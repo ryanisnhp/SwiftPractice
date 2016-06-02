@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5012F14CDF14EA3A537C2ADC /* Pods_RestFulDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94C3DD49C26E4C5A82D7C05 /* Pods_RestFulDemo.framework */; };
 		7958AEDD1D009350001A843A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7958AEDC1D009350001A843A /* AppDelegate.swift */; };
 		7958AEE41D009351001A843A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7958AEE31D009351001A843A /* Assets.xcassets */; };
 		7958AEE71D009351001A843A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7958AEE51D009351001A843A /* LaunchScreen.storyboard */; };
 		7958AEF01D009420001A843A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7958AEEE1D009420001A843A /* ViewController.swift */; };
 		7958AEF11D009420001A843A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7958AEEF1D009420001A843A /* ViewController.xib */; };
+		7958AEF31D00964B001A843A /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7958AEF21D00964B001A843A /* RestAPIManager.swift */; };
+		7958AEF51D009D7B001A843A /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7958AEF41D009D7B001A843A /* UserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0890407B450874B1E3BC5180 /* Pods-RestFulDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestFulDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestFulDemo/Pods-RestFulDemo.release.xcconfig"; sourceTree = "<group>"; };
+		53442A4AAF1BD613DA244D9C /* Pods-RestFulDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestFulDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RestFulDemo/Pods-RestFulDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7958AED91D009350001A843A /* RestFulDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestFulDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7958AEDC1D009350001A843A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7958AEE31D009351001A843A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		7958AEE81D009351001A843A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7958AEEE1D009420001A843A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7958AEEF1D009420001A843A /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		7958AEF21D00964B001A843A /* RestAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
+		7958AEF41D009D7B001A843A /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		E94C3DD49C26E4C5A82D7C05 /* Pods_RestFulDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestFulDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5012F14CDF14EA3A537C2ADC /* Pods_RestFulDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				7958AEDB1D009350001A843A /* RestFulDemo */,
 				7958AEDA1D009350001A843A /* Products */,
+				CDD09B87D584D4E25D587CE7 /* Pods */,
+				AD426AC80662E69331E9A669 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +65,8 @@
 		7958AEDB1D009350001A843A /* RestFulDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7958AEF21D00964B001A843A /* RestAPIManager.swift */,
+				7958AEF41D009D7B001A843A /* UserInfo.swift */,
 				7958AEDC1D009350001A843A /* AppDelegate.swift */,
 				7958AEEE1D009420001A843A /* ViewController.swift */,
 				7958AEEF1D009420001A843A /* ViewController.xib */,
@@ -64,6 +77,23 @@
 			path = RestFulDemo;
 			sourceTree = "<group>";
 		};
+		AD426AC80662E69331E9A669 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E94C3DD49C26E4C5A82D7C05 /* Pods_RestFulDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDD09B87D584D4E25D587CE7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53442A4AAF1BD613DA244D9C /* Pods-RestFulDemo.debug.xcconfig */,
+				0890407B450874B1E3BC5180 /* Pods-RestFulDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7958AEEB1D009351001A843A /* Build configuration list for PBXNativeTarget "RestFulDemo" */;
 			buildPhases = (
+				11B767F7488C80811231C611 /* Check Pods Manifest.lock */,
 				7958AED51D009350001A843A /* Sources */,
 				7958AED61D009350001A843A /* Frameworks */,
 				7958AED71D009350001A843A /* Resources */,
+				CE849EF28F5DE9146321E85B /* Embed Pods Frameworks */,
+				CC1F43E0D4EE1400E97FD202 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,12 +163,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11B767F7488C80811231C611 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC1F43E0D4EE1400E97FD202 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RestFulDemo/Pods-RestFulDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE849EF28F5DE9146321E85B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RestFulDemo/Pods-RestFulDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7958AED51D009350001A843A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7958AEF51D009D7B001A843A /* UserInfo.swift in Sources */,
 				7958AEF01D009420001A843A /* ViewController.swift in Sources */,
+				7958AEF31D00964B001A843A /* RestAPIManager.swift in Sources */,
 				7958AEDD1D009350001A843A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +320,7 @@
 		};
 		7958AEEC1D009351001A843A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53442A4AAF1BD613DA244D9C /* Pods-RestFulDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RestFulDemo/Info.plist;
@@ -248,6 +332,7 @@
 		};
 		7958AEED1D009351001A843A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0890407B450874B1E3BC5180 /* Pods-RestFulDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RestFulDemo/Info.plist;
@@ -276,6 +361,7 @@
 				7958AEED1D009351001A843A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
