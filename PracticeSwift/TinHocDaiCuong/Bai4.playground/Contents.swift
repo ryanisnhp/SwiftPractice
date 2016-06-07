@@ -12,8 +12,12 @@ class Cycle {
         self.long = long
     }
     
-    func cycle() -> Double {
-        return 2 * M_PI * sqrt(self.long / Cycle.gravitation)
+    func cycle() -> String {
+        if self.long > 0 {
+            return "Chu ki con lac la \(2 * M_PI * sqrt(self.long / Cycle.gravitation))"
+        } else {
+            return "Not invalid"
+        }
     }
 }
 
