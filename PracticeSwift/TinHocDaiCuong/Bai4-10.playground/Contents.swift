@@ -13,6 +13,17 @@ struct Power {
     }
 }
 
+struct Power2 {
+    private var a: Int
+    subscript(power: Int) -> Int {
+        if power == 0 {
+            return 1
+        } else {
+            return a * Power2(a: a)[power - 1]
+        }
+    }
+}
+
 class Equation {
     
     private var a: Int
@@ -36,5 +47,5 @@ class Equation {
     }
 }
 
-let equation = Equation(a: 2, n: 10)
+let equation = Equation(a: 2, n: 3)
 print(equation.result())
