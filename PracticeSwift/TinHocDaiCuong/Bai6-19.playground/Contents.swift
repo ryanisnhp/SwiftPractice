@@ -57,7 +57,7 @@ class Kaprekar {
 
 
 private func printNumber() {
-    for i in 1...100000 {
+    for i in 480...10000 {
         let check = Kaprekar(n: i)
         if check.checking() {
             print(i)
