@@ -15,7 +15,7 @@ class Kaprekar {
     private func numbers() -> [Int] {
         var numbers: [Int] = []
         var number = self.n
-        while number / 10 > 0 {
+        while number > 0 {
             numbers.append(number % 10)
             number = number / 10
         }
@@ -57,7 +57,7 @@ class Kaprekar {
 
 
 private func printNumber() {
-    for i in 1...10000000 {
+    for i in 1...100000 {
         let check = Kaprekar(n: i)
         if check.checking() {
             print(i)
@@ -65,12 +65,5 @@ private func printNumber() {
     }
 }
 
-let check = Kaprekar(n: 1253)
-check.tangDan
-check.giamDan
-check.numbers()
-check.numberOfSorted { (maxNumber, minNumber) -> Void in
-    print(maxNumber)
-    print(minNumber)
-}
+printNumber()
 
