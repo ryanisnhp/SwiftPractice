@@ -3,30 +3,52 @@
 import UIKit
 
 //135 = 1! + 3! + 5!
-
-extension Int {
-    private func giaiThua() -> Int {
-        var s = 1
-        for i in 1...self {
-            s *= i
-        }
-        return s
+class FindingNumber {
+    
+    private var n: Int
+    
+    init(n: Int) {
+        self.n = n
     }
     
-    private mutating func numbers() -> [Int] {
+    private var numbers: [Int] {
         var numbers: [Int] = []
-        while self > 0 {
-            numbers.append(self % 10)
-            self = self / 10
+        while n > 0 {
+            numbers.append(n % 10)
+            n /= 10
         }
         return numbers
     }
-}
-
-struct Founded {
-    private var n: Int
+    
+    private func giaiThua(a: Int) -> Int {
+        if a == 0 {
+            return 1
+        } else {
+            var s = 1
+            for i in 1...a {
+                s *= i
+            }
+            return s
+        }
+    }
+    
     private var checking: Bool {
-        let s = 
+        var s = 0
+        for i in self.numbers {
+            s += giaiThua(i)
+        }
+        return s == self.n
     }
 }
+
+private func finding() {
+    for i in 1...1000000 {
+      let s = FindingNumber(n: i)
+        if s.checking {
+            print(i)
+        }
+    }
+}
+
+finding()
 
