@@ -11,11 +11,12 @@ class FindingNumber {
         self.n = n
     }
     
-    private var numbers: [Int] {
+    private func numbers() -> [Int] {
         var numbers: [Int] = []
-        while n > 0 {
-            numbers.append(n % 10)
-            n /= 10
+        var s = n
+        while s > 0 {
+            numbers.append(s % 10)
+            s /= 10
         }
         return numbers
     }
@@ -34,21 +35,18 @@ class FindingNumber {
     
     private var checking: Bool {
         var s = 0
-        for i in self.numbers {
+        for i in self.numbers() {
             s += giaiThua(i)
         }
         return s == self.n
     }
 }
 
-private func finding() {
-    for i in 1...1000000 {
-      let s = FindingNumber(n: i)
-        if s.checking {
+func finding() {
+    for i in 1...5000 {
+        if FindingNumber(n: i).checking {
             print(i)
         }
     }
 }
-
 finding()
-
