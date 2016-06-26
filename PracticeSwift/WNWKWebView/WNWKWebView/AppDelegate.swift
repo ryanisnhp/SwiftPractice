@@ -15,7 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        if let window = window {
+            window.backgroundColor = UIColor.whiteColor()
+            let webViewController = WKWebViewController(nibName: "WKWebViewController", bundle: nil)
+            window.rootViewController = webViewController
+            window.makeKeyAndVisible()
+        }
         return true
     }
 
