@@ -20,21 +20,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(calculateTax(products[0]))
+
+        print("Sales tax for Kayak: $\(products[0].calculateTax(0.2))")
+        print("Total value of stock: $\(calculateStockValue(products))")
+    
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func calculateTax(product: Product) -> Double {
-        return product.price * 0.2
     }
     
     func calculateStockValue(tuples: [Product]) -> Double {
         return tuples.reduce(0, combine: { (total, product) -> Double in
-            return total + (product.price * Double(product.stock))
+            return total + product.stockValue
         })
     }
 }
