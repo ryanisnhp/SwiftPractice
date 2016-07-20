@@ -1,4 +1,6 @@
-//
+func calculateTax(product:(String, String, Double, Int)) -> Double {
+    return product.2 * 0.2;
+}//
 //  AppDelegate.swift
 //  DemoPattern
 //
@@ -19,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         if let window = window {
             window.backgroundColor = UIColor.whiteColor()
-            window.rootViewController = HomeViewController()
+            window.rootViewController = ViewController()
             window.makeKeyAndVisible()
         }
         return true
