@@ -33,3 +33,4 @@ if let name = (data[2] as? Person)?.name {
     print("0: \(data[0]) 1: \(data[1]) 2: \(name)")
 }
 
+
