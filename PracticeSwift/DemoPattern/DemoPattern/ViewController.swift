@@ -10,20 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var products: [Product] = [
-        Product(name: "Kayak", description: "A boat for one person",
-            price: 275, stock: 10),
-        Product(name: "Lifejacket", description: "Protective and fashionable",
-            price: 48.95, stock: 14),
-        Product(name: "Soccer Ball", description: "FIFA-approved size and weight",
-            price: 19.5, stock: 32)]
+    @IBOutlet weak var totalStockLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print("Sales tax for Kayak: $\(products[0].calculateTax(0.2))")
-        print("Total value of stock: $\(calculateStockValue(products))")
-    
+        //        displayStockTotal()
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,4 +27,14 @@ class ViewController: UIViewController {
             return total + product.stockValue
         })
     }
+    
+    @IBAction func stockValueDidChange(sender: AnyObject) {
+        if var currentCell = sender as? UIView {
+            while (true) {
+                currentCell = currentCell.superview!
+                if let cell = currentCell as? Produc
+            
+        }
+    }
 }
+
