@@ -2,39 +2,34 @@
 //  ViewController.swift
 //  DemoPattern
 //
-//  Created by Lam Le Van on 7/16/16.
+//  Created by Lam Le Van on 7/23/16.
 //  Copyright © 2016 Le Van Lam. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
     
-    @IBOutlet weak var totalStockLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var totalStockLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
+    var handler = (T) -> Void
+    let logger = Logger<Product>(callback: handler)
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        displayStockTotal()
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    func calculateStockValue(tuples: [Product]) -> Double {
-        return tuples.reduce(0, combine: { (total, product) -> Double in
-            return total + product.stockValue
-        })
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
     }
-    
-    @IBAction func stockValueDidChange(sender: AnyObject) {
-        if var currentCell = sender as? UIView {
-            while (true) {
-                currentCell = currentCell.superview!
-                if let cell = currentCell as? Produc
-            
-        }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
     }
 }
-
