@@ -2,7 +2,7 @@
 //  ProductTableCell.swift
 //  DemoPattern
 //
-//  Created by Lam Le Van on 7/21/16.
+//  Created by Lam Le Van on 7/24/16.
 //  Copyright © 2016 Le Van Lam. All rights reserved.
 //
 
@@ -14,6 +14,7 @@ class ProductTableCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var stockStepper: UIStepper!
     @IBOutlet weak var stockField: UITextField!
+    
     var product: Product?
 
     override func awakeFromNib() {
@@ -27,4 +28,6 @@ class ProductTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func stepperClicked(sender: UIStepper) {
+    }
 }
