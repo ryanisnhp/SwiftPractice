@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6DB5C8E1021B1661BBBE2736 /* Pods_WNCalendar1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BEDF85A7B38AD36DE5DDBA /* Pods_WNCalendar1.framework */; };
+		79327B431D797D7100087BAF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79327B421D797D7100087BAF /* Constants.swift */; };
+		79327B471D798CE800087BAF /* WNCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79327B461D798CE800087BAF /* WNCalendar.swift */; };
 		798611E61D74AD8D00D8128B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798611E51D74AD8D00D8128B /* AppDelegate.swift */; };
 		798611ED1D74AD8D00D8128B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798611EC1D74AD8D00D8128B /* Assets.xcassets */; };
 		798611F01D74AD8D00D8128B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798611EE1D74AD8D00D8128B /* LaunchScreen.storyboard */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		1CCDCA4C8044363947B6EEC8 /* Pods-WNCalendar1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNCalendar1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WNCalendar1/Pods-WNCalendar1.debug.xcconfig"; sourceTree = "<group>"; };
+		79327B421D797D7100087BAF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		79327B461D798CE800087BAF /* WNCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WNCalendar.swift; sourceTree = "<group>"; };
 		798611E21D74AD8D00D8128B /* WNCalendar1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WNCalendar1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		798611E51D74AD8D00D8128B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		798611EC1D74AD8D00D8128B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 			children = (
 				798611FC1D74B35200D8128B /* DateUtil.swift */,
 				798611FE1D74B98C00D8128B /* LazyScrollView.swift */,
+				79327B421D797D7100087BAF /* Constants.swift */,
+				79327B461D798CE800087BAF /* WNCalendar.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,6 +230,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79327B471D798CE800087BAF /* WNCalendar.swift in Sources */,
+				79327B431D797D7100087BAF /* Constants.swift in Sources */,
 				798611FD1D74B35200D8128B /* DateUtil.swift in Sources */,
 				798611FF1D74B98C00D8128B /* LazyScrollView.swift in Sources */,
 				798611F91D74AE3100D8128B /* ViewController.swift in Sources */,

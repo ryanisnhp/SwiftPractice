@@ -8,12 +8,16 @@
 
 import UIKit
 
+private let kDMLazyScrollViewTransitionDuration = 0.4
+
+
 protocol LazyScrollViewDelegate {
     func lazyScrollViewBeginDragging(pagingView: LazyScrollView)
     func lazyScrollViewDidScroll(pagingView: LazyScrollView, at visibleOffset: CGPoint)
     func lazyScrollViewDidScroll(pagingView: LazyScrollView, at visibleOffset: CGPoint, willSelfDrivenAnimation selfDrivenAnimation: Bool)
     func lazyScrollViewDidEndDragging(pagingView: LazyScrollView)
     func lazyScrollViewWillBeginDecelarating(pagingView: LazyScrollView)
+    func lazyScrollViewDidEndDecelerating(pagingView: LazyScrollView, atPageIndex pageIndex: NSInteger)
     func lazyScrollView(pagingView: LazyScrollView, currentPageChanged currentPageIndex: NSInteger)
 }
 
@@ -39,9 +43,9 @@ class LazyScrollView: UIScrollView {
     
     static let transitionDuration = 0.4
     
-    var numberOfPages: Int = 0
+    var numberOfPages = 0
     var currentPage = 0
-    let isManualAnimating = false
+    var isManualAnimating = false
     var circularScrollEnabled = false
     var timer_autoPlay: NSTimer? = nil
     var autoPlayTime: CGFloat = 3.0
@@ -49,7 +53,7 @@ class LazyScrollView: UIScrollView {
     var circularScroll = false
     var paging = false
     var autoPlay = false
-    var datasource: LazyScrollViewDatasource
+    var datasource: LazyScrollViewDatasource?
     var controlDelegate: LazyScrollViewDelegate?
     private var lazyFrame: CGRect?
     
@@ -58,12 +62,12 @@ class LazyScrollView: UIScrollView {
         super.init(frame: self.lazyFrame!)
     }
     
-    init(frame: CGRect, direction: LazyScrollViewDirection, circularScroll: Bool, circularScrolling paging: Bool) {
+    init(frame: CGRect, direction: LazyScrollViewDirection, circularScroll: Bool, circularScrolling:Bool, paging: Bool) {
+        super.init(frame: frame)
         self.direction = direction
         self.circularScroll = circularScroll
         self.paging = paging
-//        self.initializeControl()
-        super.init(frame: frame)
+        self.initializeControl()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -107,7 +111,7 @@ class LazyScrollView: UIScrollView {
         if nextPage >= self.numberOfPages {
             nextPage = 0
         }
-        self.nextPage(nextPage, animated: true)
+        self.setPage(nextPage, animated: true)
     }
     
     func autoPlayPause() {
@@ -140,10 +144,10 @@ class LazyScrollView: UIScrollView {
         currentPage = NSNotFound
     }
     
-    func numberOfPages(pages: UInt) {
+    func numberOfPages(pages: Int) {
         if pages != numberOfPages {
             numberOfPages = pages
-            var offset = self.hasMultiplePages() ? numberOfPages + 2 : 1
+            let offset = self.hasMultiplePages() ? numberOfPages + 2 : 1
             if direction == LazyScrollViewDirection.Horizontal {
                 self.contentSize = CGSize(width: self.frame.size.width * CGFloat(offset), height: self.contentSize.height)
             } else {
@@ -163,7 +167,7 @@ class LazyScrollView: UIScrollView {
     }
     
     func visibleRect() -> CGRect {
-        let visibleRect: CGRect
+        var visibleRect = CGRectZero
         visibleRect.origin = self.contentOffset
         visibleRect.size = self.bounds.size
         return visibleRect
@@ -220,7 +224,7 @@ extension LazyScrollView: UIScrollViewDelegate {
         if offset <= size {
             newPageIndex = self.pageIndexByAdding(-1, from: currentPage)
         } else {
-            newPageIndex = self.pagingIndexByAdding(+1, from: currentPage)
+            newPageIndex = self.pageIndexByAdding(+1, from: currentPage)
         }
         self.currentViewController(newPageIndex)
         controlDelegate?.lazyScrollViewDidScroll(self, at: self.visibleRect().origin, willSelfDrivenAnimation: false)
@@ -236,7 +240,7 @@ extension LazyScrollView: UIScrollViewDelegate {
         let prevPage = self.pageIndexByAdding(-1, from: currentPage)
         let nextPage = self.pageIndexByAdding(1, from: currentPage)
         
-        self.loadControllerAtIndex(index, andPlaceIndex: 0)
+        self.loadControllerAtIndex(index, andPlaceAtIndex: 0)
         if self.hasMultiplePages() {
             self.loadControllerAtIndex(prevPage, andPlaceAtIndex: -1)
             self.loadControllerAtIndex(nextPage, andPlaceAtIndex: 1)
@@ -253,6 +257,87 @@ extension LazyScrollView: UIScrollViewDelegate {
             newOffset = newOffset + numberOfPages
         }
         return (numberOfPages + index + newOffset) * numberOfPages
+    }
+    
+    func pageIndexByAdding(inout offset: NSInteger, from index: NSInteger) -> NSInteger {
+        //Complicated stuff with negative module
+        while (offset < 0) {
+            offset = offset + numberOfPages
+        }
+        return (numberOfPages + index + offset) % numberOfPages
+    }
+    
+    func moveByPages(offset: NSInteger, animated: Bool) {
+        let finalIndex = self.pageIndexByAdding(offset, from: currentPage)
+        let transition: LazyScrollView.LazyScrollViewTransition = offset >= 0 ? .Forward: .Backward
+        self.setPage(finalIndex, transition: transition, animated: animated)
+    }
+    
+    func setPage(newIndex: NSInteger, animated: Bool) {
+        self.setPage(newIndex, transition: LazyScrollView.LazyScrollViewTransition.Forward, animated: true)
+    }
+    
+    func setPage(newIndex: NSInteger, var transition: LazyScrollView.LazyScrollViewTransition, animated: Bool) {
+        if newIndex == currentPage {
+            return
+        }
+        if animated {
+            var finalOffset = CGPoint.zero
+            if transition == LazyScrollViewTransition.Auto {
+                if newIndex > self.currentPage {
+                    transition = LazyScrollViewTransition.Forward
+                } else if newIndex < self.currentPage {
+                    transition = LazyScrollViewTransition.Backward
+                }
+            }
+            let size = direction == LazyScrollViewDirection.Horizontal ? self.frame.size.width : self.frame.size.height
+            if transition == LazyScrollViewTransition.Forward {
+                self.loadControllerAtIndex(newIndex, andPlaceAtIndex: 1)
+                finalOffset = self.createPoint(size * 3)
+            } else {
+                self.loadControllerAtIndex(newIndex, andPlaceAtIndex: -1)
+                finalOffset = self.createPoint(size)
+            }
+            isManualAnimating = true
+            UIView.animateWithDuration(kDMLazyScrollViewTransitionDuration, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                self.contentOffset = finalOffset
+                }, completion: { (finished) -> Void in
+                    if finished {
+                        return
+                    }
+            })
+        } else {
+            self.currentViewController(newIndex)
+        }
+    }
+    
+    func currentPage(newCurrentPage: NSInteger) {
+        self.currentViewController(newCurrentPage)
+    }
+    
+    func loadControllerAtIndex(index: NSInteger, andPlaceAtIndex destIndex: NSInteger) -> UIViewController {
+        if let viewController = datasource?(index: UInt(index)) {
+            viewController.view.tag = 0
+            var viewFrame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
+            let offset = self.hasMultiplePages() ? 2 : 0
+            if direction == LazyScrollViewDirection.Horizontal {
+                viewFrame = CGRectOffset(viewFrame, self.frame.size.width * CGFloat(destIndex + offset), 0)
+            } else {
+                viewFrame = CGRectOffset(viewFrame, 0, self.frame.size.height * CGFloat(destIndex + offset))
+            }
+            viewController.view.frame = viewFrame
+            self.addSubview(viewController.view)
+            return viewController
+        }
+        return UIViewController()
+    }
+    
+    func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
+        controlDelegate?.lazyScrollViewWillBeginDecelarating(self)
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        controlDelegate?.lazyScrollViewDidEndDecelerating(self, atPageIndex: self.currentPage)
     }
 }
 
@@ -287,7 +372,5 @@ extension UIView {
         else {
             return nil
         }
-        
     }
-
 }
