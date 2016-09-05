@@ -9,16 +9,11 @@
 import UIKit
 import FBSDKLoginKit
 
+struct Handle<T> {
+    typealias HandleComletion = (T) -> Void
+}
+
 class UserProfile {
-    
-    private var accessToken = ""
-    private var userID = ""
-    private var facebookProfileUrl = ""
-    private var resultUser: [String: String] = [:]
-    
-    static var permisson: [String] {
-        return ["public_profile", "email", "user_friends"]
-    }
     
     class var sharedInstance: UserProfile {
         struct Wrapper {
@@ -27,59 +22,56 @@ class UserProfile {
         return Wrapper.singleton
     }
     
-    enum User {
-        
-        case Profile
-        case Email
-        case Friends
-        
-        var value: String {
-            return UserProfile.permisson[self.hashValue]
+    var userName: String?
+    var email: String?
+    var avatar: UIImage?
+    
+    static var permisson: [String] {
+        return ["public_profile", "email", "user_friends"]
+    }
+    
+    private var parameters: [NSObject : AnyObject] {
+        return ["fields": "email, name"]
+    }
+    
+    func getFacebookData(completion: Handle<(accessToken: String?, userProfile: UserProfile?)>.HandleComletion) {
+        self.makeData { (accessToken, myResult, error) -> Void in
+            if error != nil {
+                print(error?.localizedDescription)
+            } else {
+                let concurentQueue = dispatch_queue_create("concurent_queue", DISPATCH_QUEUE_CONCURRENT)
+                dispatch_async(concurentQueue, { () -> Void in
+                    let userProfile = UserProfile.sharedInstance
+                    if let myResult = myResult {
+                        userProfile.userName = myResult["name"]
+                        userProfile.email = myResult["email"]
+                        if let userID = myResult["id"] {
+                            let facebookProfileUrl = "http://graph.facebook.com/\(userID)/picture?type=large"
+                            if let url = NSURL(string: facebookProfileUrl), data = NSData(contentsOfURL: url) {
+                                userProfile.avatar = UIImage(data: data)
+                            }
+                        }
+                    }
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        completion((accessToken, userProfile))
+                    })
+                })
+            }
         }
-
     }
     
-    init() {
-    }
-
-    var userName: String? {
-
-        return nil
-    }
-    
-    var userEmail: String? {
-        if let userEmail = resultUser["email"] {
-            return userEmail
-        }
-        return nil
-    }
-    
-    var avatar: UIImage? {
-
-        return nil
-    }
-    
-    func returnData(completion: (Optional<String>,Optional<UIImage>) -> Void) {
-        let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+    private func makeData(completion: Handle<(String?, [String: String]?, NSError?)>.HandleComletion) {
+        let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: parameters)
         graphRequest.startWithCompletionHandler { (connection, result, error) -> Void in
             if error != nil {
-                print(error.localizedDescription)
+                completion((nil, nil, error))
             } else {
-                var userName: String?
-                var avatar: UIImage?
-                self.accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+                let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+                var myResult: [String: String] = [:]
                 if let result = result as? [String: String] {
-                    self.resultUser = result
+                    myResult = result
                 }
-                if let userID = result.valueForKey("id") as? String {
-                    self.userID = userID
-                    self.facebookProfileUrl = "http://graph.facebook.com/\(userID)/picture?type=large"
-                    if let url = NSURL(string: self.facebookProfileUrl), data = NSData(contentsOfURL: url) {
-                        avatar = UIImage(data: data)
-                    }
-                    userName = self.resultUser["name"]
-                }
-                completion(userName, avatar)
+                completion((accessToken, myResult, nil))
             }
         }
     }
