@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		796B17621D7DEB7000831FC2 /* loginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 796B17611D7DEB6F00831FC2 /* loginButton.png */; };
 		799638711D7C884B002EF4A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799638701D7C884B002EF4A9 /* AppDelegate.swift */; };
 		799638781D7C884B002EF4A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799638771D7C884B002EF4A9 /* Assets.xcassets */; };
 		7996387B1D7C884B002EF4A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799638791D7C884B002EF4A9 /* LaunchScreen.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		4370819A552FD27ACAF2737C /* Pods-WNFacebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNFacebook.release.xcconfig"; path = "Pods/Target Support Files/Pods-WNFacebook/Pods-WNFacebook.release.xcconfig"; sourceTree = "<group>"; };
 		690883C07EF49560478452F8 /* Pods-WNFacebook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WNFacebook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WNFacebook/Pods-WNFacebook.debug.xcconfig"; sourceTree = "<group>"; };
+		796B17611D7DEB6F00831FC2 /* loginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginButton.png; sourceTree = "<group>"; };
 		7996386D1D7C884B002EF4A9 /* WNFacebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WNFacebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		799638701D7C884B002EF4A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		799638771D7C884B002EF4A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		7996386F1D7C884B002EF4A9 /* WNFacebook */ = {
 			isa = PBXGroup;
 			children = (
+				796B17611D7DEB6F00831FC2 /* loginButton.png */,
 				799638861D7C8B05002EF4A9 /* Model */,
 				799638701D7C884B002EF4A9 /* AppDelegate.swift */,
 				799638821D7C887B002EF4A9 /* ViewController.swift */,
@@ -166,6 +169,7 @@
 				7996387B1D7C884B002EF4A9 /* LaunchScreen.storyboard in Resources */,
 				799638851D7C887B002EF4A9 /* ViewController.xib in Resources */,
 				799638781D7C884B002EF4A9 /* Assets.xcassets in Resources */,
+				796B17621D7DEB7000831FC2 /* loginButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

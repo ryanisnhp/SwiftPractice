@@ -20,19 +20,23 @@ class ViewController: UIViewController {
 
         loginButton.readPermissions = UserProfile.permisson
         loginButton.delegate = self
-        let sharedInstance = UserProfile.sharedInstance
-        sharedInstance.returnData({userName, avatar in
-            if let avatar = avatar {
-                self.userImage.image = avatar
-            }
-            self.userName.text = userName
-        })
-        
+        self.getUserFacebook()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func getUserFacebook() {
+        let userProfile = UserProfile.sharedInstance
+        userProfile.getFacebookData { (accessToken, userProfile) -> Void in
+            print(accessToken)
+            print(userProfile?.email)
+            print(userProfile?.userName)
+            self.userName.text = userProfile?.userName
+            self.userImage.image = userProfile?.avatar
+        }
     }
 }
 
@@ -46,13 +50,13 @@ extension ViewController: FBSDKLoginButtonDelegate {
             //Handle cancelations
         } else {
             if result.grantedPermissions.contains("email") {
-                //Do work
+                self.getUserFacebook()
             }
         }
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        print("User Logged Out")
+        self.getUserFacebook()
     }
     
 }
