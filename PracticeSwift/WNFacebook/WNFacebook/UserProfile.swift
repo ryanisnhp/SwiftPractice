@@ -38,6 +38,7 @@ class UserProfile {
         self.makeData { (accessToken, myResult, error) -> Void in
             if error != nil {
                 print(error?.localizedDescription)
+                completion((accessToken: nil, userProfile: nil))
             } else {
                 let concurentQueue = dispatch_queue_create("concurent_queue", DISPATCH_QUEUE_CONCURRENT)
                 dispatch_async(concurentQueue, { () -> Void in
