@@ -17,7 +17,6 @@ final class Logger {
     private var data: [String] = []
     private let arrayQ = dispatch_queue_create("arrayQ", DISPATCH_QUEUE_SERIAL)
     private init() {
-        
     }
     
     func log(msg: String) {
