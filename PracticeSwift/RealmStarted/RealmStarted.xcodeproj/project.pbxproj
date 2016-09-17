@@ -11,6 +11,7 @@
 		79754ACD1D5B9FE6007E97E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79754ACC1D5B9FE6007E97E5 /* Assets.xcassets */; };
 		79754AD01D5B9FE6007E97E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79754ACE1D5B9FE6007E97E5 /* LaunchScreen.storyboard */; };
 		79754AE01D5BA3B7007E97E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79754ADF1D5BA3B7007E97E5 /* GoogleService-Info.plist */; };
+		79AA97161D8B1559007516E8 /* RealmStarted-23f2a13eac40.json in Resources */ = {isa = PBXBuildFile; fileRef = 79AA97151D8B1559007516E8 /* RealmStarted-23f2a13eac40.json */; };
 		79ADAB6E1D6E066900AD9A5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADAB6C1D6E066900AD9A5E /* ViewController.swift */; };
 		79ADAB6F1D6E066900AD9A5E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79ADAB6D1D6E066900AD9A5E /* ViewController.xib */; };
 		79ADAB721D6E0D3D00AD9A5E /* CoffeeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ADAB711D6E0D3D00AD9A5E /* CoffeeAPI.swift */; };
@@ -30,6 +31,7 @@
 		79754ADF1D5BA3B7007E97E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		797CCE261D6618EF0059D180 /* AdapterPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AdapterPattern.playground; sourceTree = "<group>"; };
 		797F84701D64EF0700C771F8 /* ErrorBackground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ErrorBackground.playground; sourceTree = "<group>"; };
+		79AA97151D8B1559007516E8 /* RealmStarted-23f2a13eac40.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "RealmStarted-23f2a13eac40.json"; sourceTree = "<group>"; };
 		79ADAB6C1D6E066900AD9A5E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		79ADAB6D1D6E066900AD9A5E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		79ADAB711D6E0D3D00AD9A5E /* CoffeeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeAPI.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				79754ACE1D5B9FE6007E97E5 /* LaunchScreen.storyboard */,
 				79754AD11D5B9FE6007E97E5 /* Info.plist */,
 				79754ADF1D5BA3B7007E97E5 /* GoogleService-Info.plist */,
+				79AA97151D8B1559007516E8 /* RealmStarted-23f2a13eac40.json */,
 				797F84701D64EF0700C771F8 /* ErrorBackground.playground */,
 				797CCE261D6618EF0059D180 /* AdapterPattern.playground */,
 			);
@@ -125,6 +128,8 @@
 				79754AC01D5B9FE6007E97E5 /* Resources */,
 				F7674564946C30E87CA66FD7 /* [CP] Embed Pods Frameworks */,
 				CBF8F9C9CD2AB82A4115EE41 /* [CP] Copy Pods Resources */,
+				79AA970F1D8B061C007516E8 /* ShellScript */,
+				841AFEBFB6177112007070F1 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79754AD01D5B9FE6007E97E5 /* LaunchScreen.storyboard in Resources */,
+				79AA97161D8B1559007516E8 /* RealmStarted-23f2a13eac40.json in Resources */,
 				79754AE01D5BA3B7007E97E5 /* GoogleService-Info.plist in Resources */,
 				79ADAB6F1D6E066900AD9A5E /* ViewController.xib in Resources */,
 				79754ACD1D5B9FE6007E97E5 /* Assets.xcassets in Resources */,
@@ -196,6 +202,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		79AA970F1D8B061C007516E8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Replace this with the GOOGLE_APP_ID from your GoogleService-Info.plist file\n#JSON_FILE=${SRCROOT}/RealmStarted/RealmStarted-23f2a13eac40.json\nGOOGLE_APP_ID=1:47852636479:ios:f15c5a32b5d91500\n\n# Replace the /Path/To/ServiceAccount.json with the path to the key you just downloaded\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym \"${SRCROOT}/RealmStarted/RealmStarted-23f2a13eac40.json\"\n#defaults write com.google.SymbolUpload version -integer 1\n\n#JSON=$(cat \"${JSON_FILE}\")\n#/usr/bin/plutil -replace \"app_${GOOGLE_APP_ID//:/_}\" -json \"${JSON}\" \"$HOME/Library/Preferences/com.google.SymbolUpload.plist\"\n#\"${PODS_ROOT}\"/FirebaseCrash/upload-sym";
+		};
+		841AFEBFB6177112007070F1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmStarted/Pods-RealmStarted-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CBF8F9C9CD2AB82A4115EE41 /* [CP] Copy Pods Resources */ = {

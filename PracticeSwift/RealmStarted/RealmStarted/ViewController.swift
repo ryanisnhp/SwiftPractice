@@ -24,6 +24,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "onVenuesUpdated:", name: API.notifications.venuesUpdated, object: nil)
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cellIdentifier")
     }
     
     func refreshVenues(location: CLLocation?, getDataFromFoursquare: Bool = false) {
@@ -126,13 +127,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         return UITableViewCell()
     }
     
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        if annotation.isKindOfClass(MKUserLocation) {
-            return nil
-        }
-        var view = mapView.dequeueReusableAnnotationViewWithIdentifier("annontationIdentifier")
-        if view == nil {
-            view =
-        }
-    }
+//    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+//        if annotation.isKindOfClass(MKUserLocation) {
+//            return nil
+//        }
+//        var view = mapView.dequeueReusableAnnotationViewWithIdentifier("annontationIdentifier")
+//        if view == nil {
+//            view =
+//        }
+//    }
 }

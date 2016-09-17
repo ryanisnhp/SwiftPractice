@@ -6,8 +6,9 @@ target 'RealmStarted' do
   use_frameworks!
 
   # Pods for RealmStarted
-pod 'RealmSwift', '~> 0.98.0'
+pod 'RealmSwift', '0.98.0'
 pod 'Firebase/Core'
 pod 'Firebase/Crash'
 pod 'QuadratTouch', '>= 1.0'
+pod 'Firebase/Auth'
 end

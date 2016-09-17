@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Archive.otf">
+            <string>Archive</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MenuLayer" customModule="SweetStuffMenu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cookie" translatesAutoresizingMaskIntoConstraints="NO" id="BcQ-ae-1GP">
+                    <rect key="frame" x="143" y="39" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="BcQ-ae-1GP" secondAttribute="height" multiplier="1:1" id="LgM-7O-rpA"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ICE CREAM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9M-Z4-4s3">
+                    <rect key="frame" x="143" y="132" width="91" height="21"/>
+                    <fontDescription key="fontDescription" name="Archive" family="Archive" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.38039215686274508" green="0.83529411764705885" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="X9M-Z4-4s3" firstAttribute="top" secondItem="BcQ-ae-1GP" secondAttribute="bottom" constant="3" id="3BH-L0-8RY"/>
+                <constraint firstItem="X9M-Z4-4s3" firstAttribute="centerX" secondItem="BcQ-ae-1GP" secondAttribute="centerX" id="DHW-gE-uMQ"/>
+                <constraint firstItem="BcQ-ae-1GP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Q2I-sR-Qvj"/>
+                <constraint firstItem="BcQ-ae-1GP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WhN-2v-5HN"/>
+                <constraint firstItem="BcQ-ae-1GP" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="90:375" id="XiL-Kb-MZF"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="BcQ-ae-1GP" id="OO5-Er-6jq"/>
+            </connections>
+            <point key="canvasLocation" x="294.5" y="199.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Cookie" width="108" height="108"/>
+    </resources>
+</document>
