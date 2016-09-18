@@ -11,7 +11,7 @@ import UIKit
 class MenuLayer: CALayer {
     
     @IBOutlet weak var imageView: UIImageView!
-    private var menu: Menu
+//    private var menu: Menu
     
     enum Menu {
         case Cookies
@@ -44,18 +44,5 @@ class MenuLayer: CALayer {
         var color: UIColor? {
             return colors[self]
         }
-    }
-    
-    init(menu: Menu) {
-        self.menu = menu
-        super.init()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func awakeFromNib() {
-        self.backgroundColor = menu.color?.CGColor
     }
 }

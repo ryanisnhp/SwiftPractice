@@ -16,6 +16,8 @@
 		79589AD01D8CE4900056F35F /* MenuLayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79589ACF1D8CE4900056F35F /* MenuLayer.xib */; };
 		79589AD21D8CE5080056F35F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79589AD11D8CE5080056F35F /* Common.swift */; };
 		79589AD71D8CEDF20056F35F /* Archive.otf in Resources */ = {isa = PBXBuildFile; fileRef = 79589AD61D8CEDF20056F35F /* Archive.otf */; };
+		79A347591D8ECDFA0046775C /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A347581D8ECDFA0046775C /* MenuView.swift */; };
+		79A3475B1D8ECE0C0046775C /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79A3475A1D8ECE0C0046775C /* MenuView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		79589ACF1D8CE4900056F35F /* MenuLayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuLayer.xib; sourceTree = "<group>"; };
 		79589AD11D8CE5080056F35F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		79589AD61D8CEDF20056F35F /* Archive.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Archive.otf; sourceTree = "<group>"; };
+		79A347581D8ECDFA0046775C /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		79A3475A1D8ECE0C0046775C /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				79589ACD1D8CE47D0056F35F /* MenuLayer.swift */,
 				79589ACF1D8CE4900056F35F /* MenuLayer.xib */,
 				79589AD11D8CE5080056F35F /* Common.swift */,
+				79A347581D8ECDFA0046775C /* MenuView.swift */,
+				79A3475A1D8ECE0C0046775C /* MenuView.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79589AC11D8CE0F70056F35F /* LaunchScreen.storyboard in Resources */,
+				79A3475B1D8ECE0C0046775C /* MenuView.xib in Resources */,
 				79589AD01D8CE4900056F35F /* MenuLayer.xib in Resources */,
 				79589AD71D8CEDF20056F35F /* Archive.otf in Resources */,
 				79589ACB1D8CE2B10056F35F /* ViewController.xib in Resources */,
@@ -165,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A347591D8ECDFA0046775C /* MenuView.swift in Sources */,
 				79589AD21D8CE5080056F35F /* Common.swift in Sources */,
 				79589ACA1D8CE2B10056F35F /* ViewController.swift in Sources */,
 				79589ACE1D8CE47D0056F35F /* MenuLayer.swift in Sources */,
@@ -308,6 +316,7 @@
 				79589AC71D8CE0F70056F35F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

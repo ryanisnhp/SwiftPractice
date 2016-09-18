@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Archive.otf">
+            <string>Archive</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="L0g-5T-A4S" userLabel="Menu View" customClass="MenuView" customModule="SweetStuffMenu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cookie" translatesAutoresizingMaskIntoConstraints="NO" id="pax-o7-hbK">
+                    <rect key="frame" x="143" y="39" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="pax-o7-hbK" secondAttribute="height" multiplier="1:1" id="0Sh-ah-9QZ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ICE CREAM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9G-LI-9wY">
+                    <rect key="frame" x="143" y="132" width="91" height="21"/>
+                    <fontDescription key="fontDescription" name="Archive" family="Archive" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.3803921569" green="0.83529411760000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="pax-o7-hbK" firstAttribute="centerY" secondItem="L0g-5T-A4S" secondAttribute="centerY" id="Jd2-Of-MKd"/>
+                <constraint firstItem="n9G-LI-9wY" firstAttribute="centerX" secondItem="pax-o7-hbK" secondAttribute="centerX" id="T8z-GP-hOK"/>
+                <constraint firstItem="pax-o7-hbK" firstAttribute="centerX" secondItem="L0g-5T-A4S" secondAttribute="centerX" id="jQi-G8-Rpf"/>
+                <constraint firstItem="pax-o7-hbK" firstAttribute="width" secondItem="L0g-5T-A4S" secondAttribute="width" multiplier="90:375" id="mod-nO-JTa"/>
+                <constraint firstItem="n9G-LI-9wY" firstAttribute="top" secondItem="pax-o7-hbK" secondAttribute="bottom" constant="3" id="sm3-0X-Ixk"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="294.5" y="199.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Cookie" width="108" height="108"/>
+    </resources>
+</document>

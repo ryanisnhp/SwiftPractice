@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeContainerLayer()
+      //  initializeContainerLayer()
+        initializeMenuView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +30,13 @@ class ViewController: UIViewController {
             containerLayer.frame = CGRect(x: 0, y: 0, width: ScreenSize.width, height: ScreenSize.height)
             containerLayer.backgroundColor = UIColor.blueColor().CGColor
             self.view.layer.addSublayer(containerLayer)
+        }
+    }
+    
+    private func initializeMenuView() {
+        if let menuView = NSBundle.mainBundle().loadNibNamed("MenuView", owner: self, options: nil).last as? MenuView {
+            menuView.frame = CGRect(x: 0, y: 0, width: ScreenSize.width, height: ScreenSize.height / 4)
+            self.view.addSubview(menuView)
         }
     }
 }
