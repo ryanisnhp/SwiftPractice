@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="AlamofireDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3Y-jF-HKx">
+                    <rect key="frame" x="165" y="10" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="testingButton" destination="-1" eventType="touchUpInside" id="AL5-8B-wT8"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="na0-bZ-HiL">
+                    <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="y3s-X0-7pE"/>
+                        <outlet property="delegate" destination="-1" id="ZQP-k8-ITp"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="na0-bZ-HiL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0RX-Xx-baP"/>
+                <constraint firstItem="A3Y-jF-HKx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="5aF-LU-B0V"/>
+                <constraint firstItem="na0-bZ-HiL" firstAttribute="top" secondItem="A3Y-jF-HKx" secondAttribute="bottom" id="7t0-mc-E31"/>
+                <constraint firstAttribute="trailing" secondItem="na0-bZ-HiL" secondAttribute="trailing" id="XQR-yz-bAf"/>
+                <constraint firstItem="A3Y-jF-HKx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bJf-HO-j0E"/>
+                <constraint firstAttribute="bottom" secondItem="na0-bZ-HiL" secondAttribute="bottom" id="dVM-Qe-5xb"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>

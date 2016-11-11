@@ -1,0 +1,11 @@
+{
+    "response": {
+        "name": "Coffee Macs",
+        "coordinates": {
+            "lat": 33.33567,
+            "lng": 43.55545
+        },
+        "category": "food"
+    }
+}
+
