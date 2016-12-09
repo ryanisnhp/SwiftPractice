@@ -14,6 +14,7 @@
 		EFC12BD61DD57A7800D0DBF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC12BD41DD57A7800D0DBF0 /* ViewController.swift */; };
 		EFC12BD71DD57A7800D0DBF0 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC12BD51DD57A7800D0DBF0 /* ViewController.xib */; };
 		EFC12BD91DD57C1B00D0DBF0 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC12BD81DD57C1B00D0DBF0 /* Venue.swift */; };
+		EFC6F3F61DFAAEA80051A3FB /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC6F3F51DFAAEA80051A3FB /* Coffee.swift */; };
 		EFF9EF1A1DD5A09F00FB0D40 /* MyJson.json in Resources */ = {isa = PBXBuildFile; fileRef = EFF9EF191DD5A09F00FB0D40 /* MyJson.json */; };
 		EFF9EF1C1DD5A78600FB0D40 /* Venue2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF9EF1B1DD5A78600FB0D40 /* Venue2.swift */; };
 		EFF9EF1E1DD5C2E000FB0D40 /* Location.json in Resources */ = {isa = PBXBuildFile; fileRef = EFF9EF1D1DD5C2E000FB0D40 /* Location.json */; };
@@ -33,6 +34,7 @@
 		EFC12BD41DD57A7800D0DBF0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EFC12BD51DD57A7800D0DBF0 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		EFC12BD81DD57C1B00D0DBF0 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		EFC6F3F51DFAAEA80051A3FB /* Coffee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		EFF9EF191DD5A09F00FB0D40 /* MyJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MyJson.json; sourceTree = "<group>"; };
 		EFF9EF1B1DD5A78600FB0D40 /* Venue2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue2.swift; sourceTree = "<group>"; };
 		EFF9EF1D1DD5C2E000FB0D40 /* Location.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Location.json; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		EFF9EF231DD5D23300FB0D40 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				EFC6F3F51DFAAEA80051A3FB /* Coffee.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -121,12 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFC12BD11DD57A5500D0DBF0 /* Build configuration list for PBXNativeTarget "AlamofireDemo" */;
 			buildPhases = (
-				031A8214C4706D87902A6456 /* 📦 Check Pods Manifest.lock */,
+				031A8214C4706D87902A6456 /* [CP] Check Pods Manifest.lock */,
 				EFC12BBB1DD57A5500D0DBF0 /* Sources */,
 				EFC12BBC1DD57A5500D0DBF0 /* Frameworks */,
 				EFC12BBD1DD57A5500D0DBF0 /* Resources */,
-				D3195D6C80410958E71B7AE4 /* 📦 Embed Pods Frameworks */,
-				FE5542B7FABBDEC4F87BFCE6 /* 📦 Copy Pods Resources */,
+				D3195D6C80410958E71B7AE4 /* [CP] Embed Pods Frameworks */,
+				FE5542B7FABBDEC4F87BFCE6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,29 +189,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		031A8214C4706D87902A6456 /* 📦 Check Pods Manifest.lock */ = {
+		031A8214C4706D87902A6456 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D3195D6C80410958E71B7AE4 /* 📦 Embed Pods Frameworks */ = {
+		D3195D6C80410958E71B7AE4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,14 +219,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlamofireDemo/Pods-AlamofireDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FE5542B7FABBDEC4F87BFCE6 /* 📦 Copy Pods Resources */ = {
+		FE5542B7FABBDEC4F87BFCE6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +243,7 @@
 			files = (
 				EFF9EF201DD5C32C00FB0D40 /* Predictions.swift in Sources */,
 				EFF9EF1C1DD5A78600FB0D40 /* Venue2.swift in Sources */,
+				EFC6F3F61DFAAEA80051A3FB /* Coffee.swift in Sources */,
 				EFC12BD61DD57A7800D0DBF0 /* ViewController.swift in Sources */,
 				EFF9EF221DD5C92E00FB0D40 /* PreditionGettor.swift in Sources */,
 				EFC12BD91DD57C1B00D0DBF0 /* Venue.swift in Sources */,
