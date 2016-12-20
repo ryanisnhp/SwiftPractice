@@ -22,6 +22,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction private func testingButton() {
+        PreditionGettor.sharedInstance.getMyJson { (testJson) in
+            
+        }
+        
+        
         PreditionGettor.sharedInstance.getPreditions { (preditions) in
             if let places = preditions?.place {
                 for place in places {

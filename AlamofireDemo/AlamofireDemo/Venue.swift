@@ -44,4 +44,4 @@ struct Venue {
         }
     }
 }
-let JSON = "{\"name\": \"Coffee Macs\", \"coordinates\": {\"lat\": 33.33567, \"lng\": 43.554545}, \"category\": \"food\"}"
+//let JSON = "{\"name\": \"Coffee Macs\", \"coordinates\": {\"lat\": 33.33567, \"lng\": 43.554545}, \"category\": \"food\"}"

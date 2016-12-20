@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import SwiftyJSON
 
 class PreditionGettor {
     
@@ -23,5 +24,14 @@ class PreditionGettor {
             }
         }
     }
-
+    
+    func getMyJson(completion: (Coffee?)->()) {
+        let path = NSBundle.mainBundle().pathForResource("MyJson", ofType: "json")
+        if let content = try? NSString(contentsOfFile: path!, encoding: NSUTF8StringEncoding) {
+            if let jsonData = content.dataUsingEncoding(NSUTF8StringEncoding) {
+                let json = JSON(data: jsonData)
+                completion(Coffee(json: json["response"]))
+            }
+        }
+    }
 }

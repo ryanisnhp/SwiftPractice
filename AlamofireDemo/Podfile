@@ -6,6 +6,7 @@ use_frameworks!
 target 'AlamofireDemo' do
  pod 'ObjectMapper', '1.1.5'
  pod 'Alamofire', '3.4.1'
-
+ pod 'RealmSwift', '0.98.6'
+ pod 'SwiftyJSON',  '2.4.0'
 end
 
