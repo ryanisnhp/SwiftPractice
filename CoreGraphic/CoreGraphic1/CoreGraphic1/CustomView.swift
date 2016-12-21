@@ -22,8 +22,12 @@ class CustomView: UIView {
     }
     
     private func setup() {
+        let path = createBezierPath()
+        let scale = CGAffineTransform(scaleX: 10, y: 10)
+        path.apply(scale)
+        
         let shapeLayer = CAShapeLayer()
-        shapeLayer.path = createBezierPath().cgPath
+        shapeLayer.path = path.cgPath
         shapeLayer.strokeColor = UIColor.blue.cgColor
         shapeLayer.fillColor = UIColor.brown.cgColor
         shapeLayer.lineWidth = 1.0
