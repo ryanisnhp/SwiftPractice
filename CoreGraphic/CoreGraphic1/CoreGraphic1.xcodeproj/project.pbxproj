@@ -295,6 +295,7 @@
 				FE2500C01E099C1500767490 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

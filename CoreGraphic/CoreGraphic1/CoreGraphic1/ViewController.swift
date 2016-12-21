@@ -9,12 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    @IBOutlet private weak var tableView: UITableView!
-    internal var dataSource: [String] = []
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let customView = CustomView(frame: CGRect(x: 40, y: 40, width: 40, height: 40))
+        customView.backgroundColor = UIColor.yellow
+        view.addSubview(customView)
     }
 
     override func didReceiveMemoryWarning() {

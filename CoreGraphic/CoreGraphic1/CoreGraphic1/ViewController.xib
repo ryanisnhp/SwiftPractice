@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="CoreGraphic1" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="2mM-A3-pQo" id="UgG-Cq-UYB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,23 +18,7 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2mM-A3-pQo">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="fnN-eb-Pfs"/>
-                        <outlet property="delegate" destination="-1" id="D6L-W4-GE2"/>
-                    </connections>
-                </tableView>
-            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="2mM-A3-pQo" secondAttribute="trailing" id="38m-5U-Urk"/>
-                <constraint firstAttribute="bottom" secondItem="2mM-A3-pQo" secondAttribute="bottom" id="7BC-tm-RqP"/>
-                <constraint firstItem="2mM-A3-pQo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Agx-RU-8Sa"/>
-                <constraint firstItem="2mM-A3-pQo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wcp-wq-cdC"/>
-            </constraints>
         </view>
     </objects>
 </document>
