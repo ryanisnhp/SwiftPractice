@@ -1,38 +1,29 @@
 //
-//  CustomView.swift
+//  CustomView2.swift
 //  CoreGraphic1
 //
-//  Created by Lam Le Van on 12/21/16.
+//  Created by Lam Le Van on 12/22/16.
 //  Copyright © 2016 dev.asiantech.lamlv. All rights reserved.
 //
 
 import UIKit
 
-// Link Reference: http://stackoverflow.com/questions/21311880/drawing-uibezierpath-on-code-generated-uiview
-
-class CustomView: UIView {
+class CustomView2: UIView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    internal func setup() {
+    override func draw(_ rect: CGRect) {
         let path = createBezierPath()
-        let scale = CGAffineTransform(scaleX: 10, y: 10)
-        path.apply(scale)
         
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = path.cgPath
-        shapeLayer.strokeColor = UIColor.blue.cgColor
-        shapeLayer.fillColor = UIColor.brown.cgColor
-        shapeLayer.lineWidth = 1.0
-        shapeLayer.position = CGPoint(x: 10, y: 10)
-        layer.addSublayer(shapeLayer)
+        let fillColor = UIColor.white
+        fillColor.setFill()
+        
+        path.lineWidth = 1.0
+        let strokeColor = UIColor.blue
+        strokeColor.setStroke()
+        
+        path.apply(CGAffineTransform(translationX: 10, y: 10))
+        
+        path.fill()
+        path.stroke()
     }
     
     func createBezierPath() -> UIBezierPath {
@@ -76,4 +67,5 @@ class CustomView: UIView {
         
         return path
     }
+
 }

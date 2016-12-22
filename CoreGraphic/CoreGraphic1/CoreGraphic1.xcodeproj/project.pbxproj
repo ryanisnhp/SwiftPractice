@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE2311991E0B004700099260 /* CustomView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2311981E0B004700099260 /* CustomView2.swift */; };
 		FE2500B01E099C1500767490 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2500AF1E099C1500767490 /* AppDelegate.swift */; };
 		FE2500B71E099C1500767490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE2500B61E099C1500767490 /* Assets.xcassets */; };
 		FE2500BA1E099C1500767490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2500B81E099C1500767490 /* LaunchScreen.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE2311981E0B004700099260 /* CustomView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView2.swift; sourceTree = "<group>"; };
 		FE2500AC1E099C1500767490 /* CoreGraphic1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreGraphic1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2500AF1E099C1500767490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE2500B61E099C1500767490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				FE2500C11E099C3000767490 /* ViewController.swift */,
 				FE2500C21E099C3000767490 /* ViewController.xib */,
 				FE2500C51E099C5C00767490 /* CustomView.swift */,
+				FE2311981E0B004700099260 /* CustomView2.swift */,
 				FE2500B61E099C1500767490 /* Assets.xcassets */,
 				FE2500B81E099C1500767490 /* LaunchScreen.storyboard */,
 				FE2500BB1E099C1500767490 /* Info.plist */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE2311991E0B004700099260 /* CustomView2.swift in Sources */,
 				FE2500C61E099C5C00767490 /* CustomView.swift in Sources */,
 				FE2500C31E099C3000767490 /* ViewController.swift in Sources */,
 				FE2500B01E099C1500767490 /* AppDelegate.swift in Sources */,
