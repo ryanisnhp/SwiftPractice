@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class PushButtonView: UIView {
+class PushButtonView: UIButton {
     
     @IBInspectable var fillColor: UIColor = UIColor.green
     @IBInspectable var isAddButton: Bool = true
