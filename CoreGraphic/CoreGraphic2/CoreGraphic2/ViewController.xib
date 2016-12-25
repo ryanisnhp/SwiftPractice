@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="CoreGraphic2" customModuleProvider="target">
+            <connections>
+                <outlet property="counterView" destination="vgS-aK-hAA" id="hKZ-1e-sK2"/>
+                <outlet property="label" destination="v35-dc-gnR" id="TyG-u7-YOg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PyR-UA-MTo" customClass="PushButtonView" customModule="CoreGraphic2" customModuleProvider="target">
+                    <rect key="frame" x="137.5" y="350" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="0jN-cN-2BS"/>
+                        <constraint firstAttribute="width" secondItem="PyR-UA-MTo" secondAttribute="height" multiplier="1:1" id="K3t-7I-pGv"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                            <color key="value" red="0.3411764705882353" green="0.85490196078431369" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnPushButtonWithButton:" destination="-1" eventType="touchUpInside" id="QPj-dH-2fp"/>
+                    </connections>
+                </view>
+                <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcO-rV-9aM" customClass="PushButtonView" customModule="CoreGraphic2" customModuleProvider="target">
+                    <rect key="frame" x="162.5" y="468" width="50" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="LcO-rV-9aM" secondAttribute="height" id="flV-z3-y61"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="NO"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                            <color key="value" red="0.93333333333333335" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnPushButtonWithButton:" destination="-1" eventType="touchUpInside" id="PnX-fF-rdH"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgS-aK-hAA" customClass="CounterView" customModule="CoreGraphic2" customModuleProvider="target">
+                    <rect key="frame" x="72" y="54" width="230" height="230"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v35-dc-gnR">
+                            <rect key="frame" x="103.5" y="92" width="23.5" height="45.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="v35-dc-gnR" firstAttribute="centerX" secondItem="vgS-aK-hAA" secondAttribute="centerX" id="8JX-Sa-pbC"/>
+                        <constraint firstAttribute="width" secondItem="vgS-aK-hAA" secondAttribute="height" multiplier="1:1" id="gx7-ps-lLY"/>
+                        <constraint firstItem="v35-dc-gnR" firstAttribute="centerY" secondItem="vgS-aK-hAA" secondAttribute="centerY" id="jVJ-7z-uDE"/>
+                        <constraint firstAttribute="width" constant="230" id="wVJ-xS-S5P"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="counter">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vgS-aK-hAA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="54" id="5cy-TD-wIr"/>
+                <constraint firstItem="vgS-aK-hAA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7B3-u4-FMC"/>
+                <constraint firstItem="LcO-rV-9aM" firstAttribute="top" secondItem="PyR-UA-MTo" secondAttribute="bottom" constant="18" id="KJk-Lf-tnn"/>
+                <constraint firstItem="PyR-UA-MTo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="350" id="Lhk-Xb-137"/>
+                <constraint firstItem="LcO-rV-9aM" firstAttribute="centerX" secondItem="PyR-UA-MTo" secondAttribute="centerX" id="Qcg-Tu-lS7"/>
+                <constraint firstItem="LcO-rV-9aM" firstAttribute="width" secondItem="PyR-UA-MTo" secondAttribute="width" multiplier="1:2" id="Wi7-na-COi"/>
+                <constraint firstItem="PyR-UA-MTo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XX5-2e-QBf"/>
+            </constraints>
+            <point key="canvasLocation" x="-132" y="11"/>
+        </view>
+    </objects>
+</document>
