@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE1A30521E0C4965006BFB50 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1A30501E0C4965006BFB50 /* HomeCell.swift */; };
+		FE1A30531E0C4965006BFB50 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE1A30511E0C4965006BFB50 /* HomeCell.xib */; };
 		FE2311991E0B004700099260 /* CustomView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2311981E0B004700099260 /* CustomView2.swift */; };
 		FE2500B01E099C1500767490 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2500AF1E099C1500767490 /* AppDelegate.swift */; };
 		FE2500B71E099C1500767490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE2500B61E099C1500767490 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE1A30501E0C4965006BFB50 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		FE1A30511E0C4965006BFB50 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		FE2311981E0B004700099260 /* CustomView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView2.swift; sourceTree = "<group>"; };
 		FE2500AC1E099C1500767490 /* CoreGraphic1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreGraphic1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2500AF1E099C1500767490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE1A304F1E0C4946006BFB50 /* BackgroundCell */ = {
+			isa = PBXGroup;
+			children = (
+				FE1A30501E0C4965006BFB50 /* HomeCell.swift */,
+				FE1A30511E0C4965006BFB50 /* HomeCell.xib */,
+			);
+			name = BackgroundCell;
+			sourceTree = "<group>";
+		};
 		FE2500A31E099C1500767490 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +71,7 @@
 		FE2500AE1E099C1500767490 /* CoreGraphic1 */ = {
 			isa = PBXGroup;
 			children = (
+				FE1A304F1E0C4946006BFB50 /* BackgroundCell */,
 				FE2500AF1E099C1500767490 /* AppDelegate.swift */,
 				FE2500C11E099C3000767490 /* ViewController.swift */,
 				FE2500C21E099C3000767490 /* ViewController.xib */,
@@ -131,6 +145,7 @@
 			files = (
 				FE2500BA1E099C1500767490 /* LaunchScreen.storyboard in Resources */,
 				FE2500C41E099C3000767490 /* ViewController.xib in Resources */,
+				FE1A30531E0C4965006BFB50 /* HomeCell.xib in Resources */,
 				FE2500B71E099C1500767490 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +161,7 @@
 				FE2500C61E099C5C00767490 /* CustomView.swift in Sources */,
 				FE2500C31E099C3000767490 /* ViewController.swift in Sources */,
 				FE2500B01E099C1500767490 /* AppDelegate.swift in Sources */,
+				FE1A30521E0C4965006BFB50 /* HomeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
