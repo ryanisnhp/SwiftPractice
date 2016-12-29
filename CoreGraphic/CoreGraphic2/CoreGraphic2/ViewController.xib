@@ -85,7 +85,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpu-n2-byQ" customClass="GraphView" customModule="CoreGraphic2" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="230" height="230"/>
+                            <rect key="frame" x="0.0" y="0.0" width="230" height="210"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -97,7 +97,6 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.3411764706" green="0.85490196080000003" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="kpu-n2-byQ" firstAttribute="top" secondItem="Ep7-YD-5xj" secondAttribute="top" id="6fR-QD-zRg"/>
                         <constraint firstAttribute="trailing" secondItem="vgS-aK-hAA" secondAttribute="trailing" id="CgS-Iz-Pal"/>
@@ -107,7 +106,7 @@
                         <constraint firstAttribute="bottom" secondItem="vgS-aK-hAA" secondAttribute="bottom" id="QV7-cp-uM2"/>
                         <constraint firstItem="kpu-n2-byQ" firstAttribute="leading" secondItem="Ep7-YD-5xj" secondAttribute="leading" id="QcE-WO-aXY"/>
                         <constraint firstAttribute="trailing" secondItem="kpu-n2-byQ" secondAttribute="trailing" id="Qph-Ga-rqc"/>
-                        <constraint firstAttribute="bottom" secondItem="kpu-n2-byQ" secondAttribute="bottom" id="dj2-iK-jDs"/>
+                        <constraint firstAttribute="bottom" secondItem="kpu-n2-byQ" secondAttribute="bottom" constant="20" id="dj2-iK-jDs"/>
                         <constraint firstAttribute="width" constant="230" id="eBD-3T-g72"/>
                     </constraints>
                 </view>
