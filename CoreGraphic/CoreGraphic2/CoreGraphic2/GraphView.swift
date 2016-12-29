@@ -13,7 +13,7 @@ import UIKit
     //1 - the properties for the gradient
     @IBInspectable var startColor: UIColor = UIColor.red
     @IBInspectable var endColor: UIColor = UIColor.green
-    let graphPoints: [Int] = [4, 2, 6, 4, 5, 8, 3]
+    var graphPoints: [Int] = [4, 2, 6, 4, 5, 8, 3]
 
     override func draw(_ rect: CGRect) {
         
@@ -122,5 +122,21 @@ import UIKit
             circle.fill()
         }
         
+        //Draw horizontal graph lines on the top of everything
+        let linePath = UIBezierPath()
+        
+        //Top line
+        linePath.move(to: CGPoint(x: margin, y: topBorder))
+        linePath.addLine(to: CGPoint(x: width-margin, y: topBorder))
+        //Center line
+        linePath.move(to: CGPoint(x: margin, y: graphHeight/2+topBorder))
+        linePath.addLine(to: CGPoint(x: width-margin, y: graphHeight/2+topBorder))
+        //bottom line
+        linePath.move(to: CGPoint(x: margin, y: height-bottomBorder))
+        linePath.addLine(to: CGPoint(x: width-margin, y: height-bottomBorder))
+        let color = UIColor(white: 1.0, alpha: 0.3)
+        color.setStroke()
+        linePath.lineWidth = 1.0
+        linePath.stroke()
     }
 }
