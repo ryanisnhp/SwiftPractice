@@ -14,6 +14,7 @@
 		FE03B72E1E0E76BF007133CD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE03B72C1E0E76BF007133CD /* ViewController.xib */; };
 		FE03B7311E0E7718007133CD /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE03B7301E0E7718007133CD /* PushButtonView.swift */; };
 		FE1DBAA11E0FDD7300946759 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1DBAA01E0FDD7300946759 /* CounterView.swift */; };
+		FE1DBAA31E0FF65500946759 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1DBAA21E0FF65500946759 /* GraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FE03B72C1E0E76BF007133CD /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		FE03B7301E0E7718007133CD /* PushButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonView.swift; sourceTree = "<group>"; };
 		FE1DBAA01E0FDD7300946759 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		FE1DBAA21E0FF65500946759 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				FE03B7301E0E7718007133CD /* PushButtonView.swift */,
 				FE1DBAA01E0FDD7300946759 /* CounterView.swift */,
+				FE1DBAA21E0FF65500946759 /* GraphView.swift */,
 			);
 			name = UIView;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1DBAA31E0FF65500946759 /* GraphView.swift in Sources */,
 				FE03B72D1E0E76BF007133CD /* ViewController.swift in Sources */,
 				FE03B71A1E0E767D007133CD /* AppDelegate.swift in Sources */,
 				FE03B7311E0E7718007133CD /* PushButtonView.swift in Sources */,
