@@ -26,6 +26,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addGesture()
+        setupGraphDisplay()
+        //Building an index
+     
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,14 +42,14 @@ class ViewController: UIViewController {
     }
     
     private func setupGraphDisplay() {
-        //Use 7 days for graph - can use any number, but labels and sample data are set up for 7 days
-        let noOfDays: Int = 7
         
         //1 - replace last day with today's actual data
         graphView.graphPoints[graphView.graphPoints.count-1] = counterView.counter
         //2 - Indicate that the graph needs to be reddrawn
         graphView.setNeedsDisplay()
-        maxLabel.text = "\(graphView.graphPoints.max())"
+        if let max = graphView.graphPoints.max() {
+            maxLabel.text = "\(max)"
+        }
         
         // Calculate average from graphPoints
         let average = graphView.graphPoints.reduce(0, +)/graphView.graphPoints.count
@@ -63,12 +66,12 @@ class ViewController: UIViewController {
         let days = ["S", "S", "M", "T", "W", "T", "F"]
         
         //5 - set up the name labels with correct day
-        for i in 1...days.reversed().count {
+        for i in 0...days.reversed().count-1 {
             if weekday == 7 {
                 weekday = 0
             }
             dayLabels[i].text = days[weekday]
-            weekday = weekday - 1
+            weekday = weekday + 1
             if weekday < 0 {
                 weekday = days.count - 1
             }
