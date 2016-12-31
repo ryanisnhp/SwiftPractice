@@ -14,6 +14,7 @@
 		FE03B72E1E0E76BF007133CD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE03B72C1E0E76BF007133CD /* ViewController.xib */; };
 		FE03B7311E0E7718007133CD /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE03B7301E0E7718007133CD /* PushButtonView.swift */; };
 		FE1DBAA11E0FDD7300946759 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1DBAA01E0FDD7300946759 /* CounterView.swift */; };
+		FE25A0521E177F4D0034BE9D /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE25A0511E177F4D0034BE9D /* BackgroundView.swift */; };
 		FE355CED1E1577550044721B /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE355CEC1E1577550044721B /* GraphView.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		FE03B7301E0E7718007133CD /* PushButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonView.swift; sourceTree = "<group>"; };
 		FE1DBAA01E0FDD7300946759 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		FE25A0501E1757EC0034BE9D /* SimpleFilter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SimpleFilter.playground; sourceTree = "<group>"; };
+		FE25A0511E177F4D0034BE9D /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		FE355CEC1E1577550044721B /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 		FE03B72F1E0E7709007133CD /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				FE25A0511E177F4D0034BE9D /* BackgroundView.swift */,
 				FE03B7301E0E7718007133CD /* PushButtonView.swift */,
 				FE1DBAA01E0FDD7300946759 /* CounterView.swift */,
 				FE355CEC1E1577550044721B /* GraphView.swift */,
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE25A0521E177F4D0034BE9D /* BackgroundView.swift in Sources */,
 				FE355CED1E1577550044721B /* GraphView.swift in Sources */,
 				FE03B72D1E0E76BF007133CD /* ViewController.swift in Sources */,
 				FE03B71A1E0E767D007133CD /* AppDelegate.swift in Sources */,
