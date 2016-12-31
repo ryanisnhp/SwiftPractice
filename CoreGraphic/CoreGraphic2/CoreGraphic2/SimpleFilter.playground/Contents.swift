@@ -87,3 +87,11 @@ extension String {
     }
 }
 print(buildIndex(words: words))
+
+let size = CGSize(width: 120, height: 200)
+UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+let context = UIGraphicsGetCurrentContext()
+
+//This code must always be at the end of the playground
+let image = UIGraphicsGetImageFromCurrentImageContext()
+UIGraphicsEndImageContext()
