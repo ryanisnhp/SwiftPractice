@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DC2A4EB162E5543E74E42EA /* Pods_CoreTextMagazine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D4C891B01A10ED4142A2FB /* Pods_CoreTextMagazine.framework */; };
 		FE2943E11E1A2CB100FCD9DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2943E01E1A2CB100FCD9DA /* AppDelegate.swift */; };
 		FE2943E81E1A2CB100FCD9DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE2943E71E1A2CB100FCD9DA /* Assets.xcassets */; };
 		FE2943EB1E1A2CB100FCD9DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2943E91E1A2CB100FCD9DA /* LaunchScreen.storyboard */; };
 		FE2943F41E1A2CD200FCD9DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2943F21E1A2CD200FCD9DA /* ViewController.swift */; };
 		FE2943F51E1A2CD200FCD9DA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE2943F31E1A2CD200FCD9DA /* ViewController.xib */; };
+		FE2943F81E1A328300FCD9DA /* ColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2943F71E1A328300FCD9DA /* ColumnView.swift */; };
+		FE2943FF1E1A36FC00FCD9DA /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE2943FA1E1A36FC00FCD9DA /* test.txt */; };
+		FE2944001E1A36FC00FCD9DA /* zombie1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE2943FB1E1A36FC00FCD9DA /* zombie1.jpg */; };
+		FE2944011E1A36FC00FCD9DA /* zombie2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE2943FC1E1A36FC00FCD9DA /* zombie2.jpg */; };
+		FE2944021E1A36FC00FCD9DA /* zombie3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE2943FD1E1A36FC00FCD9DA /* zombie3.jpg */; };
+		FE2944031E1A36FC00FCD9DA /* zombies.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE2943FE1E1A36FC00FCD9DA /* zombies.txt */; };
+		FE2944061E1A375D00FCD9DA /* MarkupParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2944051E1A375D00FCD9DA /* MarkupParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FDE0E7FD0B0520B9A3378DA /* Pods-CoreTextMagazine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTextMagazine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreTextMagazine/Pods-CoreTextMagazine.debug.xcconfig"; sourceTree = "<group>"; };
+		48D4C891B01A10ED4142A2FB /* Pods_CoreTextMagazine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreTextMagazine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F270507030F51EE8689F96E /* Pods-CoreTextMagazine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTextMagazine.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreTextMagazine/Pods-CoreTextMagazine.release.xcconfig"; sourceTree = "<group>"; };
 		FE2943DD1E1A2CB100FCD9DA /* CoreTextMagazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreTextMagazine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2943E01E1A2CB100FCD9DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE2943E71E1A2CB100FCD9DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -22,6 +33,14 @@
 		FE2943EC1E1A2CB100FCD9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE2943F21E1A2CD200FCD9DA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE2943F31E1A2CD200FCD9DA /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		FE2943F71E1A328300FCD9DA /* ColumnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnView.swift; sourceTree = "<group>"; };
+		FE2943FA1E1A36FC00FCD9DA /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		FE2943FB1E1A36FC00FCD9DA /* zombie1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zombie1.jpg; sourceTree = "<group>"; };
+		FE2943FC1E1A36FC00FCD9DA /* zombie2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zombie2.jpg; sourceTree = "<group>"; };
+		FE2943FD1E1A36FC00FCD9DA /* zombie3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zombie3.jpg; sourceTree = "<group>"; };
+		FE2943FE1E1A36FC00FCD9DA /* zombies.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zombies.txt; sourceTree = "<group>"; };
+		FE2944051E1A375D00FCD9DA /* MarkupParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkupParser.swift; sourceTree = "<group>"; };
+		FE2944071E1A3CD000FCD9DA /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +48,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DC2A4EB162E5543E74E42EA /* Pods_CoreTextMagazine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC4B6364FD0D4EB8A2B38B39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FDE0E7FD0B0520B9A3378DA /* Pods-CoreTextMagazine.debug.xcconfig */,
+				5F270507030F51EE8689F96E /* Pods-CoreTextMagazine.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FBE27EBBF2A407FAEA395600 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48D4C891B01A10ED4142A2FB /* Pods_CoreTextMagazine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE2943D41E1A2CB100FCD9DA = {
 			isa = PBXGroup;
 			children = (
 				FE2943DF1E1A2CB100FCD9DA /* CoreTextMagazine */,
 				FE2943DE1E1A2CB100FCD9DA /* Products */,
+				BC4B6364FD0D4EB8A2B38B39 /* Pods */,
+				FBE27EBBF2A407FAEA395600 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +93,9 @@
 		FE2943DF1E1A2CB100FCD9DA /* CoreTextMagazine */ = {
 			isa = PBXGroup;
 			children = (
+				FE2943F91E1A36FC00FCD9DA /* Resources */,
+				FE2943F61E1A327200FCD9DA /* UIView */,
+				FE2944041E1A374900FCD9DA /* Model */,
 				FE2943E01E1A2CB100FCD9DA /* AppDelegate.swift */,
 				FE2943F21E1A2CD200FCD9DA /* ViewController.swift */,
 				FE2943F31E1A2CD200FCD9DA /* ViewController.xib */,
@@ -64,6 +106,35 @@
 			path = CoreTextMagazine;
 			sourceTree = "<group>";
 		};
+		FE2943F61E1A327200FCD9DA /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				FE2943F71E1A328300FCD9DA /* ColumnView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		FE2943F91E1A36FC00FCD9DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE2943FA1E1A36FC00FCD9DA /* test.txt */,
+				FE2943FB1E1A36FC00FCD9DA /* zombie1.jpg */,
+				FE2943FC1E1A36FC00FCD9DA /* zombie2.jpg */,
+				FE2943FD1E1A36FC00FCD9DA /* zombie3.jpg */,
+				FE2943FE1E1A36FC00FCD9DA /* zombies.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FE2944041E1A374900FCD9DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE2944051E1A375D00FCD9DA /* MarkupParser.swift */,
+				FE2944071E1A3CD000FCD9DA /* MyPlayground.playground */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE2943EF1E1A2CB100FCD9DA /* Build configuration list for PBXNativeTarget "CoreTextMagazine" */;
 			buildPhases = (
+				2B841E2A491B40D240A48EA3 /* [CP] Check Pods Manifest.lock */,
 				FE2943D91E1A2CB100FCD9DA /* Sources */,
 				FE2943DA1E1A2CB100FCD9DA /* Frameworks */,
 				FE2943DB1E1A2CB100FCD9DA /* Resources */,
+				248C5D77881D465B9F2C2248 /* [CP] Embed Pods Frameworks */,
+				7BEB010A6B7D2761E3F81765 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,18 +199,73 @@
 			files = (
 				FE2943EB1E1A2CB100FCD9DA /* LaunchScreen.storyboard in Resources */,
 				FE2943F51E1A2CD200FCD9DA /* ViewController.xib in Resources */,
+				FE2944031E1A36FC00FCD9DA /* zombies.txt in Resources */,
+				FE2943FF1E1A36FC00FCD9DA /* test.txt in Resources */,
 				FE2943E81E1A2CB100FCD9DA /* Assets.xcassets in Resources */,
+				FE2944011E1A36FC00FCD9DA /* zombie2.jpg in Resources */,
+				FE2944001E1A36FC00FCD9DA /* zombie1.jpg in Resources */,
+				FE2944021E1A36FC00FCD9DA /* zombie3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		248C5D77881D465B9F2C2248 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreTextMagazine/Pods-CoreTextMagazine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B841E2A491B40D240A48EA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7BEB010A6B7D2761E3F81765 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreTextMagazine/Pods-CoreTextMagazine-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE2943D91E1A2CB100FCD9DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE2943F81E1A328300FCD9DA /* ColumnView.swift in Sources */,
 				FE2943F41E1A2CD200FCD9DA /* ViewController.swift in Sources */,
+				FE2944061E1A375D00FCD9DA /* MarkupParser.swift in Sources */,
 				FE2943E11E1A2CB100FCD9DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +379,7 @@
 		};
 		FE2943F01E1A2CB100FCD9DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FDE0E7FD0B0520B9A3378DA /* Pods-CoreTextMagazine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CoreTextMagazine/Info.plist;
@@ -262,6 +392,7 @@
 		};
 		FE2943F11E1A2CB100FCD9DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F270507030F51EE8689F96E /* Pods-CoreTextMagazine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CoreTextMagazine/Info.plist;
@@ -291,6 +422,7 @@
 				FE2943F11E1A2CB100FCD9DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
