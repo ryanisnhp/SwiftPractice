@@ -20,6 +20,7 @@
 		FE2944021E1A36FC00FCD9DA /* zombie3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE2943FD1E1A36FC00FCD9DA /* zombie3.jpg */; };
 		FE2944031E1A36FC00FCD9DA /* zombies.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE2943FE1E1A36FC00FCD9DA /* zombies.txt */; };
 		FE2944061E1A375D00FCD9DA /* MarkupParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2944051E1A375D00FCD9DA /* MarkupParser.swift */; };
+		FE35D4D51E1D658500B4F114 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE35D4D41E1D658500B4F114 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		FE2943FE1E1A36FC00FCD9DA /* zombies.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zombies.txt; sourceTree = "<group>"; };
 		FE2944051E1A375D00FCD9DA /* MarkupParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkupParser.swift; sourceTree = "<group>"; };
 		FE2944071E1A3CD000FCD9DA /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		FE35D4D41E1D658500B4F114 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		FE2943DF1E1A2CB100FCD9DA /* CoreTextMagazine */ = {
 			isa = PBXGroup;
 			children = (
+				FE35D4D31E1D657600B4F114 /* Extensions */,
 				FE2943F91E1A36FC00FCD9DA /* Resources */,
 				FE2943F61E1A327200FCD9DA /* UIView */,
 				FE2944041E1A374900FCD9DA /* Model */,
@@ -133,6 +136,14 @@
 				FE2944071E1A3CD000FCD9DA /* MyPlayground.playground */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FE35D4D31E1D657600B4F114 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FE35D4D41E1D658500B4F114 /* Helpers.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +277,7 @@
 				FE2943F81E1A328300FCD9DA /* ColumnView.swift in Sources */,
 				FE2943F41E1A2CD200FCD9DA /* ViewController.swift in Sources */,
 				FE2944061E1A375D00FCD9DA /* MarkupParser.swift in Sources */,
+				FE35D4D51E1D658500B4F114 /* Helpers.swift in Sources */,
 				FE2943E11E1A2CB100FCD9DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
