@@ -30,13 +30,13 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="BackgroundView" customModule="CoreGraphic2" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PyR-UA-MTo" customClass="PushButtonView" customModule="CoreGraphic2" customModuleProvider="target">
                     <rect key="frame" x="137.5" y="350" width="100" height="100"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="0jN-cN-2BS"/>
                         <constraint firstAttribute="width" secondItem="PyR-UA-MTo" secondAttribute="height" multiplier="1:1" id="K3t-7I-pGv"/>
@@ -53,7 +53,7 @@
                 </view>
                 <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcO-rV-9aM" customClass="PushButtonView" customModule="CoreGraphic2" customModuleProvider="target">
                     <rect key="frame" x="162.5" y="468" width="50" height="50"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="LcO-rV-9aM" secondAttribute="height" id="flV-z3-y61"/>
                     </constraints>
@@ -70,29 +70,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ep7-YD-5xj">
                     <rect key="frame" x="72" y="54" width="230" height="230"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgS-aK-hAA" customClass="CounterView" customModule="CoreGraphic2" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="230" height="230"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v35-dc-gnR">
-                                    <rect key="frame" x="103.5" y="92" width="23.5" height="45.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="v35-dc-gnR" firstAttribute="centerX" secondItem="vgS-aK-hAA" secondAttribute="centerX" id="8JX-Sa-pbC"/>
-                                <constraint firstAttribute="width" secondItem="vgS-aK-hAA" secondAttribute="height" multiplier="1:1" id="gx7-ps-lLY"/>
-                                <constraint firstItem="v35-dc-gnR" firstAttribute="centerY" secondItem="vgS-aK-hAA" secondAttribute="centerY" id="jVJ-7z-uDE"/>
-                                <constraint firstAttribute="width" constant="230" id="wVJ-xS-S5P"/>
-                            </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="counter">
-                                    <integer key="value" value="4"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpu-n2-byQ" customClass="GraphView" customModule="CoreGraphic2" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="230" height="210"/>
                             <subviews>
@@ -169,7 +146,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="lDD-ix-igD" firstAttribute="leading" secondItem="0l6-qF-Q3u" secondAttribute="trailing" constant="22" id="1Rx-Ci-gAe"/>
                                 <constraint firstItem="lBQ-9C-vaE" firstAttribute="leading" secondItem="B0J-NO-obA" secondAttribute="trailing" constant="22" id="3eo-Qx-GWf"/>
@@ -205,7 +182,41 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgS-aK-hAA" customClass="CounterView" customModule="CoreGraphic2" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="230" height="230"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v35-dc-gnR">
+                                    <rect key="frame" x="103.5" y="92" width="23.5" height="45.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjk-8l-SoK" customClass="MedalView" customModule="CoreGraphic2" customModuleProvider="target">
+                                    <rect key="frame" x="75" y="147" width="80" height="80"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="80" id="PcM-KT-YPk"/>
+                                        <constraint firstAttribute="height" constant="80" id="f5v-oM-wgT"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="v35-dc-gnR" firstAttribute="centerX" secondItem="vgS-aK-hAA" secondAttribute="centerX" id="8JX-Sa-pbC"/>
+                                <constraint firstItem="Qjk-8l-SoK" firstAttribute="centerX" secondItem="vgS-aK-hAA" secondAttribute="centerX" id="cTA-43-hgD"/>
+                                <constraint firstAttribute="width" secondItem="vgS-aK-hAA" secondAttribute="height" multiplier="1:1" id="gx7-ps-lLY"/>
+                                <constraint firstItem="v35-dc-gnR" firstAttribute="centerY" secondItem="vgS-aK-hAA" secondAttribute="centerY" id="jVJ-7z-uDE"/>
+                                <constraint firstAttribute="bottom" secondItem="Qjk-8l-SoK" secondAttribute="bottom" constant="3" id="ofV-2M-omT"/>
+                                <constraint firstAttribute="width" constant="230" id="wVJ-xS-S5P"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="counter">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="kpu-n2-byQ" firstAttribute="top" secondItem="Ep7-YD-5xj" secondAttribute="top" id="6fR-QD-zRg"/>
                         <constraint firstAttribute="trailing" secondItem="vgS-aK-hAA" secondAttribute="trailing" id="CgS-Iz-Pal"/>
@@ -230,6 +241,17 @@
                 <constraint firstItem="PyR-UA-MTo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XX5-2e-QBf"/>
                 <constraint firstItem="Ep7-YD-5xj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="54" id="sGR-lC-kOe"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
+                    <color key="value" red="0.87450980392156863" green="1" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="darkColor">
+                    <color key="value" red="1" green="1" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="patternSize">
+                    <real key="value" value="30"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="-132.5" y="10.5"/>
         </view>
     </objects>
