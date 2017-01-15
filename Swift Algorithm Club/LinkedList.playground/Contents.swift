@@ -145,4 +145,7 @@ numbers.append(value: 2)
 numbers.append(value: 4)
 print(numbers.count)
 print(dogBreeds.count)
+if let number = numbers.nodeAt(index: 1) {
+    print(number.value)
+}
 
