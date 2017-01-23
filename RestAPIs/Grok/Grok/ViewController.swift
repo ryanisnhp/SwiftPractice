@@ -11,6 +11,15 @@ private let urlString = "https://jsonplaceholder.typicode.com/todos/1"
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let myCompletionHandler: (Data?, URLResponse?, Error?) -> Void = { (data, response, error) in
+        if let response = response {
+            print(response)
+        }
+        if let error = error {
+            print(error)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +31,14 @@ class ViewController: UIViewController {
         }
         let urlRequest = URLRequest(url: url)
         let session = URLSession.shared
-        let task = session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
-            if let response = response {
-                print(response)
-            }
-            if let error = error {
-                print(error)
-            }
-        })
+        let task = session.dataTask(with: urlRequest, completionHandler: myCompletionHandler)
         task.resume()
+
     }
+//    
+//    open func dataTask(with request: URLRequest, completionHandle: @escaping (Data?, URLResponse?, Error?) -> Swift.Void) -> URLSessionDataTask {
+//        completionHandle(data, response, error)
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
