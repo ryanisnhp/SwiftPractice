@@ -12,6 +12,11 @@
 		FE57043D1E3B9DEF00A81F60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE57043B1E3B9DEF00A81F60 /* LaunchScreen.storyboard */; };
 		FE5704461E3B9E1000A81F60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5704441E3B9E1000A81F60 /* ViewController.swift */; };
 		FE5704471E3B9E1000A81F60 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5704451E3B9E1000A81F60 /* ViewController.xib */; };
+		FE5704491E3B9EBB00A81F60 /* AbstractCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5704481E3B9EBB00A81F60 /* AbstractCard.swift */; };
+		FE57044B1E3B9F6D00A81F60 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE57044A1E3B9F6D00A81F60 /* Card.swift */; };
+		FE57044D1E3BA42300A81F60 /* CardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE57044C1E3BA42300A81F60 /* CardFactory.swift */; };
+		FE57044F1E3BA65000A81F60 /* BoardGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE57044E1E3BA65000A81F60 /* BoardGameManager.swift */; };
+		FE5704511E3BA93E00A81F60 /* Watch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5704501E3BA93E00A81F60 /* Watch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		FE57043E1E3B9DEF00A81F60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE5704441E3B9E1000A81F60 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE5704451E3B9E1000A81F60 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		FE5704481E3B9EBB00A81F60 /* AbstractCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractCard.swift; sourceTree = "<group>"; };
+		FE57044A1E3B9F6D00A81F60 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FE57044C1E3BA42300A81F60 /* CardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFactory.swift; sourceTree = "<group>"; };
+		FE57044E1E3BA65000A81F60 /* BoardGameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardGameManager.swift; sourceTree = "<group>"; };
+		FE5704501E3BA93E00A81F60 /* Watch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Watch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				FE5704321E3B9DEF00A81F60 /* AppDelegate.swift */,
+				FE5704481E3B9EBB00A81F60 /* AbstractCard.swift */,
+				FE57044A1E3B9F6D00A81F60 /* Card.swift */,
+				FE57044C1E3BA42300A81F60 /* CardFactory.swift */,
+				FE57044E1E3BA65000A81F60 /* BoardGameManager.swift */,
+				FE5704501E3BA93E00A81F60 /* Watch.swift */,
 				FE5704441E3B9E1000A81F60 /* ViewController.swift */,
 				FE5704451E3B9E1000A81F60 /* ViewController.xib */,
 				FE5704391E3B9DEF00A81F60 /* Assets.xcassets */,
@@ -136,8 +151,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE57044F1E3BA65000A81F60 /* BoardGameManager.swift in Sources */,
+				FE5704511E3BA93E00A81F60 /* Watch.swift in Sources */,
 				FE5704461E3B9E1000A81F60 /* ViewController.swift in Sources */,
 				FE5704331E3B9DEF00A81F60 /* AppDelegate.swift in Sources */,
+				FE5704491E3B9EBB00A81F60 /* AbstractCard.swift in Sources */,
+				FE57044D1E3BA42300A81F60 /* CardFactory.swift in Sources */,
+				FE57044B1E3B9F6D00A81F60 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +311,7 @@
 				FE5704431E3B9DEF00A81F60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
