@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE226C8D1E3FA7F3000B7049 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE226C8C1E3FA7F3000B7049 /* Builder.swift */; };
 		FE5704331E3B9DEF00A81F60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5704321E3B9DEF00A81F60 /* AppDelegate.swift */; };
 		FE57043A1E3B9DEF00A81F60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE5704391E3B9DEF00A81F60 /* Assets.xcassets */; };
 		FE57043D1E3B9DEF00A81F60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE57043B1E3B9DEF00A81F60 /* LaunchScreen.storyboard */; };
@@ -16,10 +17,11 @@
 		FE57044B1E3B9F6D00A81F60 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE57044A1E3B9F6D00A81F60 /* Card.swift */; };
 		FE57044D1E3BA42300A81F60 /* CardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE57044C1E3BA42300A81F60 /* CardFactory.swift */; };
 		FE57044F1E3BA65000A81F60 /* BoardGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE57044E1E3BA65000A81F60 /* BoardGameManager.swift */; };
-		FE5704511E3BA93E00A81F60 /* Watch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5704501E3BA93E00A81F60 /* Watch.swift */; };
+		FE5704511E3BA93E00A81F60 /* WatchFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5704501E3BA93E00A81F60 /* WatchFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE226C8C1E3FA7F3000B7049 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		FE57042F1E3B9DEF00A81F60 /* CreationPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreationPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5704321E3B9DEF00A81F60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE5704391E3B9DEF00A81F60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,7 +33,7 @@
 		FE57044A1E3B9F6D00A81F60 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		FE57044C1E3BA42300A81F60 /* CardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFactory.swift; sourceTree = "<group>"; };
 		FE57044E1E3BA65000A81F60 /* BoardGameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardGameManager.swift; sourceTree = "<group>"; };
-		FE5704501E3BA93E00A81F60 /* Watch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Watch.swift; sourceTree = "<group>"; };
+		FE5704501E3BA93E00A81F60 /* WatchFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +71,8 @@
 				FE57044A1E3B9F6D00A81F60 /* Card.swift */,
 				FE57044C1E3BA42300A81F60 /* CardFactory.swift */,
 				FE57044E1E3BA65000A81F60 /* BoardGameManager.swift */,
-				FE5704501E3BA93E00A81F60 /* Watch.swift */,
+				FE5704501E3BA93E00A81F60 /* WatchFactory.swift */,
+				FE226C8C1E3FA7F3000B7049 /* Builder.swift */,
 				FE5704441E3B9E1000A81F60 /* ViewController.swift */,
 				FE5704451E3B9E1000A81F60 /* ViewController.xib */,
 				FE5704391E3B9DEF00A81F60 /* Assets.xcassets */,
@@ -152,12 +155,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE57044F1E3BA65000A81F60 /* BoardGameManager.swift in Sources */,
-				FE5704511E3BA93E00A81F60 /* Watch.swift in Sources */,
+				FE5704511E3BA93E00A81F60 /* WatchFactory.swift in Sources */,
 				FE5704461E3B9E1000A81F60 /* ViewController.swift in Sources */,
 				FE5704331E3B9DEF00A81F60 /* AppDelegate.swift in Sources */,
 				FE5704491E3B9EBB00A81F60 /* AbstractCard.swift in Sources */,
 				FE57044D1E3BA42300A81F60 /* CardFactory.swift in Sources */,
 				FE57044B1E3B9F6D00A81F60 /* Card.swift in Sources */,
+				FE226C8D1E3FA7F3000B7049 /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

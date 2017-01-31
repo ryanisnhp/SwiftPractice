@@ -1,5 +1,5 @@
 //
-//  Watch.swift
+//  WatchFactory.swift
 //  CreationPattern
 //
 //  Created by Lam Le Van on 1/27/17.

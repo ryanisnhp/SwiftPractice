@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        abstractCardObject()
-        factoryPatterhObject()
+//        factoryPatterhObject()
+        builderPatternObject()
     }
     
     private func abstractCardObject() {
@@ -34,6 +35,20 @@ class ViewController: UIViewController {
         let productB = manufacture1.createDial(materialType: MaterialType.gold)
         print(productB.material)
         print(productB.size)
+    }
+    
+    
+    private func builderPatternObject() {
+        let gold42mmMilaneseWatch = Watch { (build) in
+            build.band = MilaneseBand(size: BandSize.ml)
+            build.dial = GoldDial(size: WatchSize._42mm)
+        }
+        if let color = gold42mmMilaneseWatch.band?.color {
+            print(color)
+        }
+        if let material = gold42mmMilaneseWatch.dial?.material {
+            print(material)
+        }
     }
 
     override func didReceiveMemoryWarning() {
