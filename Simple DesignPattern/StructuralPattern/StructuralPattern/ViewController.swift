@@ -14,7 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //        useDecoratorPattern()
-        useProxyPattern()
+//        useProxyPattern()
+        useBridgePattern()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +38,13 @@ class ViewController: UIViewController {
         print(animation.display())
         print(animation.click())
         print( animation.display())
+    }
+    
+    private func useBridgePattern() {
+        let tvRemoteControl = RemoteControl(concreteImpl: TV())
+        let lightRemoteControl = RemoteControl(concreteImpl: Light())
+        print(tvRemoteControl.turnOn())
+        print(lightRemoteControl.turnOn())
     }
 }
 

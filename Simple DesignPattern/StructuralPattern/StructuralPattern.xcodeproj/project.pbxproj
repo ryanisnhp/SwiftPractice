@@ -14,6 +14,7 @@
 		FE2287EF1E40DCB1005DBFD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2287ED1E40DCB1005DBFD5 /* LaunchScreen.storyboard */; };
 		FE22CD011E457F4D00A97C43 /* DecoratorPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22CD001E457F4D00A97C43 /* DecoratorPattern.swift */; };
 		FE22CD031E45827100A97C43 /* ProxyPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22CD021E45827100A97C43 /* ProxyPattern.swift */; };
+		FE22CD051E45860300A97C43 /* BridgePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22CD041E45860300A97C43 /* BridgePattern.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FE2287F01E40DCB1005DBFD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE22CD001E457F4D00A97C43 /* DecoratorPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoratorPattern.swift; sourceTree = "<group>"; };
 		FE22CD021E45827100A97C43 /* ProxyPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyPattern.swift; sourceTree = "<group>"; };
+		FE22CD041E45860300A97C43 /* BridgePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgePattern.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				FE22CD001E457F4D00A97C43 /* DecoratorPattern.swift */,
 				FE22CD021E45827100A97C43 /* ProxyPattern.swift */,
+				FE22CD041E45860300A97C43 /* BridgePattern.swift */,
 				FE2287E41E40DCB1005DBFD5 /* AppDelegate.swift */,
 				FE2287E61E40DCB1005DBFD5 /* ViewController.swift */,
 				FE2287E81E40DCB1005DBFD5 /* Main.storyboard */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE2287E71E40DCB1005DBFD5 /* ViewController.swift in Sources */,
+				FE22CD051E45860300A97C43 /* BridgePattern.swift in Sources */,
 				FE22CD031E45827100A97C43 /* ProxyPattern.swift in Sources */,
 				FE22CD011E457F4D00A97C43 /* DecoratorPattern.swift in Sources */,
 				FE2287E51E40DCB1005DBFD5 /* AppDelegate.swift in Sources */,
