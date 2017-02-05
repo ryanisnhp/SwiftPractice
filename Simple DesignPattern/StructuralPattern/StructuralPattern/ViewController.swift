@@ -16,7 +16,8 @@ class ViewController: UIViewController {
 //        useDecoratorPattern()
 //        useProxyPattern()
 //        useBridgePattern()
-        useCompositePattern()
+//        useCompositePattern()
+        useAdapterPattern()
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,6 +75,22 @@ class ViewController: UIViewController {
         comedyCategory.add(vodComponent: VODItem(name: "Step Brothers", description: "Step Brothers Movie", price: 9.99))
         comedyCategory.add(vodComponent: VODItem(name: "Bad teacher", description: "Bad Teacher Movie", price: 9.99))
         vodManager.displayCatalog()
+    }
+    
+    private func useAdapterPattern() {
+        print("*** start test program")
+        // Create our Charger
+        let charger = Charger()
+        print("*** charger ready test program")
+        //Test 1
+        //Charge a Pear Mobile Phone
+        print("Will charge a Pear Mobile Phone")
+        //1 mobile and adapter creation
+        let pearPhone = PearMobilePhone()
+        let pearAdapter = PearAdapter(phone: pearPhone)
+        //we plug the portable to our charger through the adapter
+        charger.plugMobilePhone(phone: pearAdapter)
+        print("*** -")
     }
 }
 
