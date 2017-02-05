@@ -15,6 +15,8 @@
 		FE22CD011E457F4D00A97C43 /* DecoratorPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22CD001E457F4D00A97C43 /* DecoratorPattern.swift */; };
 		FE22CD031E45827100A97C43 /* ProxyPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22CD021E45827100A97C43 /* ProxyPattern.swift */; };
 		FE22CD051E45860300A97C43 /* BridgePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22CD041E45860300A97C43 /* BridgePattern.swift */; };
+		FE22CD081E4591B700A97C43 /* CompositePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22CD071E4591B700A97C43 /* CompositePattern.swift */; };
+		FE2595C91E46420900B87E26 /* AdapterPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2595C81E46420900B87E26 /* AdapterPattern.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		FE22CD001E457F4D00A97C43 /* DecoratorPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoratorPattern.swift; sourceTree = "<group>"; };
 		FE22CD021E45827100A97C43 /* ProxyPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyPattern.swift; sourceTree = "<group>"; };
 		FE22CD041E45860300A97C43 /* BridgePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgePattern.swift; sourceTree = "<group>"; };
+		FE22CD071E4591B700A97C43 /* CompositePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositePattern.swift; sourceTree = "<group>"; };
+		FE2595C81E46420900B87E26 /* AdapterPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterPattern.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				FE22CD001E457F4D00A97C43 /* DecoratorPattern.swift */,
 				FE22CD021E45827100A97C43 /* ProxyPattern.swift */,
 				FE22CD041E45860300A97C43 /* BridgePattern.swift */,
+				FE22CD071E4591B700A97C43 /* CompositePattern.swift */,
+				FE2595C81E46420900B87E26 /* AdapterPattern.swift */,
 				FE2287E41E40DCB1005DBFD5 /* AppDelegate.swift */,
 				FE2287E61E40DCB1005DBFD5 /* ViewController.swift */,
 				FE2287E81E40DCB1005DBFD5 /* Main.storyboard */,
@@ -149,7 +155,9 @@
 				FE22CD051E45860300A97C43 /* BridgePattern.swift in Sources */,
 				FE22CD031E45827100A97C43 /* ProxyPattern.swift in Sources */,
 				FE22CD011E457F4D00A97C43 /* DecoratorPattern.swift in Sources */,
+				FE22CD081E4591B700A97C43 /* CompositePattern.swift in Sources */,
 				FE2287E51E40DCB1005DBFD5 /* AppDelegate.swift in Sources */,
+				FE2595C91E46420900B87E26 /* AdapterPattern.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
