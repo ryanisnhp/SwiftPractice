@@ -13,6 +13,8 @@
 		FE24D16A1E46D91200E99F06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE24D1691E46D91200E99F06 /* Assets.xcassets */; };
 		FE24D16D1E46D91200E99F06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE24D16B1E46D91200E99F06 /* LaunchScreen.storyboard */; };
 		FE24D1751E46D93600E99F06 /* StrategyPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE24D1741E46D93600E99F06 /* StrategyPattern.swift */; };
+		FE24D1771E46DB5C00E99F06 /* StatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE24D1761E46DB5C00E99F06 /* StatePattern.swift */; };
+		FEA646AB1E4B933C00FDF939 /* ChainOfResponsibilityPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA646AA1E4B933C00FDF939 /* ChainOfResponsibilityPattern.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FE24D16C1E46D91200E99F06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE24D16E1E46D91200E99F06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE24D1741E46D93600E99F06 /* StrategyPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrategyPattern.swift; sourceTree = "<group>"; };
+		FE24D1761E46DB5C00E99F06 /* StatePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatePattern.swift; sourceTree = "<group>"; };
+		FEA646AA1E4B933C00FDF939 /* ChainOfResponsibilityPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainOfResponsibilityPattern.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				FE24D1741E46D93600E99F06 /* StrategyPattern.swift */,
+				FEA646AA1E4B933C00FDF939 /* ChainOfResponsibilityPattern.swift */,
+				FE24D1761E46DB5C00E99F06 /* StatePattern.swift */,
 				FE24D1621E46D91200E99F06 /* AppDelegate.swift */,
 				FE24D1641E46D91200E99F06 /* ViewController.swift */,
 				FE24D1661E46D91200E99F06 /* Main.storyboard */,
@@ -139,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA646AB1E4B933C00FDF939 /* ChainOfResponsibilityPattern.swift in Sources */,
+				FE24D1771E46DB5C00E99F06 /* StatePattern.swift in Sources */,
 				FE24D1651E46D91200E99F06 /* ViewController.swift in Sources */,
 				FE24D1751E46D93600E99F06 /* StrategyPattern.swift in Sources */,
 				FE24D1631E46D91200E99F06 /* AppDelegate.swift in Sources */,
@@ -303,6 +311,7 @@
 				FE24D1731E46D91200E99F06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
