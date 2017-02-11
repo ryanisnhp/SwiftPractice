@@ -10,11 +10,9 @@ import UIKit
 
 class DayButton: UIButton {
     
-    convenience init(type: UIButtonType) {
+    convenience init(type buttonType: UIButtonType) {
+        self.init(type: buttonType)
+        // assign your custom property
     }
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
 }
 

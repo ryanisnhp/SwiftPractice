@@ -71,6 +71,7 @@ class ViewController: UIViewController {
             let yCount = 1
             let formatter = DateFormatter()
             monthLyLabel.text = formatter.monthSymbols[thisMonth - 1]
+            
         }
     }
 }
