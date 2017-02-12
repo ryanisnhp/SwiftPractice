@@ -13,6 +13,7 @@
 		FE142B8D1E50145000F39A79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE142B8B1E50145000F39A79 /* ViewController.swift */; };
 		FE142B8E1E50145000F39A79 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE142B8C1E50145000F39A79 /* ViewController.xib */; };
 		FE142B901E5014C600F39A79 /* InvalidTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE142B8F1E5014C600F39A79 /* InvalidTextField.swift */; };
+		FE26E2311E505070009D85BF /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26E2301E505070009D85BF /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FE142B8B1E50145000F39A79 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE142B8C1E50145000F39A79 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		FE142B8F1E5014C600F39A79 /* InvalidTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvalidTextField.swift; sourceTree = "<group>"; };
+		FE26E2301E505070009D85BF /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FE142B801E50143400F39A79 /* Assets.xcassets */,
 				FE142B821E50143400F39A79 /* LaunchScreen.storyboard */,
 				FE142B851E50143400F39A79 /* Info.plist */,
+				FE26E2301E505070009D85BF /* UserProfile.swift */,
 			);
 			path = TextFieldInvalid;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE26E2311E505070009D85BF /* UserProfile.swift in Sources */,
 				FE142B901E5014C600F39A79 /* InvalidTextField.swift in Sources */,
 				FE142B8D1E50145000F39A79 /* ViewController.swift in Sources */,
 				FE142B7A1E50143300F39A79 /* AppDelegate.swift in Sources */,
@@ -295,6 +299,7 @@
 				FE142B8A1E50143400F39A79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

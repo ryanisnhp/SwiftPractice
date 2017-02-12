@@ -10,10 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet fileprivate weak var invalidTextField: InvalidTextField!
+    @IBOutlet fileprivate weak var firstNameTextField: InvalidTextField!
+    @IBOutlet fileprivate weak var lastNameTextField: InvalidTextField!
+    @IBOutlet fileprivate weak var ageTextField: InvalidTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UserProfile.instance.validate = { [weak self] enable in
+            guard let strongSelf = self else {
+                return
+            }
+//            strongSelf
+        }
     }
     
 }
@@ -26,10 +35,16 @@ extension ViewController: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if invalidTextField == textField {
-            return invalidTextField.configTextField(with: range, string: string)
+        if textField == firstNameTextField {
+            UserProfile.instance.firstName = textField.text!
+            return firstNameTextField.configTextField(with: range, string: string)
+        } else if textField == lastNameTextField {
+            UserProfile.instance.lastName = textField.text!
+            return firstNameTextField.configTextField(with: range, string: string)
+        } else {
+            UserProfile.instance.lastName = textField.text!
+            return ageTextField.configTextField(with: range, string: string)
         }
-        return false
     }
     
 }

@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="TextFieldInvalid" customModuleProvider="target">
             <connections>
-                <outlet property="invalidTextField" destination="rJk-vR-g4z" id="zNr-rB-zUz"/>
+                <outlet property="ageTextField" destination="DBk-Ho-P8R" id="cSp-wX-LqH"/>
+                <outlet property="firstNameTextField" destination="rJk-vR-g4z" id="mXn-ML-mW9"/>
+                <outlet property="lastNameTextField" destination="p5r-br-VDq" id="7u3-Po-jY6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,9 +22,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rJk-vR-g4z" customClass="InvalidTextField" customModule="TextFieldInvalid" customModuleProvider="target">
-                    <rect key="frame" x="127" y="69" width="97" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hiragana" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rJk-vR-g4z" customClass="InvalidTextField" customModule="TextFieldInvalid" customModuleProvider="target">
+                    <rect key="frame" x="89" y="69" width="281" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -38,8 +39,60 @@
                         <outlet property="delegate" destination="-1" id="BT7-xR-act"/>
                     </connections>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afj-90-2ye">
+                    <rect key="frame" x="5" y="74" width="79" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="79" id="7sP-ee-HJd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13m-tr-iFV">
+                    <rect key="frame" x="5" y="113" width="75" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p5r-br-VDq" customClass="InvalidTextField" customModule="TextFieldInvalid" customModuleProvider="target">
+                    <rect key="frame" x="89" y="108" width="281" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4T-gP-sIT">
+                    <rect key="frame" x="5" y="156" width="79" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBk-Ho-P8R" customClass="InvalidTextField" customModule="TextFieldInvalid" customModuleProvider="target">
+                    <rect key="frame" x="89" y="151" width="281" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="p5r-br-VDq" firstAttribute="trailing" secondItem="rJk-vR-g4z" secondAttribute="trailing" id="BNI-xJ-SjR"/>
+                <constraint firstItem="DBk-Ho-P8R" firstAttribute="leading" secondItem="p5r-br-VDq" secondAttribute="leading" id="CXY-wm-AYk"/>
+                <constraint firstItem="DBk-Ho-P8R" firstAttribute="leading" secondItem="C4T-gP-sIT" secondAttribute="trailing" constant="5" id="EwT-Bl-DlF"/>
+                <constraint firstItem="13m-tr-iFV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="IcB-Wb-zTt"/>
+                <constraint firstItem="C4T-gP-sIT" firstAttribute="top" secondItem="13m-tr-iFV" secondAttribute="bottom" constant="22" id="Keu-3e-F43"/>
+                <constraint firstItem="p5r-br-VDq" firstAttribute="centerY" secondItem="13m-tr-iFV" secondAttribute="centerY" id="OHX-d9-Kbw"/>
+                <constraint firstItem="rJk-vR-g4z" firstAttribute="centerY" secondItem="Afj-90-2ye" secondAttribute="centerY" id="Xag-3M-lg0"/>
+                <constraint firstItem="rJk-vR-g4z" firstAttribute="leading" secondItem="Afj-90-2ye" secondAttribute="trailing" constant="5" id="bVS-cT-3OE"/>
+                <constraint firstItem="DBk-Ho-P8R" firstAttribute="centerY" secondItem="C4T-gP-sIT" secondAttribute="centerY" id="e7C-3y-ObT"/>
+                <constraint firstItem="Afj-90-2ye" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="eii-XA-5GX"/>
+                <constraint firstItem="C4T-gP-sIT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="iCf-3Z-f27"/>
+                <constraint firstItem="p5r-br-VDq" firstAttribute="leading" secondItem="rJk-vR-g4z" secondAttribute="leading" id="ke1-3U-Gp2"/>
+                <constraint firstItem="Afj-90-2ye" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="kvP-Q6-luk"/>
+                <constraint firstItem="13m-tr-iFV" firstAttribute="top" secondItem="rJk-vR-g4z" secondAttribute="bottom" constant="14" id="qDm-Cd-ncm"/>
+                <constraint firstAttribute="trailing" secondItem="rJk-vR-g4z" secondAttribute="trailing" constant="5" id="qMN-nH-ogR"/>
+                <constraint firstItem="DBk-Ho-P8R" firstAttribute="trailing" secondItem="p5r-br-VDq" secondAttribute="trailing" id="t9Z-mz-kAb"/>
+            </constraints>
+            <point key="canvasLocation" x="26.5" y="9.5"/>
         </view>
     </objects>
 </document>
