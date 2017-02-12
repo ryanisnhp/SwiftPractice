@@ -26,7 +26,7 @@ enum TextType: Int {
     case text
     case number
     
-    var value: String {
+    var regex: String {
         switch self {
         case .hiragana: return "[ぁ-ん]"
         case .text: return "[a-z0-9A-Z]"
@@ -35,7 +35,7 @@ enum TextType: Int {
     }
     
     func validate(string: String) -> Bool {
-        let regex = try? NSRegularExpression(pattern: value, options: .caseInsensitive)
+        let regex = try? NSRegularExpression(pattern: self.regex, options: .caseInsensitive)
         let matchesNumber = regex?.numberOfMatches(in: string, options: [], range: NSRange(location: 0, length: string.length))
         if let matchesNumber = matchesNumber, matchesNumber > 0 {
             return matchesNumber == string.length
@@ -58,7 +58,6 @@ class InvalidTextField: UITextField {
     
     func configTextField(with range: NSRange, string: String) -> Bool {
         let newString = (self.text! as NSString).replacingCharacters(in: range, with: string)
-        print(textType)
         return textType.validate(string: newString)
     }
 }
