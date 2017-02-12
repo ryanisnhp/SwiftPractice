@@ -37,7 +37,7 @@ enum TextType: Int {
     func validate(string: String) -> Bool {
         let regex = try? NSRegularExpression(pattern: self.regex, options: .caseInsensitive)
         let matchesNumber = regex?.numberOfMatches(in: string, options: [], range: NSRange(location: 0, length: string.length))
-        if let matchesNumber = matchesNumber, matchesNumber > 0 {
+        if let matchesNumber = matchesNumber {
             return matchesNumber == string.length
         }
         return false
