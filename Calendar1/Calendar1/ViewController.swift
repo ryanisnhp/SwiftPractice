@@ -65,13 +65,34 @@ class ViewController: UIViewController {
         if let newDate = newDate {
             let comps = gregorian.dateComponents([.weekday], from: newDate)
             numDays = newDate.daysInMonth
-            
-            let newWeekDay = weekDay - 1
+            self.weekDay = comps.weekday ?? 1
+            var newWeekDay = weekDay - 1
             let yVal = 175
-            let yCount = 1
+            var yCount = 1
             let formatter = DateFormatter()
             monthLyLabel.text = formatter.monthSymbols[thisMonth - 1]
             
+            //use for loop to dispalay each day
+            for startDay in 1...numDays {
+                let dayButton = UIButton(type: .roundedRect)
+                let xCoord = newWeekDay*40+15
+                let yCoord = yCount*30+yVal
+                newWeekDay = newWeekDay + 1
+                if newWeekDay > 6 {
+                    newWeekDay = 0
+                    yCount = yCount + 1
+                }
+                dayButton.frame = CGRect(x: xCoord, y: yCoord, width: 35, height: 25)
+                dayButton.setTitle("\(startDay)", for: .normal)
+                dayButton.setTitleColor(UIColor.red, for: UIControlState.normal)
+                dayButton.addTarget(self, action: #selector(popupInfo), for: .touchUpInside)
+                dayButton.tag = startDay
+                view.addSubview(dayButton)
+            }
         }
+    }
+    
+    @objc private func popupInfo(button: UIButton) {
+        
     }
 }
