@@ -6,4 +6,15 @@
 //  Copyright © 2017 dev.asiantech.lamlv. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ConfirmButton: UIButton {
+    
+    convenience override init(frame: CGRect) {
+        self.init()
+        setTitle("Success", for: .normal)
+        setTitleColor(UIColor.black, for: .normal)
+        setTitle("Fail", for: .disabled)
+        setTitleColor(UIColor.red, for: .disabled)
+    }
+}

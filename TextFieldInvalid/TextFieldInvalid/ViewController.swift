@@ -13,18 +13,24 @@ class ViewController: UIViewController {
     @IBOutlet fileprivate weak var firstNameTextField: InvalidTextField!
     @IBOutlet fileprivate weak var lastNameTextField: InvalidTextField!
     @IBOutlet fileprivate weak var ageTextField: InvalidTextField!
-    
+    @IBOutlet fileprivate weak var confirmButton: ConfirmButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UserProfile.instance.validate = { [weak self] enable in
+        UserProfile.instance.validate = { [weak self] isEnabled in
             guard let strongSelf = self else {
                 return
             }
-//            strongSelf
+            strongSelf.confirmButton.isEnabled = isEnabled
         }
+        UserProfile.instance.getUserProfile()
+        firstNameTextField.text = UserProfile.instance.firstName
+        lastNameTextField.text = UserProfile.instance.lastName
+        ageTextField.text = UserProfile.instance.age
+        firstNameTextField.config(textType: TextType.hiragana)
+        lastNameTextField.config(textType: TextType.text)
+        ageTextField.config(textType: TextType.number)
     }
-    
 }
 
 extension ViewController: UITextFieldDelegate {
@@ -37,12 +43,15 @@ extension ViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == firstNameTextField {
             UserProfile.instance.firstName = textField.text!
+            print(textField.text!)
             return firstNameTextField.configTextField(with: range, string: string)
         } else if textField == lastNameTextField {
             UserProfile.instance.lastName = textField.text!
-            return firstNameTextField.configTextField(with: range, string: string)
+            print(textField.text!)
+            return lastNameTextField.configTextField(with: range, string: string)
         } else {
-            UserProfile.instance.lastName = textField.text!
+            UserProfile.instance.age = textField.text!
+            print(textField.text!)
             return ageTextField.configTextField(with: range, string: string)
         }
     }

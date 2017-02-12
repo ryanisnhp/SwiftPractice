@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="TextFieldInvalid" customModuleProvider="target">
             <connections>
                 <outlet property="ageTextField" destination="DBk-Ho-P8R" id="cSp-wX-LqH"/>
+                <outlet property="confirmButton" destination="cPN-vO-deb" id="vIR-c0-wpk"/>
                 <outlet property="firstNameTextField" destination="rJk-vR-g4z" id="mXn-ML-mW9"/>
                 <outlet property="lastNameTextField" destination="p5r-br-VDq" id="7u3-Po-jY6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -72,9 +73,18 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPN-vO-deb" customClass="ConfirmButton" customModule="TextFieldInvalid" customModuleProvider="target">
+                    <rect key="frame" x="140" y="213" width="95" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="95" id="cwh-sO-zQF"/>
+                        <constraint firstAttribute="height" constant="30" id="ybG-sv-f3G"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="cPN-vO-deb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="20A-4l-2yr"/>
                 <constraint firstItem="p5r-br-VDq" firstAttribute="trailing" secondItem="rJk-vR-g4z" secondAttribute="trailing" id="BNI-xJ-SjR"/>
                 <constraint firstItem="DBk-Ho-P8R" firstAttribute="leading" secondItem="p5r-br-VDq" secondAttribute="leading" id="CXY-wm-AYk"/>
                 <constraint firstItem="DBk-Ho-P8R" firstAttribute="leading" secondItem="C4T-gP-sIT" secondAttribute="trailing" constant="5" id="EwT-Bl-DlF"/>
@@ -90,6 +100,7 @@
                 <constraint firstItem="Afj-90-2ye" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="kvP-Q6-luk"/>
                 <constraint firstItem="13m-tr-iFV" firstAttribute="top" secondItem="rJk-vR-g4z" secondAttribute="bottom" constant="14" id="qDm-Cd-ncm"/>
                 <constraint firstAttribute="trailing" secondItem="rJk-vR-g4z" secondAttribute="trailing" constant="5" id="qMN-nH-ogR"/>
+                <constraint firstItem="cPN-vO-deb" firstAttribute="top" secondItem="DBk-Ho-P8R" secondAttribute="bottom" constant="32" id="sS8-Ij-qyQ"/>
                 <constraint firstItem="DBk-Ho-P8R" firstAttribute="trailing" secondItem="p5r-br-VDq" secondAttribute="trailing" id="t9Z-mz-kAb"/>
             </constraints>
             <point key="canvasLocation" x="26.5" y="9.5"/>
