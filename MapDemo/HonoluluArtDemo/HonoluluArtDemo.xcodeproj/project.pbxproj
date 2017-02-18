@@ -13,9 +13,14 @@
 		BC618F5C1E589F2A00941DEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F5A1E589F2A00941DEA /* ViewController.swift */; };
 		BC618F5D1E589F2A00941DEA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC618F5B1E589F2A00941DEA /* ViewController.xib */; };
 		BC618F5F1E589FC000941DEA /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F5E1E589FC000941DEA /* Helpers.swift */; };
+		BC618F611E58A46500941DEA /* BasicNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F601E58A46500941DEA /* BasicNetwork.swift */; };
+		EF9D4CD048ECB9CBC6C2FD95 /* Pods_HonoluluArtDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7457C63C4C1E146B224DD3 /* Pods_HonoluluArtDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A7457C63C4C1E146B224DD3 /* Pods_HonoluluArtDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HonoluluArtDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75688680C6F50DA911189F61 /* Pods-HonoluluArtDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonoluluArtDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HonoluluArtDemo/Pods-HonoluluArtDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A4F53C287D7B76604909C169 /* Pods-HonoluluArtDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonoluluArtDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HonoluluArtDemo/Pods-HonoluluArtDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BC618F451E589EE100941DEA /* HonoluluArtDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HonoluluArtDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC618F481E589EE100941DEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC618F4F1E589EE100941DEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		BC618F5A1E589F2A00941DEA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC618F5B1E589F2A00941DEA /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		BC618F5E1E589FC000941DEA /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		BC618F601E58A46500941DEA /* BasicNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9D4CD048ECB9CBC6C2FD95 /* Pods_HonoluluArtDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7074041B6D6F1284A4977C17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A7457C63C4C1E146B224DD3 /* Pods_HonoluluArtDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A93F925F9B08E43FBB9222CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75688680C6F50DA911189F61 /* Pods-HonoluluArtDemo.debug.xcconfig */,
+				A4F53C287D7B76604909C169 /* Pods-HonoluluArtDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BC618F3C1E589EE100941DEA = {
 			isa = PBXGroup;
 			children = (
 				BC618F471E589EE100941DEA /* HonoluluArtDemo */,
 				BC618F461E589EE100941DEA /* Products */,
+				A93F925F9B08E43FBB9222CD /* Pods */,
+				7074041B6D6F1284A4977C17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +82,7 @@
 		BC618F471E589EE100941DEA /* HonoluluArtDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BC618F601E58A46500941DEA /* BasicNetwork.swift */,
 				BC618F5E1E589FC000941DEA /* Helpers.swift */,
 				BC618F481E589EE100941DEA /* AppDelegate.swift */,
 				BC618F5A1E589F2A00941DEA /* ViewController.swift */,
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC618F571E589EE100941DEA /* Build configuration list for PBXNativeTarget "HonoluluArtDemo" */;
 			buildPhases = (
+				1E86EC3257C304AD93D13073 /* [CP] Check Pods Manifest.lock */,
 				BC618F411E589EE100941DEA /* Sources */,
 				BC618F421E589EE100941DEA /* Frameworks */,
 				BC618F431E589EE100941DEA /* Resources */,
+				1B2364F953716EDEF5615E71 /* [CP] Embed Pods Frameworks */,
+				2FD6A26D839C071C138454BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,12 +164,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B2364F953716EDEF5615E71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HonoluluArtDemo/Pods-HonoluluArtDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E86EC3257C304AD93D13073 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2FD6A26D839C071C138454BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HonoluluArtDemo/Pods-HonoluluArtDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC618F411E589EE100941DEA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BC618F5C1E589F2A00941DEA /* ViewController.swift in Sources */,
+				BC618F611E58A46500941DEA /* BasicNetwork.swift in Sources */,
 				BC618F5F1E589FC000941DEA /* Helpers.swift in Sources */,
 				BC618F491E589EE100941DEA /* AppDelegate.swift in Sources */,
 			);
@@ -254,6 +333,7 @@
 		};
 		BC618F581E589EE100941DEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75688680C6F50DA911189F61 /* Pods-HonoluluArtDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HonoluluArtDemo/Info.plist;
@@ -266,6 +346,7 @@
 		};
 		BC618F591E589EE100941DEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4F53C287D7B76604909C169 /* Pods-HonoluluArtDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HonoluluArtDemo/Info.plist;
@@ -295,6 +376,7 @@
 				BC618F591E589EE100941DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
