@@ -15,6 +15,7 @@
 		BC3D31901E54B0D400B73B5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D318E1E54B0D400B73B5E /* ViewController.swift */; };
 		BC3D31911E54B0D400B73B5E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC3D318F1E54B0D400B73B5E /* ViewController.xib */; };
 		BC3D31931E54B1A100B73B5E /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3D31921E54B1A100B73B5E /* Car.swift */; };
+		BC954E2C1E57FCA200A3E108 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC954E2B1E57FCA200A3E108 /* CarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BC3D318E1E54B0D400B73B5E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC3D318F1E54B0D400B73B5E /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		BC3D31921E54B1A100B73B5E /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		BC954E2B1E57FCA200A3E108 /* CarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				BC3D31921E54B1A100B73B5E /* Car.swift */,
+				BC954E2B1E57FCA200A3E108 /* CarViewModel.swift */,
 				BC3D31601E54B0B700B73B5E /* AppDelegate.swift */,
 				BC3D318E1E54B0D400B73B5E /* ViewController.swift */,
 				BC3D318F1E54B0D400B73B5E /* ViewController.xib */,
@@ -265,6 +268,7 @@
 				BC3D31901E54B0D400B73B5E /* ViewController.swift in Sources */,
 				BC3D31611E54B0B700B73B5E /* AppDelegate.swift in Sources */,
 				BC3D31931E54B1A100B73B5E /* Car.swift in Sources */,
+				BC954E2C1E57FCA200A3E108 /* CarViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +505,7 @@
 				BC3D31871E54B0B700B73B5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC3D31881E54B0B700B73B5E /* Build configuration list for PBXNativeTarget "MVVMDemo1Tests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +514,7 @@
 				BC3D318A1E54B0B700B73B5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC3D318B1E54B0B700B73B5E /* Build configuration list for PBXNativeTarget "MVVMDemo1UITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +523,7 @@
 				BC3D318D1E54B0B700B73B5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

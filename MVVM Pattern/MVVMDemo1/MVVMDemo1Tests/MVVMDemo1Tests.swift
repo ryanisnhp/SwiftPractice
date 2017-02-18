@@ -22,12 +22,13 @@ class MVVMDemo1Tests: XCTestCase {
     }
     
     func testCarViewModelWithFerrariF12() {
-        let ferrariF12 = Car(model: "F12", make: "Ferrari", horsepower: 730, photoURL: "http://auto.ferrari.com/en_EN/wp-content/uploads/sites/5/2013/07/Ferrari-F12berlinetta.jpg")
-        let ferrariViewModel = CarViewModel(car: ferrariF12)
-        XCTAssertEqual(ferrariViewModel.modelText, "F12")
-        XCTAssertEqual(ferrariViewModel.makeText, "Ferrari")
-        XCTAssertEqual(ferrariViewModel.horsepowerText, "730HP")
-        XCTAssertEqual(ferrariViewModel.photoURL, ferrariF12.photoURL)
-        XCTAssertEqual(ferrariViewModel.titleText, "Ferrari F12")
+        let ferrariF12 = Car(model: "F12", make: "Ferrari", kilowatts: 739, photoURL: "http://auto.ferrari.com/en_EN/wp-content/uploads/sites/5/2013/07/Ferrari-F12berlinetta.jpg")
+        let ferrariF12ViewModel = CarViewModel(car: ferrariF12)
+        XCTAssertEqual(ferrariF12ViewModel.makeText, ferrariF12.make)
+        XCTAssertEqual(ferrariF12ViewModel.modelText, ferrariF12.model)
+        XCTAssertEqual(ferrariF12ViewModel.horsepowerText, "\(Int(round(Double(ferrariF12.kilowatts) * CarViewModel.horsePowerKilowatt))) HP")
+        XCTAssertEqual(ferrariF12ViewModel.titleText, "\(ferrariF12.make) \(ferrariF12.model)")
+        XCTAssertEqual(ferrariF12ViewModel.photoURL, URL(string: ferrariF12.photoURL))
     }
+
 }
