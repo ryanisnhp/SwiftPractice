@@ -11,16 +11,16 @@ import UIKit
 extension UICollectionView {
     
     func registerCell<T: UICollectionViewCell>(_: T.Type) where T: Reusable {
-        if let nib = T.nib {
-            register(nib, forCellWithReuseIdentifier: T.identifier)
+        if T.isNibExisted {
+            register(T.nib, forCellWithReuseIdentifier: T.identifier)
         } else {
             register(T.self, forCellWithReuseIdentifier: T.identifier)
         }
     }
     
     func registerSupplementary<T: UICollectionViewCell>(elementKind: String, _: T.Type) where T: Reusable {
-        if let nib = T.nib {
-            register(nib, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: T.identifier)
+        if T.isNibExisted {
+            register(T.nib, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: T.identifier)
         } else {
             register(T.self, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: T.identifier)
         }

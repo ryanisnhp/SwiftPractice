@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerCell(BaseTableViewCell.self)
+        tableView.registerCell(BaseTableViewCell2)
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,9 +30,9 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeue(BaseTableViewCell.self) {
-            cell.textLabel?.text = "\(indexPath.row)"
-//            cell.config(name: "\(indexPath.row)")
+        if let cell = tableView.dequeue(BaseTableViewCell2.self) {
+//            cell.textLabel?.text = "\(indexPath.row)"
+            cell.config(name: "\(indexPath.row)")
             return cell
         }
         return UITableViewCell()

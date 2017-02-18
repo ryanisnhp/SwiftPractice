@@ -11,8 +11,8 @@ import UIKit
 extension UITableView {
     
     func registerCell<T: UITableViewCell>(_: T.Type) where T: Reusable {
-        if let nib = T.nib {
-            register(nib, forCellReuseIdentifier: T.identifier)
+        if T.isNibExisted {
+            register(T.nib, forCellReuseIdentifier: T.identifier)
         } else {
             register(T.self, forCellReuseIdentifier: T.identifier)
         }
@@ -27,8 +27,8 @@ extension UITableView {
     }
     
     func registerHeaderFooter<T: UITableViewHeaderFooterView>(_: T.Type) where T: Reusable {
-        if let nib = T.nib {
-            register(nib, forHeaderFooterViewReuseIdentifier: T.identifier)
+        if T.isNibExisted {
+            register(T.nib, forHeaderFooterViewReuseIdentifier: T.identifier)
         } else {
             register(T.self, forHeaderFooterViewReuseIdentifier: T.identifier)
         }
