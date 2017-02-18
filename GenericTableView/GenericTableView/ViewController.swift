@@ -32,6 +32,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeue(BaseTableViewCell.self) {
             cell.textLabel?.text = "\(indexPath.row)"
+//            cell.config(name: "\(indexPath.row)")
             return cell
         }
         return UITableViewCell()

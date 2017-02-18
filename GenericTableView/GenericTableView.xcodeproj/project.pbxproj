@@ -17,6 +17,8 @@
 		BC618F331E585B0600941DEA /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F2F1E585B0600941DEA /* UIViewExtensions.swift */; };
 		BC618F361E585CC600941DEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F341E585CC600941DEA /* ViewController.swift */; };
 		BC618F371E585CC600941DEA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC618F351E585CC600941DEA /* ViewController.xib */; };
+		BC618F3A1E58601100941DEA /* BaseTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F381E58601100941DEA /* BaseTableViewCell2.swift */; };
+		BC618F3B1E58601100941DEA /* BaseTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC618F391E58601100941DEA /* BaseTableViewCell2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		BC618F2F1E585B0600941DEA /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		BC618F341E585CC600941DEA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC618F351E585CC600941DEA /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		BC618F381E58601100941DEA /* BaseTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell2.swift; sourceTree = "<group>"; };
+		BC618F391E58601100941DEA /* BaseTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseTableViewCell2.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 				BC618F2F1E585B0600941DEA /* UIViewExtensions.swift */,
 				BC618F081E5849E800941DEA /* AppDelegate.swift */,
 				BC618F241E585A6800941DEA /* BaseTableViewCell.swift */,
+				BC618F381E58601100941DEA /* BaseTableViewCell2.swift */,
+				BC618F391E58601100941DEA /* BaseTableViewCell2.xib */,
 				BC618F341E585CC600941DEA /* ViewController.swift */,
 				BC618F351E585CC600941DEA /* ViewController.xib */,
 				BC618F0F1E5849E800941DEA /* Assets.xcassets */,
@@ -141,6 +147,7 @@
 				BC618F131E5849E800941DEA /* LaunchScreen.storyboard in Resources */,
 				BC618F371E585CC600941DEA /* ViewController.xib in Resources */,
 				BC618F101E5849E800941DEA /* Assets.xcassets in Resources */,
+				BC618F3B1E58601100941DEA /* BaseTableViewCell2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +161,7 @@
 				BC618F301E585B0600941DEA /* CollectionViewExtensions.swift in Sources */,
 				BC618F331E585B0600941DEA /* UIViewExtensions.swift in Sources */,
 				BC618F261E585A6800941DEA /* BaseTableViewCell.swift in Sources */,
+				BC618F3A1E58601100941DEA /* BaseTableViewCell2.swift in Sources */,
 				BC618F091E5849E800941DEA /* AppDelegate.swift in Sources */,
 				BC618F361E585CC600941DEA /* ViewController.swift in Sources */,
 				BC618F311E585B0600941DEA /* Reusable.swift in Sources */,
