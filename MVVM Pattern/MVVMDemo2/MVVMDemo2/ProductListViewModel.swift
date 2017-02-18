@@ -11,11 +11,7 @@ import UIKit
 class ProductListViewModel: ProductListViewModelProtocol {
     
     var products: [Product]
-    var productListDataSource: ProductListDataSource! {
-        didSet {
-            self.productDidChange?(self)
-        }
-    }
+    var productListDataSource: ProductListDataSource!
     var productListDelegate: ProductListDelegate! {
         didSet {
             self.productDidChange?(self)
