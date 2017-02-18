@@ -44,10 +44,13 @@ class BasicNetwork: BasicNetworkable {
                 break
             case .failure(let error):
                 print(error)
+                self.connectDidFinishWith(json: JSON(error))
                 break
             }
         }
     }
     
     func connectDidFinishWith(json: JSON) {}
+    func connectDidErrorWith(json: JSON) {}
+
 }

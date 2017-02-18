@@ -10,10 +10,12 @@
 		BC618F491E589EE100941DEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F481E589EE100941DEA /* AppDelegate.swift */; };
 		BC618F501E589EE100941DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC618F4F1E589EE100941DEA /* Assets.xcassets */; };
 		BC618F531E589EE100941DEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC618F511E589EE100941DEA /* LaunchScreen.storyboard */; };
-		BC618F5C1E589F2A00941DEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F5A1E589F2A00941DEA /* ViewController.swift */; };
-		BC618F5D1E589F2A00941DEA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC618F5B1E589F2A00941DEA /* ViewController.xib */; };
 		BC618F5F1E589FC000941DEA /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F5E1E589FC000941DEA /* Helpers.swift */; };
 		BC618F611E58A46500941DEA /* BasicNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F601E58A46500941DEA /* BasicNetwork.swift */; };
+		BC618F641E58A81C00941DEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F621E58A81C00941DEA /* ViewController.swift */; };
+		BC618F651E58A81C00941DEA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC618F631E58A81C00941DEA /* ViewController.xib */; };
+		BC618F671E58B21900941DEA /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F661E58B21900941DEA /* ArtWork.swift */; };
+		BC618F691E58B77400941DEA /* ArtWorkNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F681E58B77400941DEA /* ArtWorkNetwork.swift */; };
 		EF9D4CD048ECB9CBC6C2FD95 /* Pods_HonoluluArtDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7457C63C4C1E146B224DD3 /* Pods_HonoluluArtDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,10 +28,12 @@
 		BC618F4F1E589EE100941DEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC618F521E589EE100941DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC618F541E589EE100941DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC618F5A1E589F2A00941DEA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BC618F5B1E589F2A00941DEA /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		BC618F5E1E589FC000941DEA /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		BC618F601E58A46500941DEA /* BasicNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicNetwork.swift; sourceTree = "<group>"; };
+		BC618F621E58A81C00941DEA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC618F631E58A81C00941DEA /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		BC618F661E58B21900941DEA /* ArtWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWork.swift; sourceTree = "<group>"; };
+		BC618F681E58B77400941DEA /* ArtWorkNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWorkNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,11 +89,13 @@
 				BC618F601E58A46500941DEA /* BasicNetwork.swift */,
 				BC618F5E1E589FC000941DEA /* Helpers.swift */,
 				BC618F481E589EE100941DEA /* AppDelegate.swift */,
-				BC618F5A1E589F2A00941DEA /* ViewController.swift */,
-				BC618F5B1E589F2A00941DEA /* ViewController.xib */,
+				BC618F621E58A81C00941DEA /* ViewController.swift */,
+				BC618F631E58A81C00941DEA /* ViewController.xib */,
 				BC618F4F1E589EE100941DEA /* Assets.xcassets */,
 				BC618F511E589EE100941DEA /* LaunchScreen.storyboard */,
 				BC618F541E589EE100941DEA /* Info.plist */,
+				BC618F661E58B21900941DEA /* ArtWork.swift */,
+				BC618F681E58B77400941DEA /* ArtWorkNetwork.swift */,
 			);
 			path = HonoluluArtDemo;
 			sourceTree = "<group>";
@@ -157,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC618F531E589EE100941DEA /* LaunchScreen.storyboard in Resources */,
-				BC618F5D1E589F2A00941DEA /* ViewController.xib in Resources */,
+				BC618F651E58A81C00941DEA /* ViewController.xib in Resources */,
 				BC618F501E589EE100941DEA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,10 +223,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC618F5C1E589F2A00941DEA /* ViewController.swift in Sources */,
 				BC618F611E58A46500941DEA /* BasicNetwork.swift in Sources */,
 				BC618F5F1E589FC000941DEA /* Helpers.swift in Sources */,
+				BC618F641E58A81C00941DEA /* ViewController.swift in Sources */,
 				BC618F491E589EE100941DEA /* AppDelegate.swift in Sources */,
+				BC618F671E58B21900941DEA /* ArtWork.swift in Sources */,
+				BC618F691E58B77400941DEA /* ArtWorkNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
