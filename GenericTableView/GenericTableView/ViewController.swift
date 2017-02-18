@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerCell(BaseTableViewCell2)
+        tableView.registerCell(BaseTableViewCell2.self)
     }
 
     override func didReceiveMemoryWarning() {
