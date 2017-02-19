@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Contacts
 import SwiftyJSON
 
 struct Location {
@@ -32,17 +33,11 @@ class Artworks {
 }
 
 class Artwork: NSObject {
+    
     let artWorktitle: String
     let locationName: String
     let discipline: String
     let coordinate: CLLocationCoordinate2D
-    
-//    init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {
-//        self.artWorktitle = title
-//        self.locationName = locationName
-//        self.discipline = discipline
-//        self.coordinate = coordinate
-//    }
     
     init(json: JSON) {
         artWorktitle = json["title"].stringValue
@@ -51,10 +46,14 @@ class Artwork: NSObject {
         let lat = json["latitude"].stringValue
         let lng = json["longitude"].stringValue
         coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(lat)!, longitude: CLLocationDegrees(lng)!)
-//        guard let latitude = CLLocationDegrees(lat), let longitude = CLLocationDegrees(lng) else {
-//            return
-//        }
-//        self.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+    
+    func mapItem() -> MKMapItem {
+        let addressDictionary = [String(CNPostalAddressStreetKey): subtitle as Any]
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDictionary)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = title
+        return mapItem
     }
 }
 

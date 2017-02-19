@@ -24,10 +24,26 @@ class ArtWorkNetwork: BasicNetwork {
         return API.url
     }
     
-    var sendData: ((Artworks) -> Void)?
+    var sendData: ((Artworks?, NSError?) -> Void)?
     
     override func connectDidFinishWith(json: JSON) {
         let artWorks = Artworks(json: json)
-        sendData?(artWorks)
+        sendData?(artWorks, nil)
+    }
+    
+    override func connectDidErrorWith(json: JSON) {
+        let message = json["message"].stringValue
+        let error = json["error"].boolValue
+        let nsError: NSError? = NSError(domain: "", code: error.intValue, userInfo: ["message": message])
+        sendData?(nil, nsError)
+    }
+}
+
+extension Bool {
+    var intValue: Int {
+        if self {
+            return 1
+        }
+        return 0
     }
 }

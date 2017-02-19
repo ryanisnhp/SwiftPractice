@@ -28,8 +28,11 @@ class ViewController: UIViewController {
         mapView.setRegion(location.centerMapOnLocation, animated: true)
 
         let artNetwork = ArtWorkNetwork()
-        artNetwork.sendData = { [weak self] artworks in
+        artNetwork.sendData = { [weak self] artworks, error in
             guard let this = self else {
+                return
+            }
+            guard let artworks = artworks else {
                 return
             }
             this.mapView.addAnnotations(artworks.artWorks)
@@ -39,6 +42,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: MKMapViewDelegate {
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let identifier = "pin"
         var view: MKPinAnnotationView
@@ -52,5 +56,11 @@ extension ViewController: MKMapViewDelegate {
             view.rightCalloutAccessoryView = UIButton(type: UIButtonType.detailDisclosure)
         }
         return view
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let location = view.annotation as? Artwork
+        let lauchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        location?.mapItem().openInMaps(launchOptions: lauchOptions)
     }
 }

@@ -88,14 +88,14 @@
 			children = (
 				BC618F601E58A46500941DEA /* BasicNetwork.swift */,
 				BC618F5E1E589FC000941DEA /* Helpers.swift */,
+				BC618F661E58B21900941DEA /* ArtWork.swift */,
+				BC618F681E58B77400941DEA /* ArtWorkNetwork.swift */,
 				BC618F481E589EE100941DEA /* AppDelegate.swift */,
 				BC618F621E58A81C00941DEA /* ViewController.swift */,
 				BC618F631E58A81C00941DEA /* ViewController.xib */,
 				BC618F4F1E589EE100941DEA /* Assets.xcassets */,
 				BC618F511E589EE100941DEA /* LaunchScreen.storyboard */,
 				BC618F541E589EE100941DEA /* Info.plist */,
-				BC618F661E58B21900941DEA /* ArtWork.swift */,
-				BC618F681E58B77400941DEA /* ArtWorkNetwork.swift */,
 			);
 			path = HonoluluArtDemo;
 			sourceTree = "<group>";
