@@ -44,17 +44,20 @@ class ViewController: UIViewController {
 extension ViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let identifier = "pin"
+        guard let annotation = annotation as? Artwork else {
+            return MKAnnotationView()
+        }
         var view: MKPinAnnotationView
-        if let dequeueView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
+        if let dequeueView = mapView.dequeueReusableAnnotationView(withIdentifier: annotation.discipline) as? MKPinAnnotationView {
             dequeueView.annotation = annotation
             view = dequeueView
         } else {
-            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: annotation.discipline)
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
             view.rightCalloutAccessoryView = UIButton(type: UIButtonType.detailDisclosure)
         }
+        view.pinTintColor = annotation.pinColor
         return view
     }
     
