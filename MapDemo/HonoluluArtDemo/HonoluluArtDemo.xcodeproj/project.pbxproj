@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC618F491E589EE100941DEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F481E589EE100941DEA /* AppDelegate.swift */; };
+		BC618F501E589EE100941DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC618F4F1E589EE100941DEA /* Assets.xcassets */; };
+		BC618F531E589EE100941DEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC618F511E589EE100941DEA /* LaunchScreen.storyboard */; };
+		BC618F5F1E589FC000941DEA /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F5E1E589FC000941DEA /* Helpers.swift */; };
+		BC618F611E58A46500941DEA /* BasicNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F601E58A46500941DEA /* BasicNetwork.swift */; };
+		BC618F641E58A81C00941DEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F621E58A81C00941DEA /* ViewController.swift */; };
+		BC618F651E58A81C00941DEA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC618F631E58A81C00941DEA /* ViewController.xib */; };
+		BC618F671E58B21900941DEA /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F661E58B21900941DEA /* ArtWork.swift */; };
+		BC618F691E58B77400941DEA /* ArtWorkNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC618F681E58B77400941DEA /* ArtWorkNetwork.swift */; };
+		EF9D4CD048ECB9CBC6C2FD95 /* Pods_HonoluluArtDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7457C63C4C1E146B224DD3 /* Pods_HonoluluArtDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A7457C63C4C1E146B224DD3 /* Pods_HonoluluArtDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HonoluluArtDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75688680C6F50DA911189F61 /* Pods-HonoluluArtDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonoluluArtDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HonoluluArtDemo/Pods-HonoluluArtDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A4F53C287D7B76604909C169 /* Pods-HonoluluArtDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonoluluArtDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HonoluluArtDemo/Pods-HonoluluArtDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BC618F451E589EE100941DEA /* HonoluluArtDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HonoluluArtDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC618F481E589EE100941DEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC618F4F1E589EE100941DEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC618F521E589EE100941DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC618F541E589EE100941DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC618F5E1E589FC000941DEA /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		BC618F601E58A46500941DEA /* BasicNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicNetwork.swift; sourceTree = "<group>"; };
+		BC618F621E58A81C00941DEA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC618F631E58A81C00941DEA /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		BC618F661E58B21900941DEA /* ArtWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWork.swift; sourceTree = "<group>"; };
+		BC618F681E58B77400941DEA /* ArtWorkNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWorkNetwork.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC618F421E589EE100941DEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9D4CD048ECB9CBC6C2FD95 /* Pods_HonoluluArtDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7074041B6D6F1284A4977C17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A7457C63C4C1E146B224DD3 /* Pods_HonoluluArtDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A93F925F9B08E43FBB9222CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75688680C6F50DA911189F61 /* Pods-HonoluluArtDemo.debug.xcconfig */,
+				A4F53C287D7B76604909C169 /* Pods-HonoluluArtDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC618F3C1E589EE100941DEA = {
+			isa = PBXGroup;
+			children = (
+				BC618F471E589EE100941DEA /* HonoluluArtDemo */,
+				BC618F461E589EE100941DEA /* Products */,
+				A93F925F9B08E43FBB9222CD /* Pods */,
+				7074041B6D6F1284A4977C17 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BC618F461E589EE100941DEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC618F451E589EE100941DEA /* HonoluluArtDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC618F471E589EE100941DEA /* HonoluluArtDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BC618F601E58A46500941DEA /* BasicNetwork.swift */,
+				BC618F5E1E589FC000941DEA /* Helpers.swift */,
+				BC618F661E58B21900941DEA /* ArtWork.swift */,
+				BC618F681E58B77400941DEA /* ArtWorkNetwork.swift */,
+				BC618F481E589EE100941DEA /* AppDelegate.swift */,
+				BC618F621E58A81C00941DEA /* ViewController.swift */,
+				BC618F631E58A81C00941DEA /* ViewController.xib */,
+				BC618F4F1E589EE100941DEA /* Assets.xcassets */,
+				BC618F511E589EE100941DEA /* LaunchScreen.storyboard */,
+				BC618F541E589EE100941DEA /* Info.plist */,
+			);
+			path = HonoluluArtDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC618F441E589EE100941DEA /* HonoluluArtDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC618F571E589EE100941DEA /* Build configuration list for PBXNativeTarget "HonoluluArtDemo" */;
+			buildPhases = (
+				1E86EC3257C304AD93D13073 /* [CP] Check Pods Manifest.lock */,
+				BC618F411E589EE100941DEA /* Sources */,
+				BC618F421E589EE100941DEA /* Frameworks */,
+				BC618F431E589EE100941DEA /* Resources */,
+				1B2364F953716EDEF5615E71 /* [CP] Embed Pods Frameworks */,
+				2FD6A26D839C071C138454BC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HonoluluArtDemo;
+			productName = HonoluluArtDemo;
+			productReference = BC618F451E589EE100941DEA /* HonoluluArtDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC618F3D1E589EE100941DEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = LeVanLam;
+				TargetAttributes = {
+					BC618F441E589EE100941DEA = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BC618F401E589EE100941DEA /* Build configuration list for PBXProject "HonoluluArtDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC618F3C1E589EE100941DEA;
+			productRefGroup = BC618F461E589EE100941DEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC618F441E589EE100941DEA /* HonoluluArtDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC618F431E589EE100941DEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC618F531E589EE100941DEA /* LaunchScreen.storyboard in Resources */,
+				BC618F651E58A81C00941DEA /* ViewController.xib in Resources */,
+				BC618F501E589EE100941DEA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B2364F953716EDEF5615E71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HonoluluArtDemo/Pods-HonoluluArtDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E86EC3257C304AD93D13073 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2FD6A26D839C071C138454BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HonoluluArtDemo/Pods-HonoluluArtDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC618F411E589EE100941DEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC618F611E58A46500941DEA /* BasicNetwork.swift in Sources */,
+				BC618F5F1E589FC000941DEA /* Helpers.swift in Sources */,
+				BC618F641E58A81C00941DEA /* ViewController.swift in Sources */,
+				BC618F491E589EE100941DEA /* AppDelegate.swift in Sources */,
+				BC618F671E58B21900941DEA /* ArtWork.swift in Sources */,
+				BC618F691E58B77400941DEA /* ArtWorkNetwork.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BC618F511E589EE100941DEA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC618F521E589EE100941DEA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC618F551E589EE100941DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC618F561E589EE100941DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC618F581E589EE100941DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75688680C6F50DA911189F61 /* Pods-HonoluluArtDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HonoluluArtDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.HonoluluArtDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BC618F591E589EE100941DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4F53C287D7B76604909C169 /* Pods-HonoluluArtDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HonoluluArtDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.HonoluluArtDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC618F401E589EE100941DEA /* Build configuration list for PBXProject "HonoluluArtDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC618F551E589EE100941DEA /* Debug */,
+				BC618F561E589EE100941DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC618F571E589EE100941DEA /* Build configuration list for PBXNativeTarget "HonoluluArtDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC618F581E589EE100941DEA /* Debug */,
+				BC618F591E589EE100941DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC618F3D1E589EE100941DEA /* Project object */;
+}
