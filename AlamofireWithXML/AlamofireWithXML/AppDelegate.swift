@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func configWindow() {
         window = UIWindow(frame: UIScreen.main.bounds)
         if let window = window {
-            window.rootViewController = ViewController()
+            window.rootViewController = UINavigationController(rootViewController: ViewController())
             window.makeKeyAndVisible()
         }
     }

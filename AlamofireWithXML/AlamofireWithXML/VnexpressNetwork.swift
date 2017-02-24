@@ -18,12 +18,14 @@ struct API {
 class VnexpressNetwork {
     
     static var sharedInstance = VnexpressNetwork()
-    
+    typealias Completion = (Vnexresses) -> Void
+    var completion: Completion?
     func parseXM() {
         Alamofire.request(API.urlVnexpress, method: .get, parameters: nil, headers: nil).responseJSON { (response) in
             guard let data = response.data else { return }
             let xml = SWXMLHash.parse(data)
             let vnexpresses = Vnexresses(xml: xml)
+            self.completion?(vnexpresses)
         }
     }
 }
@@ -48,6 +50,21 @@ class Vnexpress {
     var pubDate: String?
     var link: String?
     var guid: String?
+    var descText: String {
+        if let description = description, let text = description.components(separatedBy: "</br>").last {
+            return text
+        }
+        return ""
+    }
+    
+    var imageURLString: String {
+        if let description = description,
+            let src = description.components(separatedBy: "src=\"").last,
+            let imageURL = src.components(separatedBy: "\" ></a>").first {
+            return imageURL
+        }
+        return ""
+    }
     
     init(xml: XMLIndexer) {
         title = xml["title"].element?.text

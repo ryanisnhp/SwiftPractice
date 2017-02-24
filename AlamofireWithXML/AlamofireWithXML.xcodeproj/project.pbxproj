@@ -14,6 +14,8 @@
 		BC89EBF41E6097FB00154A78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89EBF21E6097FB00154A78 /* ViewController.swift */; };
 		BC89EBF51E6097FB00154A78 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC89EBF31E6097FB00154A78 /* ViewController.xib */; };
 		BC89EBF91E60999700154A78 /* VnexpressNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89EBF81E60999600154A78 /* VnexpressNetwork.swift */; };
+		BC89EBFC1E60AE0500154A78 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89EBFA1E60AE0500154A78 /* HomeViewCell.swift */; };
+		BC89EBFD1E60AE0500154A78 /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC89EBFB1E60AE0500154A78 /* HomeViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		BC89EBF21E6097FB00154A78 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC89EBF31E6097FB00154A78 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		BC89EBF81E60999600154A78 /* VnexpressNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VnexpressNetwork.swift; sourceTree = "<group>"; };
+		BC89EBFA1E60AE0500154A78 /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		BC89EBFB1E60AE0500154A78 /* HomeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
 		DAA7E1A6B389051155F3B894 /* Pods-AlamofireWithXML.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireWithXML.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofireWithXML/Pods-AlamofireWithXML.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +76,8 @@
 		BC89EBDF1E6097DF00154A78 /* AlamofireWithXML */ = {
 			isa = PBXGroup;
 			children = (
+				BC89EBFA1E60AE0500154A78 /* HomeViewCell.swift */,
+				BC89EBFB1E60AE0500154A78 /* HomeViewCell.xib */,
 				BC89EBE01E6097DF00154A78 /* AppDelegate.swift */,
 				BC89EBF81E60999600154A78 /* VnexpressNetwork.swift */,
 				BC89EBF21E6097FB00154A78 /* ViewController.swift */,
@@ -154,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC89EBEB1E6097DF00154A78 /* LaunchScreen.storyboard in Resources */,
+				BC89EBFD1E60AE0500154A78 /* HomeViewCell.xib in Resources */,
 				BC89EBF51E6097FB00154A78 /* ViewController.xib in Resources */,
 				BC89EBE81E6097DF00154A78 /* Assets.xcassets in Resources */,
 			);
@@ -215,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC89EBF41E6097FB00154A78 /* ViewController.swift in Sources */,
+				BC89EBFC1E60AE0500154A78 /* HomeViewCell.swift in Sources */,
 				BC89EBF91E60999700154A78 /* VnexpressNetwork.swift in Sources */,
 				BC89EBE11E6097DF00154A78 /* AppDelegate.swift in Sources */,
 			);
