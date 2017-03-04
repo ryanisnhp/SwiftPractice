@@ -1,0 +1,378 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6EC7B8B36BC36D9CD07EDC8F /* Pods_DynamicNaviBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3783FE72A75B18BE4B44E759 /* Pods_DynamicNaviBar.framework */; };
+		BCB603761E69D850003799F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB603751E69D850003799F4 /* AppDelegate.swift */; };
+		BCB6037D1E69D850003799F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCB6037C1E69D850003799F4 /* Assets.xcassets */; };
+		BCB603801E69D850003799F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCB6037E1E69D850003799F4 /* LaunchScreen.storyboard */; };
+		BCB603891E69D877003799F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB603871E69D877003799F4 /* ViewController.swift */; };
+		BCB6038A1E69D877003799F4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCB603881E69D877003799F4 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3783FE72A75B18BE4B44E759 /* Pods_DynamicNaviBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamicNaviBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		419AE581F7B100EB975BDE48 /* Pods-DynamicNaviBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicNaviBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-DynamicNaviBar/Pods-DynamicNaviBar.release.xcconfig"; sourceTree = "<group>"; };
+		831951031982AE0307F4E67A /* Pods-DynamicNaviBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicNaviBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DynamicNaviBar/Pods-DynamicNaviBar.debug.xcconfig"; sourceTree = "<group>"; };
+		BCB603721E69D850003799F4 /* DynamicNaviBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicNaviBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCB603751E69D850003799F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BCB6037C1E69D850003799F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BCB6037F1E69D850003799F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BCB603811E69D850003799F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCB603871E69D877003799F4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BCB603881E69D877003799F4 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCB6036F1E69D84F003799F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EC7B8B36BC36D9CD07EDC8F /* Pods_DynamicNaviBar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48E4B600DEB38A2562101D2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				831951031982AE0307F4E67A /* Pods-DynamicNaviBar.debug.xcconfig */,
+				419AE581F7B100EB975BDE48 /* Pods-DynamicNaviBar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BCB603691E69D84F003799F4 = {
+			isa = PBXGroup;
+			children = (
+				BCB603741E69D850003799F4 /* DynamicNaviBar */,
+				BCB603731E69D850003799F4 /* Products */,
+				48E4B600DEB38A2562101D2D /* Pods */,
+				C63D3EE51811647C541E3EC4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BCB603731E69D850003799F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCB603721E69D850003799F4 /* DynamicNaviBar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCB603741E69D850003799F4 /* DynamicNaviBar */ = {
+			isa = PBXGroup;
+			children = (
+				BCB603751E69D850003799F4 /* AppDelegate.swift */,
+				BCB603871E69D877003799F4 /* ViewController.swift */,
+				BCB603881E69D877003799F4 /* ViewController.xib */,
+				BCB6037C1E69D850003799F4 /* Assets.xcassets */,
+				BCB6037E1E69D850003799F4 /* LaunchScreen.storyboard */,
+				BCB603811E69D850003799F4 /* Info.plist */,
+			);
+			path = DynamicNaviBar;
+			sourceTree = "<group>";
+		};
+		C63D3EE51811647C541E3EC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3783FE72A75B18BE4B44E759 /* Pods_DynamicNaviBar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCB603711E69D84F003799F4 /* DynamicNaviBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCB603841E69D850003799F4 /* Build configuration list for PBXNativeTarget "DynamicNaviBar" */;
+			buildPhases = (
+				4100BBEADA5A3F6A4E8E3E77 /* [CP] Check Pods Manifest.lock */,
+				BCB6036E1E69D84F003799F4 /* Sources */,
+				BCB6036F1E69D84F003799F4 /* Frameworks */,
+				BCB603701E69D84F003799F4 /* Resources */,
+				74337CDAFF1A58ED28F0C4DE /* [CP] Embed Pods Frameworks */,
+				4FB1F24FE9FB8F7B699E7E10 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicNaviBar;
+			productName = DynamicNaviBar;
+			productReference = BCB603721E69D850003799F4 /* DynamicNaviBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCB6036A1E69D84F003799F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = LeVanLam;
+				TargetAttributes = {
+					BCB603711E69D84F003799F4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BCB6036D1E69D84F003799F4 /* Build configuration list for PBXProject "DynamicNaviBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCB603691E69D84F003799F4;
+			productRefGroup = BCB603731E69D850003799F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCB603711E69D84F003799F4 /* DynamicNaviBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCB603701E69D84F003799F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCB603801E69D850003799F4 /* LaunchScreen.storyboard in Resources */,
+				BCB6038A1E69D877003799F4 /* ViewController.xib in Resources */,
+				BCB6037D1E69D850003799F4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4100BBEADA5A3F6A4E8E3E77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4FB1F24FE9FB8F7B699E7E10 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DynamicNaviBar/Pods-DynamicNaviBar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74337CDAFF1A58ED28F0C4DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DynamicNaviBar/Pods-DynamicNaviBar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCB6036E1E69D84F003799F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCB603891E69D877003799F4 /* ViewController.swift in Sources */,
+				BCB603761E69D850003799F4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BCB6037E1E69D850003799F4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BCB6037F1E69D850003799F4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BCB603821E69D850003799F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCB603831E69D850003799F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCB603851E69D850003799F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 831951031982AE0307F4E67A /* Pods-DynamicNaviBar.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DynamicNaviBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.DynamicNaviBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BCB603861E69D850003799F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 419AE581F7B100EB975BDE48 /* Pods-DynamicNaviBar.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DynamicNaviBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.DynamicNaviBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCB6036D1E69D84F003799F4 /* Build configuration list for PBXProject "DynamicNaviBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCB603821E69D850003799F4 /* Debug */,
+				BCB603831E69D850003799F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCB603841E69D850003799F4 /* Build configuration list for PBXNativeTarget "DynamicNaviBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCB603851E69D850003799F4 /* Debug */,
+				BCB603861E69D850003799F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCB6036A1E69D84F003799F4 /* Project object */;
+}
