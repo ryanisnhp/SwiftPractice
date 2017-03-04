@@ -15,7 +15,7 @@ enum SegmentType {
 }
 
 enum SoundType {
-    case soundRepeat
+    case `repeat`
     case begin
     case end
 }
@@ -58,7 +58,7 @@ class Sound {
     var type: SoundType
     var name = ""
     var iterations = 0
-    var timeInterval = 300.0
+    var timeInterval: Double = 300.0
     
     init(type: SoundType) {
         self.type = type

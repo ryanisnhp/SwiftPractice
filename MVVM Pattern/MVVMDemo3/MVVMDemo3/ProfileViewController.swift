@@ -8,25 +8,6 @@
 
 import UIKit
 
-enum ProfileSection: Int {
-    
-    case time
-    case warmUp
-    case coolDown
-    
-    static var count = ProfileSection.coolDown.hashValue + 1
-    
-    static let sectionTitles: [ProfileSection: String] = [
-        time: "Time",
-        warmUp: "Warm Up",
-        coolDown: "Cool Down"
-    ]
-    
-    var sectionTitle: String {
-        return ProfileSection.sectionTitles[self] ?? ""
-    }
-}
-
 class ProfileViewController: UIViewController {
     
     var profileViewModel: ProfileViewModel!
@@ -36,11 +17,21 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileTableViewCell")
+        let profile = Profile()
+        profileViewModel = ProfileViewModel(profile: profile)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    fileprivate func cellForTimeSectionForRowAtIndexPath(_ indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as? ProfileTableViewCell {
+            cell.configCell(profileViewModel: profileViewModel)
+            return cell
+        }
+        return UITableViewCell()
     }
 
 }
@@ -48,35 +39,21 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return ProfileSection.count
+        return profileViewModel.sectionNumbers
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let section = ProfileSection(rawValue: section) else {
-            return 1
-        }
-        switch section {
-        default: return 1
-        }
+        return profileViewModel.numberOfRow(in: section)
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard let section = ProfileSection(rawValue: section) else {
-            return ""
-        }
-        return section.sectionTitle
+        return profileViewModel.titleForHeader(in: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let section = ProfileSection(rawValue: indexPath.section) {
-            switch section {
-            case .time:
-                if let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell") as? ProfileTableViewCell {
-                    return cell
-                }
-            default:
-                break
-            }
+         let section = ProfileSection(rawValue: indexPath.section)
+        if section == .time {
+            return cellForTimeSectionForRowAtIndexPath(indexPath)
         }
         return UITableViewCell()
     }

@@ -109,12 +109,12 @@
 				BC618EF61E58347000941DEA /* ProfileViewModel.swift */,
 				BC954E391E580B8700A3E108 /* AppDelegate.swift */,
 				BC618EF81E5839BB00941DEA /* ProfileTableViewCell.swift */,
+				BC618EF91E5839BB00941DEA /* ProfileTableViewCell.xib */,
 				BC618EF21E58341800941DEA /* ProfileViewController.swift */,
 				BC618EF31E58341800941DEA /* ProfileViewController.xib */,
 				BC954E401E580B8700A3E108 /* Assets.xcassets */,
 				BC954E421E580B8700A3E108 /* LaunchScreen.storyboard */,
 				BC954E451E580B8700A3E108 /* Info.plist */,
-				BC618EF91E5839BB00941DEA /* ProfileTableViewCell.xib */,
 			);
 			path = MVVMDemo3;
 			sourceTree = "<group>";

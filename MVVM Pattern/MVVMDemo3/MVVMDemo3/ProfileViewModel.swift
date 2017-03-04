@@ -8,6 +8,25 @@
 
 import Foundation
 
+enum ProfileSection: Int {
+    
+    case time
+    case warmUp
+    case coolDown
+    
+    static var count = ProfileSection.coolDown.hashValue + 1
+    
+    static let sectionTitles: [ProfileSection: String] = [
+        time: "Time",
+        warmUp: "Warm Up",
+        coolDown: "Cool Down"
+    ]
+    
+    var sectionTitle: String {
+        return ProfileSection.sectionTitles[self] ?? ""
+    }
+}
+
 class ProfileViewModel {
     
     let profile: Profile
@@ -18,6 +37,24 @@ class ProfileViewModel {
     
     func timeForProfile() -> String {
         return stringFromTimeInterval(profile.duration)
+    }
+    
+    var sectionNumbers: Int {
+        return ProfileSection.count
+    }
+    
+    func numberOfRow(in section: Int) -> Int {
+        guard let section = ProfileSection(rawValue: section) else {
+            return 1
+        }
+        switch section {
+        default: return 1
+        }
+    }
+    
+    func titleForHeader(in section: Int) -> String {
+        guard let section = ProfileSection(rawValue: section) else { return "" }
+        return section.sectionTitle
     }
     
     private func stringFromTimeInterval(_ timeInterval: Double) -> String {
