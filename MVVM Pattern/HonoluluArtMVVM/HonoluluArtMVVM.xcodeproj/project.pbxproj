@@ -1,0 +1,736 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49581E4710D57EF528BF8651 /* Pods_HonoluluArtMVVMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B720565FC7CD73364B41C531 /* Pods_HonoluluArtMVVMUITests.framework */; };
+		60D3FC3AE8DFBF02E51CD747 /* Pods_HonoluluArtMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6124AEE9AB7975F8E0AD1160 /* Pods_HonoluluArtMVVMTests.framework */; };
+		A65FF6654D6C75EA53997277 /* Pods_HonoluluArtMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D90A9C5B90E3C71F03D0D50 /* Pods_HonoluluArtMVVM.framework */; };
+		BC2C314C1E6BB0750067F642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C314B1E6BB0750067F642 /* AppDelegate.swift */; };
+		BC2C31531E6BB0750067F642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2C31521E6BB0750067F642 /* Assets.xcassets */; };
+		BC2C31561E6BB0750067F642 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2C31541E6BB0750067F642 /* LaunchScreen.storyboard */; };
+		BC2C31611E6BB0760067F642 /* HonoluluArtMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C31601E6BB0760067F642 /* HonoluluArtMVVMTests.swift */; };
+		BC2C316C1E6BB0760067F642 /* HonoluluArtMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C316B1E6BB0760067F642 /* HonoluluArtMVVMUITests.swift */; };
+		BC2C317F1E6BB0CD0067F642 /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C31791E6BB0CD0067F642 /* ArtWork.swift */; };
+		BC2C31801E6BB0CD0067F642 /* ArtWorkNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C317A1E6BB0CD0067F642 /* ArtWorkNetwork.swift */; };
+		BC2C31811E6BB0CD0067F642 /* BasicNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C317B1E6BB0CD0067F642 /* BasicNetwork.swift */; };
+		BC2C31821E6BB0CD0067F642 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C317C1E6BB0CD0067F642 /* Helpers.swift */; };
+		BC2C31831E6BB0CD0067F642 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C317D1E6BB0CD0067F642 /* ViewController.swift */; };
+		BC2C31841E6BB0CD0067F642 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC2C317E1E6BB0CD0067F642 /* ViewController.xib */; };
+		BC2C31861E6BB27B0067F642 /* ArtWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C31851E6BB27B0067F642 /* ArtWorkViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC2C315D1E6BB0760067F642 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2C31401E6BB0750067F642 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC2C31471E6BB0750067F642;
+			remoteInfo = HonoluluArtMVVM;
+		};
+		BC2C31681E6BB0760067F642 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC2C31401E6BB0750067F642 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC2C31471E6BB0750067F642;
+			remoteInfo = HonoluluArtMVVM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BA5F4341985685294F4A3B5 /* Pods-HonoluluArtMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonoluluArtMVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-HonoluluArtMVVM/Pods-HonoluluArtMVVM.release.xcconfig"; sourceTree = "<group>"; };
+		2D90A9C5B90E3C71F03D0D50 /* Pods_HonoluluArtMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HonoluluArtMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E88F12F2D22C163568D9F3D /* Pods-HonoluluArtMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonoluluArtMVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HonoluluArtMVVM/Pods-HonoluluArtMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		555D47FC6C2245F7B314E6DA /* Pods-HonoluluArtMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonoluluArtMVVMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HonoluluArtMVVMTests/Pods-HonoluluArtMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
+		57C4B4D6662492F8ACDE3AD6 /* Pods-HonoluluArtMVVMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonoluluArtMVVMUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HonoluluArtMVVMUITests/Pods-HonoluluArtMVVMUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6124AEE9AB7975F8E0AD1160 /* Pods_HonoluluArtMVVMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HonoluluArtMVVMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B720565FC7CD73364B41C531 /* Pods_HonoluluArtMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HonoluluArtMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2C31481E6BB0750067F642 /* HonoluluArtMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HonoluluArtMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2C314B1E6BB0750067F642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC2C31521E6BB0750067F642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC2C31551E6BB0750067F642 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC2C31571E6BB0750067F642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC2C315C1E6BB0760067F642 /* HonoluluArtMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HonoluluArtMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2C31601E6BB0760067F642 /* HonoluluArtMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonoluluArtMVVMTests.swift; sourceTree = "<group>"; };
+		BC2C31621E6BB0760067F642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC2C31671E6BB0760067F642 /* HonoluluArtMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HonoluluArtMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2C316B1E6BB0760067F642 /* HonoluluArtMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonoluluArtMVVMUITests.swift; sourceTree = "<group>"; };
+		BC2C316D1E6BB0760067F642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC2C31791E6BB0CD0067F642 /* ArtWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWork.swift; sourceTree = "<group>"; };
+		BC2C317A1E6BB0CD0067F642 /* ArtWorkNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWorkNetwork.swift; sourceTree = "<group>"; };
+		BC2C317B1E6BB0CD0067F642 /* BasicNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicNetwork.swift; sourceTree = "<group>"; };
+		BC2C317C1E6BB0CD0067F642 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		BC2C317D1E6BB0CD0067F642 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC2C317E1E6BB0CD0067F642 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		BC2C31851E6BB27B0067F642 /* ArtWorkViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWorkViewModel.swift; sourceTree = "<group>"; };
+		F3EDA840FA6EC6B5E3927AAA /* Pods-HonoluluArtMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonoluluArtMVVMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HonoluluArtMVVMTests/Pods-HonoluluArtMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F9448CA86E876C50E5AE0625 /* Pods-HonoluluArtMVVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HonoluluArtMVVMUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HonoluluArtMVVMUITests/Pods-HonoluluArtMVVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC2C31451E6BB0750067F642 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A65FF6654D6C75EA53997277 /* Pods_HonoluluArtMVVM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC2C31591E6BB0760067F642 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60D3FC3AE8DFBF02E51CD747 /* Pods_HonoluluArtMVVMTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC2C31641E6BB0760067F642 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49581E4710D57EF528BF8651 /* Pods_HonoluluArtMVVMUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4FD99248ED2F110939E5C99F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D90A9C5B90E3C71F03D0D50 /* Pods_HonoluluArtMVVM.framework */,
+				6124AEE9AB7975F8E0AD1160 /* Pods_HonoluluArtMVVMTests.framework */,
+				B720565FC7CD73364B41C531 /* Pods_HonoluluArtMVVMUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC2C313F1E6BB0750067F642 = {
+			isa = PBXGroup;
+			children = (
+				BC2C314A1E6BB0750067F642 /* HonoluluArtMVVM */,
+				BC2C315F1E6BB0760067F642 /* HonoluluArtMVVMTests */,
+				BC2C316A1E6BB0760067F642 /* HonoluluArtMVVMUITests */,
+				BC2C31491E6BB0750067F642 /* Products */,
+				E445451E131264F4B0E22478 /* Pods */,
+				4FD99248ED2F110939E5C99F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BC2C31491E6BB0750067F642 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC2C31481E6BB0750067F642 /* HonoluluArtMVVM.app */,
+				BC2C315C1E6BB0760067F642 /* HonoluluArtMVVMTests.xctest */,
+				BC2C31671E6BB0760067F642 /* HonoluluArtMVVMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC2C314A1E6BB0750067F642 /* HonoluluArtMVVM */ = {
+			isa = PBXGroup;
+			children = (
+				BC2C31791E6BB0CD0067F642 /* ArtWork.swift */,
+				BC2C31851E6BB27B0067F642 /* ArtWorkViewModel.swift */,
+				BC2C317A1E6BB0CD0067F642 /* ArtWorkNetwork.swift */,
+				BC2C317B1E6BB0CD0067F642 /* BasicNetwork.swift */,
+				BC2C317C1E6BB0CD0067F642 /* Helpers.swift */,
+				BC2C317D1E6BB0CD0067F642 /* ViewController.swift */,
+				BC2C317E1E6BB0CD0067F642 /* ViewController.xib */,
+				BC2C314B1E6BB0750067F642 /* AppDelegate.swift */,
+				BC2C31521E6BB0750067F642 /* Assets.xcassets */,
+				BC2C31541E6BB0750067F642 /* LaunchScreen.storyboard */,
+				BC2C31571E6BB0750067F642 /* Info.plist */,
+			);
+			path = HonoluluArtMVVM;
+			sourceTree = "<group>";
+		};
+		BC2C315F1E6BB0760067F642 /* HonoluluArtMVVMTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC2C31601E6BB0760067F642 /* HonoluluArtMVVMTests.swift */,
+				BC2C31621E6BB0760067F642 /* Info.plist */,
+			);
+			path = HonoluluArtMVVMTests;
+			sourceTree = "<group>";
+		};
+		BC2C316A1E6BB0760067F642 /* HonoluluArtMVVMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BC2C316B1E6BB0760067F642 /* HonoluluArtMVVMUITests.swift */,
+				BC2C316D1E6BB0760067F642 /* Info.plist */,
+			);
+			path = HonoluluArtMVVMUITests;
+			sourceTree = "<group>";
+		};
+		E445451E131264F4B0E22478 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E88F12F2D22C163568D9F3D /* Pods-HonoluluArtMVVM.debug.xcconfig */,
+				2BA5F4341985685294F4A3B5 /* Pods-HonoluluArtMVVM.release.xcconfig */,
+				F3EDA840FA6EC6B5E3927AAA /* Pods-HonoluluArtMVVMTests.debug.xcconfig */,
+				555D47FC6C2245F7B314E6DA /* Pods-HonoluluArtMVVMTests.release.xcconfig */,
+				F9448CA86E876C50E5AE0625 /* Pods-HonoluluArtMVVMUITests.debug.xcconfig */,
+				57C4B4D6662492F8ACDE3AD6 /* Pods-HonoluluArtMVVMUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC2C31471E6BB0750067F642 /* HonoluluArtMVVM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC2C31701E6BB0760067F642 /* Build configuration list for PBXNativeTarget "HonoluluArtMVVM" */;
+			buildPhases = (
+				C6F1FB3FB66CF5BFB31F9D77 /* [CP] Check Pods Manifest.lock */,
+				BC2C31441E6BB0750067F642 /* Sources */,
+				BC2C31451E6BB0750067F642 /* Frameworks */,
+				BC2C31461E6BB0750067F642 /* Resources */,
+				98818301CFD0B975CBB89483 /* [CP] Embed Pods Frameworks */,
+				912BE3E33573B8ED9C160C1E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HonoluluArtMVVM;
+			productName = HonoluluArtMVVM;
+			productReference = BC2C31481E6BB0750067F642 /* HonoluluArtMVVM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC2C315B1E6BB0760067F642 /* HonoluluArtMVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC2C31731E6BB0760067F642 /* Build configuration list for PBXNativeTarget "HonoluluArtMVVMTests" */;
+			buildPhases = (
+				B93B371EE15EE56910573FDF /* [CP] Check Pods Manifest.lock */,
+				BC2C31581E6BB0760067F642 /* Sources */,
+				BC2C31591E6BB0760067F642 /* Frameworks */,
+				BC2C315A1E6BB0760067F642 /* Resources */,
+				E4830F1663F9DE6BCE0D5B82 /* [CP] Embed Pods Frameworks */,
+				B642930E99461FBAAE3DB22E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC2C315E1E6BB0760067F642 /* PBXTargetDependency */,
+			);
+			name = HonoluluArtMVVMTests;
+			productName = HonoluluArtMVVMTests;
+			productReference = BC2C315C1E6BB0760067F642 /* HonoluluArtMVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BC2C31661E6BB0760067F642 /* HonoluluArtMVVMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC2C31761E6BB0760067F642 /* Build configuration list for PBXNativeTarget "HonoluluArtMVVMUITests" */;
+			buildPhases = (
+				F3E55C13506D3F74F853022C /* [CP] Check Pods Manifest.lock */,
+				BC2C31631E6BB0760067F642 /* Sources */,
+				BC2C31641E6BB0760067F642 /* Frameworks */,
+				BC2C31651E6BB0760067F642 /* Resources */,
+				ACEDB092EFFE267AD42DE812 /* [CP] Embed Pods Frameworks */,
+				B90A1F8E4CECC5584ADFE9EA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC2C31691E6BB0760067F642 /* PBXTargetDependency */,
+			);
+			name = HonoluluArtMVVMUITests;
+			productName = HonoluluArtMVVMUITests;
+			productReference = BC2C31671E6BB0760067F642 /* HonoluluArtMVVMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC2C31401E6BB0750067F642 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = LeVanLam;
+				TargetAttributes = {
+					BC2C31471E6BB0750067F642 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					BC2C315B1E6BB0760067F642 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BC2C31471E6BB0750067F642;
+					};
+					BC2C31661E6BB0760067F642 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BC2C31471E6BB0750067F642;
+					};
+				};
+			};
+			buildConfigurationList = BC2C31431E6BB0750067F642 /* Build configuration list for PBXProject "HonoluluArtMVVM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC2C313F1E6BB0750067F642;
+			productRefGroup = BC2C31491E6BB0750067F642 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC2C31471E6BB0750067F642 /* HonoluluArtMVVM */,
+				BC2C315B1E6BB0760067F642 /* HonoluluArtMVVMTests */,
+				BC2C31661E6BB0760067F642 /* HonoluluArtMVVMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC2C31461E6BB0750067F642 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC2C31561E6BB0750067F642 /* LaunchScreen.storyboard in Resources */,
+				BC2C31841E6BB0CD0067F642 /* ViewController.xib in Resources */,
+				BC2C31531E6BB0750067F642 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC2C315A1E6BB0760067F642 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC2C31651E6BB0760067F642 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		912BE3E33573B8ED9C160C1E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HonoluluArtMVVM/Pods-HonoluluArtMVVM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98818301CFD0B975CBB89483 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HonoluluArtMVVM/Pods-HonoluluArtMVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACEDB092EFFE267AD42DE812 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HonoluluArtMVVMUITests/Pods-HonoluluArtMVVMUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B642930E99461FBAAE3DB22E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HonoluluArtMVVMTests/Pods-HonoluluArtMVVMTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B90A1F8E4CECC5584ADFE9EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HonoluluArtMVVMUITests/Pods-HonoluluArtMVVMUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B93B371EE15EE56910573FDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6F1FB3FB66CF5BFB31F9D77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4830F1663F9DE6BCE0D5B82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HonoluluArtMVVMTests/Pods-HonoluluArtMVVMTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3E55C13506D3F74F853022C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC2C31441E6BB0750067F642 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC2C31831E6BB0CD0067F642 /* ViewController.swift in Sources */,
+				BC2C31861E6BB27B0067F642 /* ArtWorkViewModel.swift in Sources */,
+				BC2C317F1E6BB0CD0067F642 /* ArtWork.swift in Sources */,
+				BC2C31811E6BB0CD0067F642 /* BasicNetwork.swift in Sources */,
+				BC2C314C1E6BB0750067F642 /* AppDelegate.swift in Sources */,
+				BC2C31821E6BB0CD0067F642 /* Helpers.swift in Sources */,
+				BC2C31801E6BB0CD0067F642 /* ArtWorkNetwork.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC2C31581E6BB0760067F642 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC2C31611E6BB0760067F642 /* HonoluluArtMVVMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC2C31631E6BB0760067F642 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC2C316C1E6BB0760067F642 /* HonoluluArtMVVMUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC2C315E1E6BB0760067F642 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC2C31471E6BB0750067F642 /* HonoluluArtMVVM */;
+			targetProxy = BC2C315D1E6BB0760067F642 /* PBXContainerItemProxy */;
+		};
+		BC2C31691E6BB0760067F642 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC2C31471E6BB0750067F642 /* HonoluluArtMVVM */;
+			targetProxy = BC2C31681E6BB0760067F642 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC2C31541E6BB0750067F642 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC2C31551E6BB0750067F642 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC2C316E1E6BB0760067F642 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC2C316F1E6BB0760067F642 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC2C31711E6BB0760067F642 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E88F12F2D22C163568D9F3D /* Pods-HonoluluArtMVVM.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HonoluluArtMVVM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.HonoluluArtMVVM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BC2C31721E6BB0760067F642 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BA5F4341985685294F4A3B5 /* Pods-HonoluluArtMVVM.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HonoluluArtMVVM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.HonoluluArtMVVM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		BC2C31741E6BB0760067F642 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3EDA840FA6EC6B5E3927AAA /* Pods-HonoluluArtMVVMTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HonoluluArtMVVMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.HonoluluArtMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HonoluluArtMVVM.app/HonoluluArtMVVM";
+			};
+			name = Debug;
+		};
+		BC2C31751E6BB0760067F642 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 555D47FC6C2245F7B314E6DA /* Pods-HonoluluArtMVVMTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HonoluluArtMVVMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.HonoluluArtMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HonoluluArtMVVM.app/HonoluluArtMVVM";
+			};
+			name = Release;
+		};
+		BC2C31771E6BB0760067F642 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9448CA86E876C50E5AE0625 /* Pods-HonoluluArtMVVMUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = HonoluluArtMVVMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.HonoluluArtMVVMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = HonoluluArtMVVM;
+			};
+			name = Debug;
+		};
+		BC2C31781E6BB0760067F642 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57C4B4D6662492F8ACDE3AD6 /* Pods-HonoluluArtMVVMUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = HonoluluArtMVVMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.HonoluluArtMVVMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = HonoluluArtMVVM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC2C31431E6BB0750067F642 /* Build configuration list for PBXProject "HonoluluArtMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC2C316E1E6BB0760067F642 /* Debug */,
+				BC2C316F1E6BB0760067F642 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC2C31701E6BB0760067F642 /* Build configuration list for PBXNativeTarget "HonoluluArtMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC2C31711E6BB0760067F642 /* Debug */,
+				BC2C31721E6BB0760067F642 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC2C31731E6BB0760067F642 /* Build configuration list for PBXNativeTarget "HonoluluArtMVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC2C31741E6BB0760067F642 /* Debug */,
+				BC2C31751E6BB0760067F642 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC2C31761E6BB0760067F642 /* Build configuration list for PBXNativeTarget "HonoluluArtMVVMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC2C31771E6BB0760067F642 /* Debug */,
+				BC2C31781E6BB0760067F642 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC2C31401E6BB0750067F642 /* Project object */;
+}
