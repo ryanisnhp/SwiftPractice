@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
+
+let uiRealm = try! Realm()
 
 class ViewController: UIViewController {
     
     @IBOutlet fileprivate weak var tableView: UITableView!
-    fileprivate var names: [String] = []
+    fileprivate var people: Results<People>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +26,12 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "New name", message: "Add a new name", preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save", style: .default) { (_) in
             guard let text = alert.textFields?[0].text else { return }
-            self.names.append(text)
-            self.tableView.reloadData()
+            let person = People()
+            person.name = text
+            try! uiRealm.write {
+                uiRealm.add(person)
+                self.tableView.reloadData()
+            }
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         alert.addTextField { (textField) in
@@ -39,7 +46,8 @@ class ViewController: UIViewController {
     }
     
     private func setupData() {
-        
+        //Register Realm
+        people = uiRealm.objects(People.self)
     }
     
     private func setupUI() {
@@ -50,12 +58,13 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        return people.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = names[indexPath.row]
+        let person = people[indexPath.row]
+        cell.textLabel?.text = person.name
         return cell
     }
 }
