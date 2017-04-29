@@ -33,7 +33,7 @@ class CoffeeAPI {
         self.session = Session.sharedSession()
     }
     
-    func getCoffeeShopWithLocation(location: CLLocation) {
+    func getCoffeeShopWithLocation(_ location: CLLocation) {
         if let session = self.session {
             var parameters = location.paramter()
             parameters += [Parameter.categoryId: "4bf58dd8d48988d1e0931735"]

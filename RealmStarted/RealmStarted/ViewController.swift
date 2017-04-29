@@ -12,8 +12,8 @@ import MapKit
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
-    @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var mapView: MKMapView!
+    @IBOutlet fileprivate weak var tableView: UITableView!
+    @IBOutlet fileprivate weak var mapView: MKMapView!
     var locationManager: CLLocationManager?
     var lastLocation: CLLocation?
     let distanceSpan: Double = 500
@@ -23,10 +23,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onVenuesUpdated:", name: API.notifications.venuesUpdated, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.onVenuesUpdated(_:)), name: NSNotification.Name(rawValue: API.notifications.venuesUpdated), object: nil)
     }
     
-    func refreshVenues(location: CLLocation?, getDataFromFoursquare: Bool = false) {
+    func refreshVenues(_ location: CLLocation?, getDataFromFoursquare: Bool = false) {
         //if location is not nil, set it as the last location
         if location != nil {
             lastLocation = location
@@ -60,12 +60,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBarHidden = true
+        navigationController?.isNavigationBarHidden = true
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if locationManager == nil {
             locationManager = CLLocationManager()
@@ -82,7 +82,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         // Dispose of any resources that can be recreated.
     }
     
-    func calculateCoordinateWithRegion(location: CLLocation) -> (CLLocationCoordinate2D, CLLocationCoordinate2D) {
+    func calculateCoordinateWithRegion(_ location: CLLocation) -> (CLLocationCoordinate2D, CLLocationCoordinate2D) {
         let region = MKCoordinateRegionMakeWithDistance(location.coordinate, distanceSpan, distanceSpan)
         var start = CLLocationCoordinate2D()
         var stop = CLLocationCoordinate2D()
@@ -94,28 +94,28 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         return (start, stop)
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
+    func locationManager(_ manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         let region = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, distanceSpan, distanceSpan)
         mapView.setRegion(region, animated: true)
     }
     
-    func onVenuesUpdated(notification: NSNotification) {
+    func onVenuesUpdated(_ notification: Notification) {
         refreshVenues(nil)
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // When venues is nil, this will return 0 (nil-coalescing operator ??)
         return venues?.count ?? 0
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(_ tableView: UITableView) -> Int {
         return 1
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCellWithIdentifier("cellIdentifier") {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier") {
             if let venue = venues?[indexPath.row] {
                 cell.textLabel?.text = venue.name
                 cell.detailTextLabel?.text = venue.address
@@ -126,11 +126,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         return UITableViewCell()
     }
     
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        if annotation.isKindOfClass(MKUserLocation) {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation.isKind(of: MKUserLocation.self) {
             return nil
         }
-        var view = mapView.dequeueReusableAnnotationViewWithIdentifier("annontationIdentifier")
+        var view = mapView.dequeueReusableAnnotationView(withIdentifier: "annontationIdentifier")
         if view == nil {
             view =
         }
