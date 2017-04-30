@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="Bowties" customModuleProvider="target">
+            <connections>
+                <outlet property="favoriteLabel" destination="IMH-Qp-Pcv" id="N2O-cp-afK"/>
+                <outlet property="imageView" destination="VnI-gp-lyJ" id="xvY-9a-z2c"/>
+                <outlet property="lastWornLabel" destination="YaF-Uw-3LF" id="HOM-fY-GeJ"/>
+                <outlet property="nameLabel" destination="mV6-iL-ZYr" id="ESV-Qb-IM8"/>
+                <outlet property="ratingLabel" destination="FWE-Jk-CtM" id="0Cb-x7-Bc5"/>
+                <outlet property="segmentedControl" destination="cJW-Be-gce" id="9bQ-9N-nuU"/>
+                <outlet property="timesWornLabel" destination="ikq-Ak-igL" id="aSO-aF-saP"/>
+                <outlet property="view" destination="33w-74-elL" id="sYr-kB-hLH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="33w-74-elL">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cJW-Be-gce">
+                    <rect key="frame" x="20" y="40" width="339" height="29"/>
+                    <segments>
+                        <segment title="R"/>
+                        <segment title="O"/>
+                        <segment title="Y"/>
+                        <segment title="G"/>
+                        <segment title="B"/>
+                        <segment title="I"/>
+                        <segment title="V"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentedControlWithControl:" destination="-1" eventType="valueChanged" id="Zea-fo-CQB"/>
+                    </connections>
+                </segmentedControl>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VnI-gp-lyJ">
+                    <rect key="frame" x="20" y="91" width="339" height="144"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="186" id="ZCj-iZ-bYc">
+                            <variation key="heightClass=regular-widthClass=compact" constant="144"/>
+                        </constraint>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ZCj-iZ-bYc"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="ZCj-iZ-bYc"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="830-pF-FIa">
+                    <rect key="frame" x="20" y="605" width="70" height="30"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="tUj-rp-EDc">
+                            <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                        </constraint>
+                    </constraints>
+                    <state key="normal" title="Wear">
+                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="tUj-rp-EDc"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="tUj-rp-EDc"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="wearWithSender:" destination="-1" eventType="touchUpInside" id="IkN-jE-XYr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="144-zZ-AQJ">
+                    <rect key="frame" x="272" y="605" width="70" height="30"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <state key="normal" title="Rate">
+                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="rateWithSender:" destination="-1" eventType="touchUpInside" id="Bnw-Ry-f9Q"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bow Tie Name Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV6-iL-ZYr">
+                    <rect key="frame" x="20" y="258" width="193.5" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of times worn: 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikq-Ak-igL">
+                    <rect key="frame" x="20" y="319" width="138" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last worn: 06/25/14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaF-Uw-3LF">
+                    <rect key="frame" x="20" y="347.5" width="154" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 4/5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWE-Jk-CtM">
+                    <rect key="frame" x="20" y="290" width="84.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Favorite*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMH-Qp-Pcv">
+                    <rect key="frame" x="20" y="376" width="77" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="144-zZ-AQJ" secondAttribute="trailing" constant="33" id="4ga-eL-N7y"/>
+                <constraint firstItem="mV6-iL-ZYr" firstAttribute="top" secondItem="VnI-gp-lyJ" secondAttribute="bottom" constant="15" id="80y-Iy-S8a">
+                    <variation key="heightClass=regular-widthClass=compact" constant="23"/>
+                </constraint>
+                <constraint firstItem="830-pF-FIa" firstAttribute="leading" secondItem="33w-74-elL" secondAttribute="leading" constant="20" id="9Uu-Yc-Oi0"/>
+                <constraint firstItem="mV6-iL-ZYr" firstAttribute="leading" secondItem="33w-74-elL" secondAttribute="leading" constant="20" id="G3k-pU-rf8"/>
+                <constraint firstAttribute="trailing" secondItem="VnI-gp-lyJ" secondAttribute="trailing" constant="20" id="HQv-uu-hBE">
+                    <variation key="heightClass=regular-widthClass=compact" constant="16"/>
+                </constraint>
+                <constraint firstItem="144-zZ-AQJ" firstAttribute="bottom" secondItem="830-pF-FIa" secondAttribute="bottom" id="LHp-wk-HIh"/>
+                <constraint firstAttribute="trailing" secondItem="cJW-Be-gce" secondAttribute="trailing" constant="16" id="N8v-8t-CzN"/>
+                <constraint firstItem="ikq-Ak-igL" firstAttribute="top" secondItem="FWE-Jk-CtM" secondAttribute="bottom" constant="8" id="ON3-08-wGv"/>
+                <constraint firstItem="YaF-Uw-3LF" firstAttribute="top" secondItem="ikq-Ak-igL" secondAttribute="bottom" constant="8" id="Q2m-9v-Ah9"/>
+                <constraint firstItem="YaF-Uw-3LF" firstAttribute="leading" secondItem="mV6-iL-ZYr" secondAttribute="leading" id="Uqc-Uf-om2"/>
+                <constraint firstItem="VnI-gp-lyJ" firstAttribute="leading" secondItem="33w-74-elL" secondAttribute="leading" constant="20" id="a1Y-Qj-u5f"/>
+                <constraint firstItem="VnI-gp-lyJ" firstAttribute="top" secondItem="cJW-Be-gce" secondAttribute="bottom" constant="23" id="aZI-lc-7vf"/>
+                <constraint firstItem="mV6-iL-ZYr" firstAttribute="leading" secondItem="ikq-Ak-igL" secondAttribute="leading" id="bbI-F4-HG9"/>
+                <constraint firstItem="mV6-iL-ZYr" firstAttribute="leading" secondItem="FWE-Jk-CtM" secondAttribute="leading" id="ccj-jt-yQ7"/>
+                <constraint firstItem="144-zZ-AQJ" firstAttribute="width" secondItem="830-pF-FIa" secondAttribute="width" id="gH6-qY-KiH"/>
+                <constraint firstItem="YaF-Uw-3LF" firstAttribute="leading" secondItem="IMH-Qp-Pcv" secondAttribute="leading" id="gqr-S4-FT7"/>
+                <constraint firstItem="FWE-Jk-CtM" firstAttribute="top" secondItem="mV6-iL-ZYr" secondAttribute="bottom" constant="8" id="htJ-7Q-8r3"/>
+                <constraint firstItem="cJW-Be-gce" firstAttribute="top" secondItem="33w-74-elL" secondAttribute="top" constant="40" id="nXr-Iq-Sse"/>
+                <constraint firstAttribute="bottom" secondItem="144-zZ-AQJ" secondAttribute="bottom" constant="32" id="s0u-Vu-Mv9"/>
+                <constraint firstItem="cJW-Be-gce" firstAttribute="leading" secondItem="33w-74-elL" secondAttribute="leading" constant="20" id="ufL-OH-sGZ"/>
+                <constraint firstItem="IMH-Qp-Pcv" firstAttribute="top" secondItem="YaF-Uw-3LF" secondAttribute="bottom" constant="8" id="wvV-DB-zdb"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="IMH-Qp-Pcv"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="N8v-8t-CzN"/>
+                    <exclude reference="ufL-OH-sGZ"/>
+                    <exclude reference="HQv-uu-hBE"/>
+                    <exclude reference="a1Y-Qj-u5f"/>
+                    <exclude reference="aZI-lc-7vf"/>
+                    <exclude reference="80y-Iy-S8a"/>
+                    <exclude reference="G3k-pU-rf8"/>
+                    <exclude reference="bbI-F4-HG9"/>
+                    <exclude reference="ccj-jt-yQ7"/>
+                    <exclude reference="htJ-7Q-8r3"/>
+                    <exclude reference="ON3-08-wGv"/>
+                    <exclude reference="Q2m-9v-Ah9"/>
+                    <exclude reference="Uqc-Uf-om2"/>
+                    <exclude reference="gqr-S4-FT7"/>
+                    <exclude reference="wvV-DB-zdb"/>
+                    <exclude reference="9Uu-Yc-Oi0"/>
+                    <exclude reference="4ga-eL-N7y"/>
+                    <exclude reference="LHp-wk-HIh"/>
+                    <exclude reference="gH6-qY-KiH"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="IMH-Qp-Pcv"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="N8v-8t-CzN"/>
+                    <include reference="ufL-OH-sGZ"/>
+                    <include reference="HQv-uu-hBE"/>
+                    <include reference="a1Y-Qj-u5f"/>
+                    <include reference="aZI-lc-7vf"/>
+                    <include reference="80y-Iy-S8a"/>
+                    <include reference="G3k-pU-rf8"/>
+                    <include reference="bbI-F4-HG9"/>
+                    <include reference="ccj-jt-yQ7"/>
+                    <include reference="htJ-7Q-8r3"/>
+                    <include reference="ON3-08-wGv"/>
+                    <include reference="Q2m-9v-Ah9"/>
+                    <include reference="Uqc-Uf-om2"/>
+                    <include reference="gqr-S4-FT7"/>
+                    <include reference="wvV-DB-zdb"/>
+                    <include reference="9Uu-Yc-Oi0"/>
+                    <include reference="4ga-eL-N7y"/>
+                    <include reference="LHp-wk-HIh"/>
+                    <include reference="gH6-qY-KiH"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="55" y="-342"/>
+        </view>
+    </objects>
+</document>
