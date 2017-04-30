@@ -13,6 +13,8 @@
 		BCD161F21EB5926700066519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD161F01EB5926700066519 /* LaunchScreen.storyboard */; };
 		BCD161FB1EB592C400066519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD161F91EB592C400066519 /* ViewController.swift */; };
 		BCD161FC1EB592C400066519 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD161FA1EB592C400066519 /* ViewController.xib */; };
+		BCD161FE1EB5D20500066519 /* SampleData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD161FD1EB5D20500066519 /* SampleData.plist */; };
+		BCD162021EB5DAB300066519 /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD162011EB5DAB300066519 /* ViewControllerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BCD161F31EB5926700066519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCD161F91EB592C400066519 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BCD161FA1EB592C400066519 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		BCD161FD1EB5D20500066519 /* SampleData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SampleData.plist; sourceTree = "<group>"; };
+		BCD162011EB5DAB300066519 /* ViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		BCD161E31EB5926700066519 /* Bowties */ = {
 			isa = PBXGroup;
 			children = (
+				BCD161FD1EB5D20500066519 /* SampleData.plist */,
+				BCD162011EB5DAB300066519 /* ViewControllerModel.swift */,
 				BCD161E41EB5926700066519 /* AppDelegate.swift */,
 				BCD161F91EB592C400066519 /* ViewController.swift */,
 				BCD161FA1EB592C400066519 /* ViewController.xib */,
@@ -128,6 +134,7 @@
 			files = (
 				BCD161F21EB5926700066519 /* LaunchScreen.storyboard in Resources */,
 				BCD161FC1EB592C400066519 /* ViewController.xib in Resources */,
+				BCD161FE1EB5D20500066519 /* SampleData.plist in Resources */,
 				BCD161EF1EB5926700066519 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD162021EB5DAB300066519 /* ViewControllerModel.swift in Sources */,
 				BCD161FB1EB592C400066519 /* ViewController.swift in Sources */,
 				BCD161E51EB5926700066519 /* AppDelegate.swift in Sources */,
 				BCD161ED1EB5926700066519 /* Bowties.xcdatamodeld in Sources */,
