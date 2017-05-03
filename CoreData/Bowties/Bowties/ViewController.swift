@@ -21,15 +21,15 @@ class ViewController: UIViewController {
     
     var viewModel: ViewControllerModel! {
         didSet {
-            viewModel.senderData = { [weak self] currentBowtie in
-                guard let this = self, let currentBowtie = currentBowtie else { return }
-                this.imageView.image = currentBowtie.image
-                this.nameLabel.text = currentBowtie.name
-                this.ratingLabel.text = currentBowtie.ratingLabel
-                this.timesWornLabel.text = currentBowtie.timesWornLabel
-                this.lastWornLabel.text = currentBowtie.lastWornLabel
-                this.favoriteLabel.isHidden = currentBowtie.isHidden
-                this.view.tintColor = currentBowtie.color
+            viewModel.updateData = { [weak self] in
+                guard let this = self else { return }
+                this.imageView.image = this.viewModel.image
+                this.nameLabel.text = this.viewModel.name
+                this.ratingLabel.text = this.viewModel.ratingLabel
+                this.timesWornLabel.text = this.viewModel.timesWornLabel
+                this.lastWornLabel.text = this.viewModel.lastWornLabel
+                this.favoriteLabel.isHidden = this.viewModel.isHidden
+                this.view.tintColor = this.viewModel.color
             }
         }
     }

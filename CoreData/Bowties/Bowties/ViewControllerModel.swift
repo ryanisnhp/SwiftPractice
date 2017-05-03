@@ -13,9 +13,9 @@ import CoreData
 class ViewControllerModel {
     
     private var currentBowtie: Bowtie?
-    var senderData: ((Bowtie?) -> Void)?
+    var updateData: ((Void) -> Void)?
     
-    var bowties: [Bowtie] = []
+    private var bowties: [Bowtie] = []
     
     init() {
         getData()
@@ -49,7 +49,7 @@ class ViewControllerModel {
     
     func bowtieForSegment(at title: String) {
         currentBowtie = bowties.filter({$0.searchKey == title}).first
-        senderData?(currentBowtie)
+        updateData?()
     }
     
     func updateBowtie() {
@@ -59,7 +59,7 @@ class ViewControllerModel {
         currentBowtie.lastWorn = NSDate()
         do {
             try managedContext.save()
-            senderData?(currentBowtie)
+            updateData?()
         } catch {}
     }
     
@@ -70,7 +70,7 @@ class ViewControllerModel {
         currentBowtie.rating = rating
         do {
             try managedContext.save()
-            senderData?(currentBowtie)
+            updateData?()
         } catch {}
 
     }
@@ -89,9 +89,46 @@ class ViewControllerModel {
         alert.addAction(saveAction)
         return alert
     }
+    
+    var image: UIImage? {
+        guard let photoData = currentBowtie?.photoData as Data? else { return nil }
+        return UIImage(data: photoData)
+    }
+    
+    var name: String {
+        return currentBowtie?.name ?? ""
+    }
+    
+    var ratingLabel: String {
+        guard let rating = currentBowtie?.rating else { return "" }
+        return "Rating: \(Double(rating))/5"
+    }
+    
+    var timesWornLabel: String {
+        guard let currentBowtie = currentBowtie else { return "" }
+        return "# times worn: \(Int(currentBowtie.timesWorn))"
+    }
+    
+    var lastWornLabel: String {
+        guard let lastWorn = currentBowtie?.lastWorn else { return "" }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        return "Last worn: " + dateFormatter.string(from: lastWorn as Date)
+    }
+    
+    var isHidden: Bool {
+        guard let currentBowtie = currentBowtie else { return false }
+        return !Bool(currentBowtie.isFavorite)
+    }
+    
+    var color: UIColor? {
+        return currentBowtie?.tintColor as? UIColor
+    }
 }
 
 extension Bowtie {
+    
     convenience init(entity: NSEntityDescription, insertInto managedContext: NSManagedObjectContext, dict: NSDictionary) {
         self.init(entity: entity, insertInto: managedContext)
         if let name = dict["name"] as? String {
@@ -139,34 +176,5 @@ extension Bowtie {
                             blue: CGFloat(blue)/255,
                             alpha: 1)
         return color
-    }
-    
-    var image: UIImage? {
-        guard let photoData = photoData as Data? else { return nil }
-        return UIImage(data: photoData)
-    }
-    
-    var ratingLabel: String {
-        return "Rating: \(Double(rating))/5"
-    }
-    
-    var timesWornLabel: String {
-        return "# times worn: \(Int(timesWorn))"
-    }
-    
-    var lastWornLabel: String {
-        guard let lastWorn = lastWorn else { return "" }
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .none
-        return "Last worn: " + dateFormatter.string(from: lastWorn as Date)
-    }
-    
-    var isHidden: Bool {
-        return !Bool(isFavorite)
-    }
-    
-    var color: UIColor? {
-        return tintColor as? UIColor
     }
 }
