@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCC487861EBA06B0000D8FB5 /* Bowtie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC487851EBA06B0000D8FB5 /* Bowtie.swift */; };
 		BCD161E51EB5926700066519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD161E41EB5926700066519 /* AppDelegate.swift */; };
-		BCD161ED1EB5926700066519 /* Bowties.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCD161EB1EB5926700066519 /* Bowties.xcdatamodeld */; };
 		BCD161EF1EB5926700066519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD161EE1EB5926700066519 /* Assets.xcassets */; };
 		BCD161F21EB5926700066519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD161F01EB5926700066519 /* LaunchScreen.storyboard */; };
 		BCD161FB1EB592C400066519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD161F91EB592C400066519 /* ViewController.swift */; };
 		BCD161FC1EB592C400066519 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD161FA1EB592C400066519 /* ViewController.xib */; };
+		BCD161FE1EB5D20500066519 /* SampleData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD161FD1EB5D20500066519 /* SampleData.plist */; };
+		BCD162021EB5DAB300066519 /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD162011EB5DAB300066519 /* ViewControllerModel.swift */; };
+		D28ADBFFF30E8A52BDFCC127 /* Pods_Bowties.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1376094E853E15F0609C6FC /* Pods_Bowties.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9CF2246B31EF25B573F73408 /* Pods-Bowties.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bowties.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bowties/Pods-Bowties.debug.xcconfig"; sourceTree = "<group>"; };
+		A1376094E853E15F0609C6FC /* Pods_Bowties.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bowties.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCC487851EBA06B0000D8FB5 /* Bowtie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bowtie.swift; sourceTree = "<group>"; };
 		BCD161E11EB5926700066519 /* Bowties.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bowties.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD161E41EB5926700066519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BCD161EC1EB5926700066519 /* Bowties.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bowties.xcdatamodel; sourceTree = "<group>"; };
 		BCD161EE1EB5926700066519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCD161F11EB5926700066519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCD161F31EB5926700066519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCD161F91EB592C400066519 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BCD161FA1EB592C400066519 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		BCD161FD1EB5D20500066519 /* SampleData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SampleData.plist; sourceTree = "<group>"; };
+		BCD162011EB5DAB300066519 /* ViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
+		E78BCAA30791D8EF1154FFC9 /* Pods-Bowties.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bowties.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bowties/Pods-Bowties.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D28ADBFFF30E8A52BDFCC127 /* Pods_Bowties.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B397FDE492F032076EC7D0D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1376094E853E15F0609C6FC /* Pods_Bowties.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BCD161D81EB5926700066519 = {
 			isa = PBXGroup;
 			children = (
 				BCD161E31EB5926700066519 /* Bowties */,
 				BCD161E21EB5926700066519 /* Products */,
+				CDB959E4C6C293742813E519 /* Pods */,
+				B397FDE492F032076EC7D0D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +75,26 @@
 		BCD161E31EB5926700066519 /* Bowties */ = {
 			isa = PBXGroup;
 			children = (
+				BCC487851EBA06B0000D8FB5 /* Bowtie.swift */,
+				BCD161FD1EB5D20500066519 /* SampleData.plist */,
+				BCD162011EB5DAB300066519 /* ViewControllerModel.swift */,
 				BCD161E41EB5926700066519 /* AppDelegate.swift */,
 				BCD161F91EB592C400066519 /* ViewController.swift */,
 				BCD161FA1EB592C400066519 /* ViewController.xib */,
 				BCD161EE1EB5926700066519 /* Assets.xcassets */,
 				BCD161F01EB5926700066519 /* LaunchScreen.storyboard */,
 				BCD161F31EB5926700066519 /* Info.plist */,
-				BCD161EB1EB5926700066519 /* Bowties.xcdatamodeld */,
 			);
 			path = Bowties;
+			sourceTree = "<group>";
+		};
+		CDB959E4C6C293742813E519 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CF2246B31EF25B573F73408 /* Pods-Bowties.debug.xcconfig */,
+				E78BCAA30791D8EF1154FFC9 /* Pods-Bowties.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCD161F61EB5926700066519 /* Build configuration list for PBXNativeTarget "Bowties" */;
 			buildPhases = (
+				9E7598D38E14830D1C4EA02C /* [CP] Check Pods Manifest.lock */,
 				BCD161DD1EB5926700066519 /* Sources */,
 				BCD161DE1EB5926700066519 /* Frameworks */,
 				BCD161DF1EB5926700066519 /* Resources */,
+				EE4677569B2B8265209B3BB1 /* [CP] Embed Pods Frameworks */,
+				7DD818FCCAC880A86C4ECAC1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,20 +161,70 @@
 			files = (
 				BCD161F21EB5926700066519 /* LaunchScreen.storyboard in Resources */,
 				BCD161FC1EB592C400066519 /* ViewController.xib in Resources */,
+				BCD161FE1EB5D20500066519 /* SampleData.plist in Resources */,
 				BCD161EF1EB5926700066519 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7DD818FCCAC880A86C4ECAC1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bowties/Pods-Bowties-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E7598D38E14830D1C4EA02C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE4677569B2B8265209B3BB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bowties/Pods-Bowties-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BCD161DD1EB5926700066519 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD162021EB5DAB300066519 /* ViewControllerModel.swift in Sources */,
+				BCC487861EBA06B0000D8FB5 /* Bowtie.swift in Sources */,
 				BCD161FB1EB592C400066519 /* ViewController.swift in Sources */,
 				BCD161E51EB5926700066519 /* AppDelegate.swift in Sources */,
-				BCD161ED1EB5926700066519 /* Bowties.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +337,7 @@
 		};
 		BCD161F71EB5926700066519 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CF2246B31EF25B573F73408 /* Pods-Bowties.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Bowties/Info.plist;
@@ -266,6 +350,7 @@
 		};
 		BCD161F81EB5926700066519 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E78BCAA30791D8EF1154FFC9 /* Pods-Bowties.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Bowties/Info.plist;
@@ -295,21 +380,9 @@
 				BCD161F81EB5926700066519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		BCD161EB1EB5926700066519 /* Bowties.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				BCD161EC1EB5926700066519 /* Bowties.xcdatamodel */,
-			);
-			currentVersion = BCD161EC1EB5926700066519 /* Bowties.xcdatamodel */;
-			path = Bowties.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = BCD161D91EB5926700066519 /* Project object */;
 }
